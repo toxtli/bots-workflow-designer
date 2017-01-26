@@ -1,0 +1,56 @@
+@import '../mixins';
+
+/*
+ * COLLAPSE
+ */
+
+
+.accordion {
+    .panel {
+        border-radius: 0;
+        margin-bottom: 0px;
+        border-bottom-width: 0px;
+        &:first-child {
+            border-radius: 5px 5px 0 0
+        }
+        &:last-child {
+            border-radius: 0 0 5px 5px;
+            border-bottom-width: 1px;
+        }
+        .panel-heading {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .panel-body {
+            padding: 0px 20px 10px 20px;
+        }
+    }
+    &.accordion-margin-bottom {
+        .panel {
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border-bottom-width: 1px;
+        }
+    }
+    .accordion-indicator {
+        padding-top: 1px;
+        color: $gray-darken;
+        .plus {
+            display: none;
+        }
+        .minus {
+            display: inline;
+        }
+    }
+    .collapsed {
+        .accordion-indicator {
+            .plus {
+                display: inline;
+            }
+            .minus {
+                display: none;
+            }
+        }
+    }
+}
+

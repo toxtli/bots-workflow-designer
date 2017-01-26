@@ -1,0 +1,91 @@
+/*
+ * TEXT-EDITOR
+ */
+.note-popover {
+    display: none;
+    margin-top: 5px;
+}
+
+.note-editor {
+    border-color: #dfe4ed !important;
+}
+
+.note-editor .note-codable {
+    outline: none;
+    background: #2b2838 !important;
+}
+
+.note-editor .note-resizebar {
+    border-top: 1px solid #dfe4ed !important;
+    background: #ffffff !important;
+    padding: 2px 0px 3px !important;
+    height: 12px !important;
+    -webkit-border-radius: 0px 0px 3px 3px;
+            border-radius: 0px 0px 3px 3px;
+}
+
+.note-editor .panel-heading {
+    padding: 0px 5px;
+}
+
+.note-editor .note-btn-group .dropdown-menu {
+    padding: 5px 10px;
+}
+
+.note-editor .note-btn-group .dropdown-menu blockquote {
+    padding: 5px 10px;
+}
+
+.note-editor .note-popover .popover-content .note-color .dropdown-menu,
+.note-editor .panel-heading.note-toolbar .note-color .dropdown-menu {
+    min-width: 355px;
+}
+
+.note-editor .note-popover .popover-content .note-para .dropdown-menu,
+.note-editor .panel-heading.note-toolbar .note-para .dropdown-menu {
+    min-width: 230px;
+}
+
+.note-editor .note-popover .popover-content .dropdown-menu,
+.note-editor .panel-heading.note-toolbar .note-fontname .dropdown-menu {
+    min-width: 140px;
+}
+
+.note-editor .note-color-reset {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    -webkit-border-radius: 1px !important;
+            border-radius: 1px !important;
+    background: #acb7bf !important;
+    color: #ffffff !important;
+}
+
+.note-editor .dropdown-toggle {
+    padding-right: 4px;
+}
+
+.note-editor .dropdown-toggle:after {
+    display: none;
+}
+
+.note-editor .note-recent-color {
+    color: #acb7bf;
+}
+
+.note-editor .note-toolbar {
+    padding: 5px 10px 10px 10px;
+    background: #ffffff;
+    -webkit-border-radius: 3px 3px 0px 0px;
+            border-radius: 3px 3px 0px 0px;
+    border-bottom: 1px solid #dfe4ed;
+}
+
+.note-editor div.panel-heading {
+    padding: 5px 10px 10px !important;
+    margin-left: 0px !important;
+    height: auto !important;
+}
+
+.note-editor div.panel-body {
+    margin-left: 0px !important;
+}

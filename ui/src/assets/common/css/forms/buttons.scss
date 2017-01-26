@@ -1,0 +1,293 @@
+@import '../mixins';
+
+/*
+ * BUTTONS
+ */
+
+
+.btn {
+    outline: none !important;
+    @include transition-middle();
+    padding: 7px 16px;
+    line-height: 1.7;
+    &:hover, &:active {
+        @include transition-fast();
+    }
+    &.btn-rounded {
+        border-radius: 100px;
+    }
+    &.btn-squared {
+        border-radius: 0px;
+    }
+    &.btn-xs {
+        padding: 1px 5px;
+        font-size: 10px;
+    }
+    &.btn-sm {
+        padding: 4px 11px;
+    }
+    &.btn-lg {
+        padding: 12px 20px;
+    }
+    &.btn-link {
+        color: $black-lighten-more;
+        border-color: transparent !important;
+        background: none !important;
+        text-decoration: none;
+        &:hover, &:active, &:focus, &.active {
+            color: $blue;
+        }
+    }
+    &.btn-icon {
+        padding: 10px;
+        line-height: 1rem;
+        text-decoration: none !important;
+        &.btn-xs {
+            padding: 5px;
+            font-size: 10px;
+        }
+        &.btn-sm {
+            padding: 7px;
+        }
+        &.btn-lg {
+            padding: 20px;
+        }
+    }
+}
+
+.btn-group-vertical {
+    > label {
+        margin-bottom: 0px;
+    }
+}
+
+.btn-group-justified {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    > .btn-group {
+        float: none;
+        display: table-cell;
+        width: 1%;
+        > .btn {
+            width: 100%;
+        }
+    }
+    &.btn-group-vertical {
+        display: block;
+        > .btn-group {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.btn, .open > .btn {
+    /* CLEAR BUTTON */
+    color: $black-lighten-more;
+    background-color: $white;
+    border-color: $gray-darken;
+    &:hover, &:active {
+        background-color: lighten($gray-darken-more, 6%);
+        border-color: lighten($gray-darken-more, 6%);
+    }
+    &:hover:active, &:focus, &.active {
+        background: lighten($gray-darken-more, 2%);
+        border-color: lighten($gray-darken-more, 2%);
+    }
+
+    /* DEFAULT BUTTONS */
+    &.btn-default, &.btn-primary, &.btn-secondary,
+    &.btn-success, &.btn-info, &.btn-warning, &.btn-danger {
+        color: $white !important;
+    }
+    &.btn-default {
+        background-color: $default;
+        border-color: $default;
+        &:hover, &:active {
+            background-color: lighten($default, 6%);
+            border-color: lighten($default, 6%);
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($default, 6%);
+            border-color: darken($default, 6%);
+        }
+    }
+    &.btn-primary {
+        background-color: $primary;
+        border-color: $primary;
+        &:hover, &:active {
+            background-color: lighten($primary, 6%);
+            border-color: lighten($primary, 6%);
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($primary, 6%) !important;
+            border-color: darken($primary, 6%) !important;
+        }
+    }
+    &.btn-secondary {
+        background-color: $secondary;
+        border-color: $secondary;
+        &:hover, &:active {
+            background-color: lighten($secondary, 6%);
+            border-color: lighten($secondary, 6%);
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($secondary, 6%);
+            border-color: darken($secondary, 6%);
+        }
+    }
+    &.btn-success {
+        background-color: $success;
+        border-color: $success;
+        &:hover, &:active {
+            background-color: lighten($success, 6%);
+            border-color: lighten($success, 6%);
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($success, 6%);
+            border-color: darken($success, 6%);
+        }
+    }
+    &.btn-info {
+        background-color: $info;
+        border-color: $info;
+        &:hover, &:active {
+            background-color: lighten($info, 6%);
+            border-color: lighten($info, 6%);
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($info, 6%);
+            border-color: darken($info, 6%);
+        }
+    }
+    &.btn-warning {
+        background-color: $warning;
+        border-color: $warning;
+        &:hover, &:active {
+            background-color: lighten($warning, 6%);
+            border-color: lighten($warning, 6%);
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($warning, 6%);
+            border-color: darken($warning, 6%);
+        }
+    }
+    &.btn-danger {
+        background-color: $danger;
+        border-color: $danger;
+        &:hover, &:active {
+            background-color: lighten($danger, 6%);
+            border-color: lighten($danger, 6%);
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($danger, 6%);
+            border-color: darken($danger, 6%);
+        }
+    }
+
+    /* OUTLINED BUTTONS */
+    &.btn-default-outline, &.btn-primary-outline, &.btn-secondary-outline,
+    &.btn-success-outline, &.btn-info-outline, &.btn-warning-outline, &.btn-danger-outline {
+        background-color: $white;
+    }
+    &.btn-default-outline {
+        border-color: $default;
+        color: $default;
+        &:hover, &:active {
+            background-color: lighten($default, 6%);
+            border-color: lighten($default, 6%);
+            color: $white;
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($default, 6%);
+            border-color: darken($default, 6%);
+            color: $white;
+        }
+    }
+    &.btn-primary-outline {
+        border-color: $primary;
+        color: $primary;
+        &:hover, &:active {
+            background-color: lighten($primary, 6%);
+            border-color: lighten($primary, 6%);
+            color: $white;
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($primary, 6%);
+            border-color: darken($primary, 6%);
+            color: $white;
+        }
+    }
+    &.btn-secondary-outline {
+        border-color: $secondary;
+        color: $secondary;
+        &:hover, &:active {
+            background-color: lighten($secondary, 6%);
+            border-color: lighten($secondary, 6%);
+            color: $white;
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($secondary, 6%);
+            border-color: darken($secondary, 6%);
+            color: $white;
+        }
+    }
+    &.btn-success-outline {
+        border-color: $success;
+        color: $success;
+        &:hover, &:active {
+            background-color: lighten($success, 6%);
+            border-color: lighten($success, 6%);
+            color: $white;
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($success, 6%);
+            border-color: darken($success, 6%);
+            color: $white;
+        }
+    }
+    &.btn-info-outline {
+        border-color: $info;
+        color: $info;
+        &:hover, &:active {
+            background-color: lighten($info, 6%);
+            border-color: lighten($info, 6%);
+            color: $white;
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($info, 6%);
+            border-color: darken($info, 6%);
+            color: $white;
+        }
+    }
+    &.btn-warning-outline {
+        border-color: $warning;
+        color: $warning;
+        &:hover, &:active {
+            background-color: lighten($warning, 6%);
+            border-color: lighten($warning, 6%);
+            color: $white;
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($warning, 6%);
+            border-color: darken($warning, 6%);
+            color: $white;
+        }
+    }
+    &.btn-danger-outline {
+        border-color: $danger;
+        color: $danger;
+        &:hover, &:active {
+            background-color: lighten($danger, 6%);
+            border-color: lighten($danger, 6%);
+            color: $white;
+        }
+        &:hover:active, &:focus, &.active {
+            background: darken($danger, 6%);
+            border-color: darken($danger, 6%);
+            color: $white;
+        }
+    }
+}

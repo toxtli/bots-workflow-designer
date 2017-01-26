@@ -1,0 +1,56 @@
+@import '../mixins';
+
+/*
+ * RTL VERSION
+ */
+
+html[dir=rtl] {
+    .widget-seven {
+        .counter-count {
+            right: auto;
+            left: 10px;
+        }
+    }
+    .pull-right {
+        float: left;
+    }
+    .pull-left {
+        float: right;
+    }
+    .single-page-block-header-menu {
+        text-align: left;
+    }
+    .single-page-block .single-page-block-inner h3 {
+        text-align: right;
+    }
+    .mail .panel-heading .mail-heading {
+        float: right;
+    }
+    div.dataTables_wrapper div.dataTables_paginate {
+        text-align: left;
+    }
+    .radio label, .checkbox label {
+        padding-right: 0px;
+        padding-left: 20px;
+    }
+    .app-gallery .app-gallery-item {
+        float: right;
+    }
+    nav.left-menu .left-menu-list li.left-menu-list-submenu > .left-menu-link:after {
+        right: auto;
+        left: 15px;
+    }
+    nav.top-menu .menu .menu-user-block {
+        float: left;
+    }
+    .menu-info-block {
+        margin-right: 0px !important;
+        margin-left: 80px;
+        .left {
+            float: right !important;
+        }
+        .right {
+            float: left !important;
+        }
+    }
+}

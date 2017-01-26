@@ -1,0 +1,79 @@
+@import '../mixins';
+
+/*
+ * TOOLTIPS & POPOVERS
+ */
+
+.popover {
+    border-color: $gray-darken-more;
+    .popover-arrow {
+        border-width: 8px;
+        &:after{
+            border-width: 7px;
+        }
+    }
+    &.left .tooltip-arrow,
+    &.bs-tether-element-attached-left .popover-arrow {
+        border-right-color: $gray-darken-more;
+        left: -8px;
+        &:after {
+            bottom: -7px;
+        }
+    }
+    &.right .tooltip-arrow,
+    &.bs-tether-element-attached-right .popover-arrow {
+        border-left-color: $gray-darken-more;
+        right: -8px;
+        &:after {
+            bottom: -7px;
+        }
+    }
+    &.top .tooltip-arrow,
+    &.bs-tether-element-attached-top .popover-arrow {
+        border-bottom-color: $gray-darken-more;
+        top: -8px;
+        &:after {
+            margin-left: -7px;
+        }
+    }
+    &.bottom .tooltip-arrow,
+    &.bs-tether-element-attached-bottom .popover-arrow {
+        border-top-color: $gray-darken-more;
+        bottom: -8px;
+        &:after {
+            margin-left: -7px;
+        }
+    }
+    .popover-title {
+        font-weight: 600;
+        background: $gray;
+        margin: -1px;
+        padding: 8px 15px;
+        border-radius: 3px 3px 0px 0px;
+    }
+}
+
+.tooltip {
+    .tooltip-inner {
+        background: $black-lighten;
+        padding: 4px 15px;
+        color: $white;
+        font-size: 14px;
+    }
+    &.left .tooltip-arrow,
+    &.bs-tether-element-attached-left .tooltip-arrow {
+        border-right-color: $black-lighten;
+    }
+    &.right .tooltip-arrow,
+    &.bs-tether-element-attached-right .tooltip-arrow {
+        border-left-color: $black-lighten;
+    }
+    &.top .tooltip-arrow,
+    &.bs-tether-element-attached-top .tooltip-arrow {
+        border-bottom-color: $black-lighten;
+    }
+    &.bottom .tooltip-arrow,
+    &.bs-tether-element-attached-bottom .tooltip-arrow {
+        border-top-color: $black-lighten;
+    }
+}

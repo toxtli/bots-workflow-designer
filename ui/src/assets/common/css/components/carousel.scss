@@ -1,0 +1,60 @@
+@import '../mixins';
+
+/*
+ * CAROUSEL
+ */
+
+.carousel {
+    .fa {
+        font-family: FontAwesome !important;
+        font-size: 24px;
+        &.icon-prev {
+            &:before {
+                content: "\f060";
+            }
+        }
+        &.icon-next {
+            &:before {
+                content: "\f061";
+            }
+        }
+    }
+    .carousel-indicators {
+        bottom: 10px;
+        li {
+            width: 12px;
+            height: 12px;
+            margin: 1px 3px;
+        }
+    }
+    .carousel-caption {
+        bottom: 40px;
+        text-shadow: 1px 1px 0px rgba(0,0,0,.5);
+        h1, h2, h3, h4, h5, h6 {
+            color: $white;
+        }
+    }
+}
+
+.owl-demo {
+    .item {
+        height: 140px;
+        background: $default;
+        padding: 1rem;
+        * {
+            color: $white;
+        }
+    }
+}
+
+.owl-demo-img {
+    .owl-item img {
+        height: 132px;
+    }
+}
+
+.owl-demo-video {
+    .item-video {
+        height: 300px;
+    }
+}

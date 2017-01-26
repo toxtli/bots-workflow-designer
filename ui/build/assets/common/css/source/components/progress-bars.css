@@ -1,0 +1,72 @@
+/*
+ * PROGRESS BARS
+ */
+.progress {
+    height: 18px;
+}
+
+.progress:last-child {
+    margin-bottom: 0px;
+}
+
+.progress-animation {
+    -webkit-transition: all 0.1s !important;
+    -o-transition: all 0.1s !important;
+    transition: all 0.1s !important;
+}
+
+.progress-primary[value]::-webkit-progress-value, .progress[value]::-webkit-progress-value {
+    background-color: #01a8fe;
+}
+
+.progress-primary[value]::-moz-progress-bar, .progress[value]::-moz-progress-bar {
+    background-color: #01a8fe;
+}
+
+.progress-default[value]::-webkit-progress-value {
+    background-color: #acb7bf;
+}
+
+.progress-default[value]::-moz-progress-bar {
+    background-color: #acb7bf;
+}
+
+.progress-secondary[value]::-webkit-progress-value {
+    background-color: #6a7a84;
+}
+
+.progress-secondary[value]::-moz-progress-bar {
+    background-color: #6a7a84;
+}
+
+.progress-success[value]::-webkit-progress-value {
+    background-color: #46be8a;
+}
+
+.progress-success[value]::-moz-progress-bar {
+    background-color: #46be8a;
+}
+
+.progress-danger[value]::-webkit-progress-value {
+    background-color: #fb434a;
+}
+
+.progress-danger[value]::-moz-progress-bar {
+    background-color: #fb434a;
+}
+
+.progress-warning[value]::-webkit-progress-value {
+    background-color: #f39834;
+}
+
+.progress-warning[value]::-moz-progress-bar {
+    background-color: #f39834;
+}
+
+.progress-info[value]::-webkit-progress-value {
+    background-color: #0190da;
+}
+
+.progress-info[value]::-moz-progress-bar {
+    background-color: #0190da;
+}

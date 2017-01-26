@@ -1,0 +1,210 @@
+<div class="page-content-inner">
+
+    <!-- Calendar -->
+    <section class="panel panel-with-sidebar sidebar-large panel-with-right-sidebar panel-with-borders">
+        <div class="panel-sidebar">
+            <h6>Calendars</h6>
+            <ul class="list-unstyled app-calendar-list">
+                <li>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="example6" checked="">
+                            Gmail
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="example6" checked="">
+                            Apple Calendar
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="example6" checked="">
+                            Birthdays
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="example6">
+                            Weekends
+                        </label>
+                    </div>
+                </li>
+            </ul>
+            <h6>Events</h6>
+            <ul class="list-unstyled app-calendar-list">
+                <li>
+                    <span class="donut donut-default"></span>
+                    Default
+                </li>
+                <li>
+                    <span class="donut donut-primary"></span>
+                    Primary
+                </li>
+                <li>
+                    <span class="donut donut-secondary"></span>
+                    Secondary
+                </li>
+                <li>
+                    <span class="donut donut-success"></span>
+                    Success
+                </li>
+                <li>
+                    <span class="donut donut-danger"></span>
+                    Danger
+                </li>
+                <li>
+                    <span class="donut donut-info"></span>
+                    Info
+                </li>
+                <li>
+                    <span class="donut donut-warning"></span>
+                    Warning
+                </li>
+            </ul>
+        </div>
+        <div class="panel-heading">
+            <div class="pull-right">
+                <div class="dropdown">
+                    <a href="javascript: void(0);" class="dropdown-toggle dropdown-inline-button" data-toggle="dropdown" aria-expanded="false">
+                        <i class="dropdown-inline-button-icon icmn-database"></i>
+                        <span class="hidden-lg-down">Actions</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="" role="menu">
+                        <a class="dropdown-item" href="javascript:void(0)"><i class="dropdown-icon icmn-plus3"></i> Add Event</a>
+                        <a class="dropdown-item" href="javascript:void(0)"><i class="dropdown-icon icmn-pencil7"></i> Edit Event</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="javascript:void(0)"><i class="dropdown-icon icmn-bin3"></i> Delete All Events</a>
+                    </ul>
+                </div>
+            </div>
+            <h6 class="messaging-title">Conference Dashboard</h6>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="app-calendar pull-left"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Calendar -->
+
+</div>
+
+<!-- Page Scripts -->
+<script>
+    $(function() {
+
+        ///////////////////////////////////////////////////
+        // FULL CALENDAR
+        $('.app-calendar').fullCalendar({
+            //aspectRatio: 2,
+            height: 800,
+            header: {
+                left: 'prev, next',
+                center: 'title',
+                right: 'month, agendaWeek, agendaDay'
+            },
+            buttonIcons: {
+                prev: 'none fa fa-arrow-left',
+                next: 'none fa fa-arrow-right',
+                prevYear: 'none fa fa-arrow-left',
+                nextYear: 'none fa fa-arrow-right'
+            },
+            defaultDate: '2016-05-12',
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            viewRender: function(view, element) {
+                if (!cleanUI.hasTouch) {
+                    $('.fc-scroller').jScrollPane({
+                        autoReinitialise: true,
+                        autoReinitialiseDelay: 100
+                    });
+                }
+            },
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2016-05-01',
+                    className: 'fc-event-success'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2016-05-07',
+                    end: '2016-05-10'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2016-05-09T16:00:00',
+                    className: 'fc-event-default'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2016-05-16T16:00:00',
+                    className: 'fc-event-success'
+                },
+                {
+                    title: 'Conference',
+                    start: '2016-05-11',
+                    end: '2016-05-13',
+                    className: 'fc-event-danger'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2016-05-12T10:30:00',
+                    end: '2016-05-12T12:30:00',
+                    className: 'fc-event-default'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2016-05-12T12:00:00',
+                    className: 'fc-event-default'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2016-05-12T14:30:00',
+                    className: 'fc-event-info'
+                },
+                {
+                    title: 'Happy Hour',
+                    start: '2016-05-12T17:30:00'
+                },
+                {
+                    title: 'Dinner',
+                    start: '2016-05-12T20:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2016-05-13T07:00:00',
+                    className: 'fc-event-danger'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'javascript: alert("Clicked: External URL");',
+                    start: '2016-05-28',
+                    className: 'fc-event-warning'
+                }
+            ],
+            eventClick: function(calEvent, jsEvent, view) {
+                if (!$(this).hasClass('event-clicked')) {
+                    $('.fc-event').removeClass('event-clicked');
+                    $(this).addClass('event-clicked');
+                }
+            }
+        });
+
+
+    });
+</script>
+<!-- End Page Scripts -->

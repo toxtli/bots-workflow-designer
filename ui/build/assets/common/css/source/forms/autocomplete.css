@@ -1,0 +1,57 @@
+/*
+ * AUTOCOMPLETE
+ */
+.typeahead__container {
+    position: relative;
+}
+
+.typeahead__container .typeahead__field {
+    position: relative;
+    z-index: 1;
+}
+
+.typeahead__container .typeahead__result {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    width: 100%;
+    margin-top: -2px;
+}
+
+.typeahead__container .typeahead__result .typeahead__list {
+    background: #ffffff;
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+    border: 1px solid #01a8fe;
+    -webkit-border-radius: 0px 0px 3px 3px;
+            border-radius: 0px 0px 3px 3px;
+    border-top: 1px solid #dfe4ed;
+}
+
+.typeahead__container .typeahead__result .typeahead__list .typeahead__item a {
+    display: block;
+    padding: 6px 16px;
+    color: #514d6a;
+}
+
+.typeahead__container .typeahead__result .typeahead__list .typeahead__item.active a {
+    background: #f2f4f8;
+}
+
+.typeahead__container .typeahead__result .typeahead__list .typeahead__item:hover a {
+    background: #dfe4ed;
+}
+
+.typeahead__container .typeahead__result .typeahead__list .typeahead__item strong {
+    font-weight: 600;
+}
+
+.typeahead__container.result .typeahead__result {
+    display: block;
+}
+
+.typeahead__container.result input.form-control {
+    border-right-color: transparent;
+}

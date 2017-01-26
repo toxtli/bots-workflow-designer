@@ -1,0 +1,41 @@
+@import '../mixins';
+
+/*
+ * BADGES & LABELS
+ */
+
+
+.label {
+    font-weight: normal;
+    background: $white;
+    color: $secondary;
+    font-size: 100%;
+    &.label-default {
+        background: $default;
+        color: $white;
+    }
+    &.label-primary {
+        background: $primary;
+        color: $white;
+    }
+    &.label-secondary {
+        background: $secondary;
+        color: $white;
+    }
+    &.label-success {
+        background: $success;
+        color: $white;
+    }
+    &.label-info {
+        background: $info;
+        color: $white;
+    }
+    &.label-danger {
+        background: $danger;
+        color: $white;
+    }
+    &.label-warning {
+        background: $warning;
+        color: $white;
+    }
+}

@@ -1,0 +1,59 @@
+@import '../mixins';
+
+/*
+ * AUTOCOMPLETE
+ */
+
+.typeahead__container {
+    position: relative;
+    .typeahead__field {
+        position: relative;
+        z-index: 1;
+    }
+    .typeahead__result {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        top: 100%;
+        width: 100%;
+        margin-top: -2px;
+        .typeahead__list {
+            background: $white;
+            margin: 0px;
+            list-style: none;
+            padding: 0px;
+            border: 1px solid $primary;
+            border-radius: 0px 0px 3px 3px;
+            border-top: 1px solid $gray-darken;
+            .typeahead__item {
+                a {
+                    display: block;
+                    padding: 6px 16px;
+                    color: $black-lighten;
+                }
+                &.active {
+                    a {
+                        background: $gray-lighten;
+                    }
+                }
+                &:hover {
+                    a {
+                        background: $gray-darken;
+                    }
+                }
+                strong {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    &.result {
+        .typeahead__result {
+            display: block;
+        }
+        input.form-control {
+            border-right-color: transparent;
+        }
+    }
+
+}

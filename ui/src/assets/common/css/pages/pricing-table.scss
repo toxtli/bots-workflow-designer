@@ -1,0 +1,121 @@
+@import '../mixins';
+
+/*
+ * PRICING TABLE
+ */
+
+.pricing-table {
+    width: 100%;
+    display: flex;
+    padding: 40px 0px;
+    .pricing-item {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        text-align: center;
+        border: 1px solid $gray-darken;
+        border-left: none;
+        padding: 20px;
+        background: $white;
+        &:first-child {
+            border-left: 1px solid $gray-darken;
+            border-radius: 6px 0px 0px 6px;
+        }
+        &:last-child {
+            border-radius: 0px 6px 6px 0px;
+        }
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        .pricing-header {
+            padding: 30px 0px;
+            .pricing-title {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 24px;
+                font-weight: 600;
+                margin-top: 10px;
+            }
+            .pricing-price {
+                font-size: 48px;
+                .pricing-currency {
+                    display: inline-block;
+                    margin-top: 10px;
+                    margin-right: -10px;
+                    font-size: 20px;
+                    vertical-align: top;
+                }
+                .pricing-amount {
+                    font-weight: 600;
+                    font-size: 56px;
+                }
+                .pricing-period {
+                    font-size: 16px;
+                }
+            }
+        }
+        .pricing-features {
+            li {
+                margin-bottom: 10px;
+            }
+        }
+        .pricing-footer {
+            padding: 30px 0px 40px;
+        }
+        &.pricing-item-featured {
+            margin: -40px 0px -40px -1px;
+            padding: 60px 20px;
+            border-radius: 6px;
+            border-left: 1px solid $gray-darken;
+        }
+        &.pricing-item-default {
+            background: $default;
+            border-color: $default;
+            color: $white;
+        }
+        &.pricing-item-primary {
+            background: $primary;
+            border-color: $primary;
+            color: $white;
+        }
+        &.pricing-item-secondary {
+            background: $secondary;
+            border-color: $secondary;
+            color: $white;
+        }
+        &.pricing-item-success {
+            background: $success;
+            border-color: $success;
+            color: $white;
+        }
+        &.pricing-item-warning {
+            background: $warning;
+            border-color: $warning;
+            color: $white;
+        }
+        &.pricing-item-danger {
+            background: $danger;
+            border-color: $danger;
+            color: $white;
+        }
+        &.pricing-item-info {
+            background: $info;
+            border-color: $info;
+            color: $white;
+        }
+    }
+    @media (max-width: $xl-max-width)  {
+        display: block;
+        padding: 0px;
+        .pricing-item {
+            margin-bottom: 20px !important;
+            border: 1px solid $gray-darken;
+            border-radius: 6px !important;
+            &.pricing-item-featured {
+                margin-top: 0px;
+            }
+        }
+    }
+}

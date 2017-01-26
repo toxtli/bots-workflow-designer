@@ -1,0 +1,33 @@
+@import '../mixins';
+
+/*
+ * CALENDAR
+ */
+
+.app-calendar {
+    margin: -25px -25px -26px -26px;
+    .fc-toolbar {
+        padding: 20px 20px 0px;
+    }
+    @media (max-width: $md-max-width) {
+        margin: -25px -26px -26px -26px;
+    }
+    @media (max-width: $xs-max-width) {
+        margin: -25px -21px -21px -21px;
+    }
+}
+
+.app-calendar-list {
+    .checkbox {
+        margin-bottom: 0px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    @media (max-width: $md-max-width) {
+        li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    }
+}

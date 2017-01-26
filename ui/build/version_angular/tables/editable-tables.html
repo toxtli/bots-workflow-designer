@@ -1,0 +1,161 @@
+<div class="page-content-inner">
+
+    <!--  -->
+    <section class="panel">
+        <div class="panel-heading">
+            <h3>
+                Editable Tables
+                <sup>
+                    <small><a href="http://mindmup.github.io/editable-table/" target="_blank" class="link-underlined">Official Documentation</a></small>
+                </sup>
+            </h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>Basic Editable Table</h4>
+                    <p>Move around with tab key, arrow keys or mouse clicks and start typing to edit</p>
+                    <p>Modifiers: <code>.editable-table</code>, see documentation</p>
+                    <br />
+                    <div class="table-responsive margin-bottom-50">
+                        <table class="table table-hover nowrap editable-table" id="example1">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Date</th>
+                                <th>Salary</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Date</th>
+                                <th>Salary</th>
+                            </tr>
+                            </tfoot>
+                            <tbody>
+                            <tr>
+                                <td>Damon</td>
+                                <td>5516 Adolfo Green</td>
+                                <td>Littelhaven</td>
+                                <td>85</td>
+                                <td>2014/06/13</td>
+                                <td>$553,536</td>
+                            </tr>
+                            <tr>
+                                <td>Torrey</td>
+                                <td>1995 Richie Neck</td>
+                                <td>West Sedrickstad</td>
+                                <td>77</td>
+                                <td>2014/09/12</td>
+                                <td>$243,577</td>
+                            </tr>
+                            <tr>
+                                <td>Miracle</td>
+                                <td>176 Hirthe Squares</td>
+                                <td>Ryleetown</td>
+                                <td>82</td>
+                                <td>2013/09/27</td>
+                                <td>$784,802</td>
+                            </tr>
+                            <tr>
+                                <td>Wilhelmine</td>
+                                <td>44727 O&#x27;Hara Union</td>
+                                <td>Dibbertfurt</td>
+                                <td>68</td>
+                                <td>2013/06/28</td>
+                                <td>$207,291</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>Modifiers from Basic Tables</h4>
+                    <p>Modifier: <code>.table-inverse</code>, <code>.thead-default</code>, <code>.thead-inverse</code>, <code>.table-striped</code>, <code>.table-hovered</code></p>
+                    <br />
+                    <div class="table-responsive margin-bottom-50">
+                        <table class="table table-hover nowrap editable-table table-inverse" id="example2">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Date</th>
+                                <th>Salary</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Date</th>
+                                <th>Salary</th>
+                            </tr>
+                            </tfoot>
+                            <tbody>
+                            <tr>
+                                <td>Damon</td>
+                                <td>5516 Adolfo Green</td>
+                                <td>Littelhaven</td>
+                                <td>85</td>
+                                <td>2014/06/13</td>
+                                <td>$553,536</td>
+                            </tr>
+                            <tr>
+                                <td>Torrey</td>
+                                <td>1995 Richie Neck</td>
+                                <td>West Sedrickstad</td>
+                                <td>77</td>
+                                <td>2014/09/12</td>
+                                <td>$243,577</td>
+                            </tr>
+                            <tr>
+                                <td>Miracle</td>
+                                <td>176 Hirthe Squares</td>
+                                <td>Ryleetown</td>
+                                <td>82</td>
+                                <td>2013/09/27</td>
+                                <td>$784,802</td>
+                            </tr>
+                            <tr>
+                                <td>Wilhelmine</td>
+                                <td>44727 O&#x27;Hara Union</td>
+                                <td>Dibbertfurt</td>
+                                <td>68</td>
+                                <td>2013/06/28</td>
+                                <td>$207,291</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End  -->
+
+</div>
+
+<!-- Page Scripts -->
+<script>
+    $(function(){
+
+        $('#example1').editableTableWidget();
+
+        $('#example2').editableTableWidget();
+
+    })
+</script>
+<!-- End Page Scripts -->

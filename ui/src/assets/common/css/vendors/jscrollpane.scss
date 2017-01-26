@@ -1,0 +1,71 @@
+@import '../mixins';
+
+/*
+ * JSCROLLPANE
+ */
+
+.jspScrollable {
+    outline: none;
+    &:hover {
+        .jspVerticalBar {
+            opacity: .7;
+            @include transition-very-slow();
+        }
+        .jspHorizontalBar {
+            opacity: .7;
+            @include transition-very-slow();
+        }
+    }
+    .jspTrack {
+        left: -1px !important;
+    }
+    .jspVerticalBar {
+        background: transparent;
+        width: 3px;
+        opacity: 0;
+        @include transition-slow();
+    }
+    .jspHorizontalBar {
+        background: transparent;
+        height: 4px;
+        opacity: 0;
+        bottom: 1px;
+        @include transition-slow();
+        .jspDrag:after {
+            background: $gray-darken;
+            top: 0px;
+            bottom: 0px;
+        }
+    }
+    .jspPane {
+        width: 100% !important;
+    }
+    .jspCap {
+        display: none;
+    }
+    .jspTrack {
+        background: transparent;
+        position: relative;
+        width: 2px;
+        left: -5px;
+    }
+    .jspDrag {
+        background: transparent;
+        position: relative;
+        top: 0;
+        left: -1px;
+        width: 5px;
+        cursor: pointer;
+        border-radius: 0px;
+        &:after {
+            display: block;
+            content: '';
+            background: $gray-darken;
+            position: absolute;
+            width: 100%;
+            top: 4px;
+            bottom: 4px;
+            border-radius: 20px;
+        }
+    }
+}

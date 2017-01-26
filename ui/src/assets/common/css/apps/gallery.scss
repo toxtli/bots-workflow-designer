@@ -1,0 +1,55 @@
+@import '../mixins';
+
+/*
+ * GALLERY
+ */
+
+.app-gallery {
+    .app-gallery-item {
+        float: left;
+        width: 200px;
+        height: 160px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        background-position: center;
+        background-size: cover;
+        @media (max-width: $sm-max-width) {
+            width: 100%;
+            height: 270px;
+        }
+        @include transition-fast();
+        &:hover {
+            transform: scale(1.1);
+            z-index: 2;
+            .app-gallery-item-hover {
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                padding-top: 62px;
+                background: rgba($black, .8);
+            }
+        }
+        .app-gallery-item-hover {
+            display: none;
+        }
+        &.edit {
+            &:before {
+                position: absolute;
+                top: -15px;
+                right: -15px;
+                width: 0px;
+                height: 0px;
+                content: '';
+                z-index: 3;
+                border: 15px solid transparent;
+                border-bottom-color: $primary;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

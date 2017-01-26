@@ -1,0 +1,54 @@
+/*
+ * FORM VALIDATION
+ */
+.form-group {
+    position: relative;
+}
+
+.form-control-error {
+    background: #fb434a;
+    padding: 5px 8px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    position: absolute;
+    right: 0;
+    bottom: 37px;
+    margin-bottom: 8px;
+    max-width: 230px;
+    font-size: 80%;
+    z-index: 1;
+}
+
+.form-control-error:after {
+    width: 0px;
+    height: 0px;
+    content: '';
+    display: block;
+    border-style: solid;
+    border-width: 5px 5px 0;
+    border-color: #fb434a transparent transparent;
+    position: absolute;
+    right: 20px;
+    bottom: -4px;
+    margin-left: -5px;
+}
+
+.form-control-error ul {
+    list-style: none;
+    color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+}
+
+.form-control-error-list ul {
+    list-style: none;
+    color: #fb434a;
+    padding: 0px;
+    margin: 5px 0px 0px 0px;
+    font-size: 80%;
+    font-weight: 400;
+}
+
+.has-danger .select2-selection--single, .has-danger .select2-selection--multiple {
+    border-color: #fb434a !important;
+}

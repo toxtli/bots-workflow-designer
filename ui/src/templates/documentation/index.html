@@ -1,0 +1,157 @@
+<div class="page-content-inner">
+
+    <!-- Documentation -->
+    <section class="panel panel-with-borders">
+        <div class="panel-heading">
+            <h2>
+                <small class="pull-right font-size-14 display-block margin-top-5">Version 1.3.0</small>
+                Clean UI Documentation
+            </h2>
+        </div>
+        <div class="panel-body">
+            <h5>
+                Thanks for Purchasing Clean UI. Clean UI is a simple, clean, and responsive admin template based on Boostrap 4. Built with HTML, CSS (SASS), jQuery and Angular (optional)
+                <div class="margin-bottom-10"><!-- --></div>
+                If you really like Clean UI, please don’t forget <a href="https://themeforest.net/downloads" class="link-blue link-underlined" target="_blank">rate it</a> —
+                <span class="text-nowrap">
+                    <span class="icmn-star-full color-orange font-size-14"></span>
+                    <span class="icmn-star-full color-orange font-size-14"></span>
+                    <span class="icmn-star-full color-orange font-size-14"></span>
+                    <span class="icmn-star-full color-orange font-size-14"></span>
+                    <span class="icmn-star-full color-orange font-size-14"></span> !
+                </span>
+                <div class="margin-bottom-10"><!-- --></div>
+                It will help us for future updates. Thank you!
+            </h5>
+            <br />
+            <h3>Introduction</h3>
+            <p>Clean UI – a modern professional admin template, based on Bootstrap 4 framework. Clean UI is a powerful
+                and super flexible tool, which suits best for any kind of web application: SPA; CRM; CMS; Admin Panels;
+                Dashboards; etc. Fully responsive, which means that it looks perfect on mobiles and tablets.</p>
+            <p>Template includes Angular Starter Kit – a set of templates, that will make your developer's life much easier.</p>
+            <p>Clean UI is fully based on SASS pre-processor, includes 50+ commented SASS files. Each file
+                corresponds to a single component, layout, page, plugin or extension – so you can easily find necessary
+                piece of code and edit it for your needs. The package includes both normal and minified CSS files, compiled from SASS.</p>
+            <br />
+            <h3>Install Node.js, Bower, Gulp</h3>
+            <p>Use of these tools is completely optional.</p>
+            <p>Gulp is the build system used to build and preview your project. Bower is a package manager is used for
+                dependency management, so that you no longer have to manually download and manage your scripts.</p>
+            <ul>
+                <li>Node.js and NPM. You can download Node.js from here <a href="https://nodejs.org" class="link-blue link-underlined">https://nodejs.org</a>. Npm comes bundled with Node.js</li>
+                <li>Next you need to install bower and gulp using terminal command <code>npm install --global bower gulp</code></li>
+                <li>Finally run <code>npm install</code> and <code>bower install</code> from the root of your project to install all the necessary dependencies</li>
+            </ul>
+            <p>Once you have all tools and dependencies installed you can use this command in your project:</p>
+            <ul>
+                <li><code>gulp</code> launches a localhost preview of your app (with Livereload) and will compile either your SASS files to CSS, and create production files</li>
+            </ul>
+            <br />
+            <h3>Options</h3>
+            <h5>Color Schemes</h5>
+            <p>
+                Optional classes applied to <code>body</code> : <code>.theme-default</code> (light), <code>.theme-dark</code>, <code>.theme-green</code>, <code>.theme-blue</code>, <code>.theme-red</code>, <code>.theme-orange</code>
+            </p>
+            <br />
+            <h5>Main Menu Position (Vertical or Horizontal)</h5>
+            <p>
+                Optional classes applied to <code>body</code> : <code>.menu-left</code>, <code>.menu-top</code>
+            </p>
+            <br />
+            <h5>Boxed Version (applied to Vertical or Horizontal Main Menu)</h5>
+            <p>
+                Optional classes applied to <code>body</code> : <code>.layout-boxed</code>
+            </p>
+            <br />
+            <h5>Iconbar Main Menu (applied to Vertical Main Menu)</h5>
+            <p>
+                Optional classes applied to <code>body</code> : <code>.menu-iconbar</code></code>
+            </p>
+            <br />
+            <h5>Fixed Top Menu</h5>
+            <p>
+                Optional classes applied to <code>body</code> : <code>.menu-static</code>, <code>.menu-fixed</code>
+            </p>
+            <br />
+            <h5>Super Clean Mode</h5>
+            <p>
+                Optional classes applied to <code>body</code> : <code>.mode-superclean</code>, <code>.mode-default</code>
+            </p>
+            <br />
+            <h5>Inversed Colors (Dark Content Container)</h5>
+            <p>
+                Optional classes applied to <code>body</code> : <code>.theme-inverse</code>
+            </p>
+            <br />
+            <h5>Colorful Menu</h5>
+            <p>
+                Optional classes applied to <code>nav.left-menu .left-menu-list-root > li</code> :
+                <code>.left-menu-list-color-primary</code>, <code>.left-menu-list-color-secondary</code>, <code>.left-menu-list-color-default</code>, <code>.left-menu-list-color-info</code>,
+                <code>.left-menu-list-color-success</code>, <code>.left-menu-list-color-warning</code>, <code>.left-menu-list-color-danger</code>, <code>.left-menu-list-color-yellow</code>
+            </p>
+            <br />
+            <h3>Structure</h3>
+<pre>
+cleanui/                            // root folder
++
++
+├─build/                            // folder with builded (ready to use) files
+│  ├─ assets/                       // assets folder
+│  │  ├─ common/                    // cleanui related files
+│  │  │  ├─ css/                    // styles folder
+│  │  │  │  ├─ source/              // source styles
+│  │  │  │  │  ├─ */                // folders with components, forms, global, etc css styles
+│  │  │  │  │  └─ main.css          // css file that includes all other css files
+│  │  │  │  └─ main.min.css         // minified and compiled css files
+│  │  │  ├─ fonts/                  // fonts and icon fonts folder
+│  │  │  ├─ img/                    // images folder
+│  │  │  └─ js/                     // js folder
+│  │  │     └─ common.js            // cleanui related js file
+│  │  └─ vendors/                   // third party plugins, copied by bower from /src/assets/vendors folder
+│  ├─ version_angular/              // angular version
+│  │  ├─ */                         // folders with page templates for angular
+│  │  └─ index.html                 ██ index angular file, runs only in web-server environment or get CORS error
+│  └─ version_html/                 // html version
+│     ├─ *                          // html pages
+│     └─ index.html                 ██ index html file
++
++
+├─src/                              // source files
+│  ├─ assets/                       // assets folder
+│  │  ├─ common/                    // cleanui related files
+│  │  │  ├─ css/                    // styles folder
+│  │  │  │  ├─ source/              // source styles
+│  │  │  │  │  ├─ */                // folders with components, forms, global, etc scss styles
+│  │  │  │  │  ├─ main.scss         // sass file that includes all other css files
+│  │  │  │  │  └─ mixins.scss       // sass with mixins and variables
+│  │  │  ├─ fonts/                  // fonts and icon fonts folder
+│  │  │  ├─ img/                    // images folder
+│  │  │  └─ js/                     // js folder
+│  │  │     └─ common.js            // cleanui related js file
+│  │  └─ vendors/                   // third party plugins
+│  │     ├─ bower/                  // bower added plugins, copied by bower to /build/assets/vendors folder
+│  │     └─ manual/                 // hand managed plugins, copied by bower to /build/assets/vendors folder
+│  ├─ templates/                    // cleanui page templates
+│  │  └─ */                         // cleanui page templates, grouped by type
+│  ├─ version_angular/              // cleanui page templates (structure folder)
+│  │  ├─ */                         // angular version files that includes cleanui templates
+│  │  ├─ _*                         // angular version related blocks
+│  │  └─ index.html                 // index angular file
+│  └─ version_html/                 // cleanui page templates (structure folder)
+│     ├─ _*                         // html version related blocks
+│     └─ *                          // html version files that includes cleanui templates
++
++
+├─ .bowerrc                         // bower config: plugins install path
+├─ bower.json                       // bower config: plugins list
+├─ gulpfile.js                      // gulp config: task configuration
+└─ package.json                     // npm config: dependencies list
+</pre>
+            <br />
+            <h3>Support</h3>
+            <a href="https://themeforest.net/item/clean-ui-premium-bootstrap-4-admin-template-angular-starter-kit/16678285/support" target="_blank" class="link-blue link-underlined">Visit Clean UI Support Dashboard</a>
+        </div>
+    </section>
+    <!-- End Documentation -->
+
+</div>

@@ -1,0 +1,96 @@
+@import '../mixins';
+
+/*
+ * RED THEME
+ */
+
+$color1: #fff;
+$color2: #d26464;
+
+
+.theme-red {
+    &.layout-boxed.menu-top {
+        nav.left-menu {
+            border-left: none;
+        }
+    }
+    nav.left-menu {
+        .jspDrag {
+            opacity: .3;
+            &:after {
+                background: $black-lighten-more-more;
+            }
+        }
+        .logo-container {
+            background: $color2 !important;
+            .logo {
+                img {
+                    display: none;
+                    &.logo-inverse {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .left-menu-list {
+            li {
+                .left-menu-link {
+                    .left-menu-link-icon {
+                        color: $black-lighten-more-more;
+                    }
+                    &:hover {
+                        background: $color1;
+                        color: $black-lighten;
+                        .left-menu-link-icon {
+                            color: $black;
+                        }
+                    }
+                    &:after {
+                        border-left-color: $gray-darken;
+                    }
+                }
+                &.left-menu-list-active {
+                    .left-menu-link {
+                        color: $white;
+                        background: $color2 !important;
+                        .left-menu-link-icon {
+                            color: $white !important;
+                        }
+                    }
+                }
+                &.left-menu-list-opened {
+                    background: $color2 !important;
+                    > .left-menu-link {
+                        color: $white !important;
+                        background: $color2 !important;
+                        &:hover {
+                            background: $color2 !important;
+                        }
+                        .left-menu-link-icon {
+                            color: $gray !important;
+                        }
+                    }
+                }
+                &.left-menu-list-submenu {
+                    .left-menu-item {
+                        color: $white;
+                    }
+                    .left-menu-list {
+                        .left-menu-link {
+                            color: $white;
+                            &:hover {
+                                background: lighten($color2, 10%) !important;
+                            }
+                        }
+                        background: $color2;
+                    }
+                }
+            }
+        }
+    }
+    nav.top-menu {
+        &:before {
+            display: none;
+        }
+    }
+}

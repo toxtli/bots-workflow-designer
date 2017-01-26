@@ -1,0 +1,25 @@
+/*
+ * CHECKBOXES & RADIOS
+ */
+.radio, .checkbox {
+    display: inline-block;
+}
+
+.radio label input[type=radio], .radio label input[type=checkbox], .checkbox label input[type=radio], .checkbox label input[type=checkbox] {
+    margin-right: 5px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+label[disabled] {
+    cursor: not-allowed;
+    color: #bbb8cb;
+}
+
+label[disabled].btn {
+    opacity: .6;
+    cursor: not-allowed;
+}

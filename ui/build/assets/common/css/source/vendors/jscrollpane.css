@@ -1,0 +1,87 @@
+/*
+ * JSCROLLPANE
+ */
+.jspScrollable {
+    outline: none;
+}
+
+.jspScrollable:hover .jspVerticalBar {
+    opacity: .7;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.jspScrollable:hover .jspHorizontalBar {
+    opacity: .7;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.jspScrollable .jspTrack {
+    left: -1px !important;
+}
+
+.jspScrollable .jspVerticalBar {
+    background: transparent;
+    width: 3px;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.jspScrollable .jspHorizontalBar {
+    background: transparent;
+    height: 4px;
+    opacity: 0;
+    bottom: 1px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.jspScrollable .jspHorizontalBar .jspDrag:after {
+    background: #dfe4ed;
+    top: 0px;
+    bottom: 0px;
+}
+
+.jspScrollable .jspPane {
+    width: 100% !important;
+}
+
+.jspScrollable .jspCap {
+    display: none;
+}
+
+.jspScrollable .jspTrack {
+    background: transparent;
+    position: relative;
+    width: 2px;
+    left: -5px;
+}
+
+.jspScrollable .jspDrag {
+    background: transparent;
+    position: relative;
+    top: 0;
+    left: -1px;
+    width: 5px;
+    cursor: pointer;
+    -webkit-border-radius: 0px;
+            border-radius: 0px;
+}
+
+.jspScrollable .jspDrag:after {
+    display: block;
+    content: '';
+    background: #dfe4ed;
+    position: absolute;
+    width: 100%;
+    top: 4px;
+    bottom: 4px;
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
+}

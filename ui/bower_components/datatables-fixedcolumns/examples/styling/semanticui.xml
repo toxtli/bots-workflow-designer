@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html-wide" table-class="ui table nowrap" order="17" framework="semanticui">
+
+<css lib="datatables fixedcolumns">
+	/* force scrolling for demo */
+	div.dataTables_wrapper {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+</css>
+<js lib="jquery datatables fixedcolumns">
+<![CDATA[
+$(document).ready(function() {
+	var table = $('#example').DataTable( {
+		scrollY:        "300px",
+		scrollX:        true,
+		scrollCollapse: true,
+		paging:         false,
+		fixedColumns:   true
+	} );
+} );
+]]>
+</js>
+
+<title lib="FixedColumns">Semantic UI</title>
+
+<info><![CDATA[
+
+This example shows DataTables and the FixedColumns extension being used with [Semantic UI](http://semantic-ui.com) providing the styling. The DataTables / Semantic UI integration provides seamless integration for DataTables to be used in a Semantic UI page.
+
+]]></info>
+
+</dt-example>

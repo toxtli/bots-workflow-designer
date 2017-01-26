@@ -1,0 +1,372 @@
+{
+    "modules": [{
+        "name": "user",
+        "class": "UserRequesterModule"
+    },{
+        "name": "generator",
+        "class": "ProfilesGeneratorModule"
+    },{
+        "name": "creator",
+        "class": "BotsCreatorModule"
+    },{
+        "name": "finder",
+        "class": "ProfilesFinderModule"
+    },{
+        "name": "connection",
+        "class": "ConnectionRequesterModule"
+    },{
+        "name": "extractor",
+        "class": "ProfilesExtractorModule"
+    },{
+        "name": "messenger",
+        "class": "MessengerModule"
+    }],
+    "fields": {
+        "user": {
+            "platforms": {
+                "flow": "in",
+                "value": "Linkedin",
+                "typeSelected": "User",
+                "top": 0.33
+            },
+            "expertise": {
+                "flow": "in",
+                "value": "Software Enginneer",
+                "typeSelected": "User",
+                "top": 0.45
+            },
+            "feedback": {
+                "flow": "in",
+                "value": "http://sheets.google.com/",
+                "typeSelected": "Linked",
+                "top": 0.58
+            },
+            "results": {
+                "flow": "out",
+                "value": "",
+                "typeSelected": "Table",
+                "top": 0.70
+            }
+        },
+        "generator": {
+            "platforms": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.30
+            },
+            "expertise": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.42
+            },
+            "gender": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "User"
+            },
+            "feedback": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.65
+            },
+            "profiles": {
+                "flow": "out",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.76
+            }
+        },
+        "creator": {
+            "platforms": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.39
+            },
+            "profiles": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.53
+            },
+            "bots": {
+                "flow": "out",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.68
+            }
+        },
+        "finder": {
+            "bots": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.30
+            },
+            "platforms": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.41
+            },
+            "expertise": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.53
+            },
+            "location": {
+                "flow": "in",
+                "value": "United States",
+                "typeSelected": "User"
+            },
+            "contacts": {
+                "flow": "out",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.75
+            }
+        },
+        "connection": {
+            "bots": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.31
+            },
+            "contacts": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.43
+            },
+            "message": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "User"
+            },
+            "accepted": {
+                "flow": "out",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.43
+            }
+        },
+        "extractor": {
+            "bots": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.39
+            },
+            "accepted": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.53
+            },
+            "userdata": {
+                "flow": "out",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.67
+            }
+        },
+        "messenger": {
+            "bots": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.28
+            },
+            "userdata": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.39
+            },
+            "feedback": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.50
+            },
+            "message": {
+                "flow": "in",
+                "value": "",
+                "typeSelected": "User"
+            },
+            "results": {
+                "flow": "out",
+                "value": "",
+                "typeSelected": "Linked",
+                "top": 0.78
+            }
+        }
+    },
+    "connections": [
+        {
+            "from": {
+                "window": "user",
+                "variable": "platforms"
+            },
+            "to": {
+                "window": "generator",
+                "variable": "platforms"
+            }
+        },
+        {
+            "from": {
+                "window": "user",
+                "variable": "expertise"
+            },
+            "to": {
+                "window": "generator",
+                "variable": "expertise"
+            }
+        },
+        {
+            "from": {
+                "window": "user",
+                "variable": "feedback"
+            },
+            "to": {
+                "window": "generator",
+                "variable": "feedback"
+            }
+        },
+        {
+            "from": {
+                "window": "generator",
+                "variable": "platforms"
+            },
+            "to": {
+                "window": "creator",
+                "variable": "platforms"
+            }
+        },
+        {
+            "from": {
+                "window": "generator",
+                "variable": "expertise"
+            },
+            "to": {
+                "window": "finder",
+                "variable": "expertise"
+            }
+        },
+        {
+            "from": {
+                "window": "generator",
+                "variable": "feedback"
+            },
+            "to": {
+                "window": "messenger",
+                "variable": "feedback"
+            }
+        },
+        {
+            "from": {
+                "window": "generator",
+                "variable": "profiles"
+            },
+            "to": {
+                "window": "creator",
+                "variable": "profiles"
+            }
+        },
+        {
+            "from": {
+                "window": "creator",
+                "variable": "platforms"
+            },
+            "to": {
+                "window": "finder",
+                "variable": "platforms"
+            }
+        },
+        {
+            "from": {
+                "window": "creator",
+                "variable": "bots"
+            },
+            "to": {
+                "window": "finder",
+                "variable": "bots"
+            }
+        },
+        {
+            "from": {
+                "window": "finder",
+                "variable": "bots"
+            },
+            "to": {
+                "window": "connection",
+                "variable": "bots"
+            }
+        },
+        {
+            "from": {
+                "window": "finder",
+                "variable": "contacts"
+            },
+            "to": {
+                "window": "connection",
+                "variable": "contacts"
+            }
+        },
+        {
+            "from": {
+                "window": "connection",
+                "variable": "bots"
+            },
+            "to": {
+                "window": "extractor",
+                "variable": "bots"
+            }
+        },
+        {
+            "from": {
+                "window": "connection",
+                "variable": "accepted"
+            },
+            "to": {
+                "window": "extractor",
+                "variable": "accepted"
+            }
+        },
+        {
+            "from": {
+                "window": "extractor",
+                "variable": "bots"
+            },
+            "to": {
+                "window": "messenger",
+                "variable": "bots"
+            }
+        },
+        {
+            "from": {
+                "window": "extractor",
+                "variable": "userdata"
+            },
+            "to": {
+                "window": "messenger",
+                "variable": "userdata"
+            }
+        },
+        {
+            "from": {
+                "window": "messenger",
+                "variable": "results"
+            },
+            "to": {
+                "window": "user",
+                "variable": "results"
+            }
+        }
+    ]
+}

@@ -1,0 +1,386 @@
+@import '../mixins';
+
+/*
+ * THEME INVERSE
+ */
+
+
+.theme-inverse {
+    background: lighten($black, 9%);
+    color: $black-lighten-more;
+    .panel {
+        background: lighten($black, 3%);
+        border-color: lighten($black, 9%);
+        &.panel-with-borders {
+            > .panel-heading {
+                border-color: lighten($black, 9%);
+            }
+            > .panel-footer {
+                border-color: lighten($black, 9%);
+            }
+        }
+    }
+    .widget {
+        background: lighten($black, 3%);
+        border-color: lighten($black, 9%);
+        .widget-header {
+            border-color: lighten($black, 9%);
+        }
+    }
+    .page-content {
+        background: lighten($black, 9%);
+        .ct-label {
+            color: $black-lighten-more;
+        }
+        .ct-grid {
+            stroke: $black-lighten;
+        }
+    }
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: $black-lighten-more-more;
+    }
+    code {
+        color: $black-lighten-more-more;
+        background: $black-lighten;
+    }
+    .dropdown .dropdown-inline-button:hover, .dropdown .dropdown-inline-button:focus,
+    .dropdown .dropdown-inline-button:active {
+        color: $black-lighten-more-more;
+    }
+    .nav-tabs .nav-item.open .nav-link, .nav-tabs .nav-item.open .nav-link:focus,
+    .nav-tabs .nav-item.open .nav-link:hover, .nav-tabs .nav-link.active,
+    .nav-tabs .nav-link.active:focus, .nav-tabs .nav-link.active:hover {
+        background: transparent;
+        color: $black-lighten-more-more;
+    }
+    .nav-tabs-horizontal .nav-tabs {
+        border-color: $black-lighten-more-more;
+    }
+    .step-block {
+        background: lighten($black, 3%);
+    }
+    .widget-four .step-block {
+        border-color: $black;
+    }
+    .btn.btn-default-outline, .btn.btn-primary-outline, .btn.btn-secondary-outline, .btn.btn-success-outline,
+    .btn.btn-info-outline, .btn.btn-warning-outline, .btn.btn-danger-outline,
+    .open > .btn.btn-default-outline, .open > .btn.btn-primary-outline, .open > .btn.btn-secondary-outline,
+    .open > .btn.btn-success-outline, .open > .btn.btn-info-outline, .open > .btn.btn-warning-outline,
+    .open > .btn.btn-danger-outline {
+        background: transparent;
+    }
+    .conversation-block .conversation-item .s2 {
+        background: lighten($black, 9%);
+        &:after {
+            border-right-color: lighten($black, 9%);
+        }
+    }
+    .btn, .open > .btn {
+        background: transparent;
+        border-color: lighten($black, 9%);
+        &:hover, &:active, &:focus, &:hover:active {
+            background: lighten($black, 9%);
+            border-color: lighten($black, 9%);
+        }
+    }
+    .form-control {
+        background: lighten($black, 9%);
+        border-color: lighten($black, 9%);
+        color: $black-lighten-more !important;
+
+    }
+    input::-webkit-input-placeholder, input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
+        color: lighten($black, 20%);
+    }
+    &.single-page {
+        .form-control {
+            background: $white;
+            border-color: $white;
+            color: $black;
+        }
+        input::-webkit-input-placeholder, input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
+            color: lighten($black, 12%);
+        }
+    }
+    .fc-event {
+        border: none;
+    }
+    .fc-unthemed .fc-divider, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td,
+    .fc-unthemed th, .fc-unthemed thead {
+        border-color: lighten($black, 9%);
+    }
+    .page-content .jspContainer:hover .jspVerticalBar {
+        opacity: .1 !important;
+    }
+    .table td, .table th {
+        border-color: lighten($black, 9%);
+    }
+    .table.table-hover tbody tr:hover {
+        background: lighten($black, 9%);
+    }
+    pre {
+        background: lighten($black, 9%);
+        color: $black-lighten-more;
+    }
+    .input-group-addon {
+        background: lighten($black, 9%);
+        border-color: lighten($black, 9%);
+        color: $black-lighten-more;
+    }
+    .form-input-icon > i {
+        color: $black-lighten-more;
+    }
+    select {
+        background: lighten($black, 9%) !important;
+    }
+    .form-actions {
+        border-color: lighten($black, 9%);
+    }
+    .form-control:disabled, .form-control[readonly] {
+        background: lighten($black, 3%) !important;
+    }
+    .pagination {
+        .page-link {
+            border-color: lighten($black, 9%);
+            background: lighten($black, 9%);
+            &:hover, &:focus {
+                background: lighten($black, 12%);
+                border-color: lighten($black, 12%);
+            }
+        }
+        .page-item {
+            &.disabled {
+                .page-link {
+                    background: lighten($black, 3%) !important;
+                    border-color: lighten($black, 12%);
+                }
+            }
+            &.active {
+                .page-link {
+                    background: $primary;
+                    border-color: $primary;
+                }
+            }
+        }
+    }
+    .pager {
+        li > a {
+            border-color: $gray-darken;
+            color: $black-lighten-more;
+            &:hover, &:focus {
+                background: $default;
+                color: $white;
+                border-color: $default;
+            }
+        }
+    }
+    .nav-tabs-horizontal .nav-tabs {
+        border-color: lighten($black, 9%);
+    }
+    .nav-tabs-horizontal .nav-tabs .nav-item .nav-link:hover {
+        border-color: lighten($black, 20%);
+    }
+    .steps-inline .step-block {
+        background: lighten($black, 9%);
+    }
+    nav.top-menu {
+        background: lighten($black, 3%);
+        border: none !important;
+    }
+    &.layout-boxed.menu-top {
+        nav.top-menu {
+            border: none !important;
+        }
+        nav.menu-left {
+            border: none !important;
+        }
+    }
+    .dropdown-menu {
+        background: lighten($black, 3%);
+        border-color: lighten($black, 12%);
+        .dropdown-divider {
+            background: lighten($black, 12%);
+        }
+    }
+    .select2 {
+        .select2 .select2-selection--single {
+            border-color: lighten($black, 9%);
+        }
+        .select2-container, .select2-selection {
+            background: lighten($black, 9%);
+            border-color: lighten($black, 9%);
+        }
+        &.select2-container--disabled .select2-selection--single,
+        &.select2-container--disabled .select2-selection--multiple {
+            background: lighten($black, 3%);
+            border-color: lighten($black, 9%) !important;
+        }
+        .select2-selection--single .select2-selection__arrow b {
+            border-top-color: lighten($black, 20%) !important;
+        }
+    }
+    .select2-dropdown {
+        background: lighten($black, 9%);
+    }
+    .select2-container--default .select2-search--dropdown .select2-search__field {
+        background: lighten($black, 3%);
+        border-color: transparent !important;
+    }
+    .select2.select2-container--open .select2-selection {
+        border-bottom-color: lighten($black, 9%);
+    }
+    .select2-container .select2-results__option[aria-selected=true].select2-results__option--highlighted,
+    .select2-container .select2-results__option[aria-selected=true],
+    .select2-container .select2-results__option--highlighted {
+        background: lighten($black, 3%) !important;
+        color: $black-lighten-more !important;
+    }
+    .select2.select2-container--above.select2-container--open .select2-selection {
+        border-top-color: transparent !important;
+    }
+    .select2 .select2-selection--multiple .select2-selection__choice {
+        color: $black-lighten-more-more;
+        background: $black-lighten;
+        border: none;
+    }
+    .typeahead__container .typeahead__result .typeahead__list {
+        background: lighten($black, 9%);
+        border-top: none;
+    }
+    .typeahead__container .typeahead__result .typeahead__list .typeahead__item a {
+        color: $black-lighten-more;
+    }
+    .typeahead__container .typeahead__result .typeahead__list .typeahead__item:hover a {
+        background: lighten($black, 3%);
+        color: $black-lighten-more;
+    }
+    .bootstrap-datetimepicker-widget table td,
+    .bootstrap-datetimepicker-widget table th,
+    .bootstrap-datetimepicker-widget table .picker-switch {
+        color: $black-lighten-more;
+    }
+    .bootstrap-datetimepicker-widget .accordion-toggle span {
+        background: lighten($black, 9%);
+    }
+    .irs .irs-line {
+        background: lighten($black, 9%);
+    }
+    .irs .irs-grid-text {
+        color: $black-lighten;
+    }
+    .irs .irs-slider {
+        background: lighten($black, 20%);
+        &:hover, &.state_hover {
+            background: lighten($black, 25%) !important;
+        }
+    }
+    .irs .irs-min, .irs .irs-max {
+        background: lighten($black, 9%);
+    }
+    .popover {
+        border-color: lighten($black, 9%);
+        background: lighten($black, 3%);
+        &.left .tooltip-arrow,
+        &.bs-tether-element-attached-left .popover-arrow {
+            border-right-color: lighten($black, 20%) !important;
+            &:after {
+                border-right-color: lighten($black, 20%) !important;
+            }
+        }
+        &.right .tooltip-arrow,
+        &.bs-tether-element-attached-right .popover-arrow {
+            border-left-color: lighten($black, 20%) !important;
+            &:after {
+                border-left-color: lighten($black, 20%) !important;
+            }
+        }
+        &.top .tooltip-arrow,
+        &.bs-tether-element-attached-top .popover-arrow {
+            border-bottom-color: lighten($black, 20%) !important;
+            &:after {
+                border-bottom-color: lighten($black, 20%) !important;
+            }
+        }
+        &.bottom .tooltip-arrow,
+        &.bs-tether-element-attached-bottom .popover-arrow {
+            border-top-color: lighten($black, 20%) !important;
+            &:after {
+                border-top-color: lighten($black, 20%) !important;
+            }
+        }
+        .popover-title {
+            background: lighten($black, 20%);
+            border-bottom: 0px;
+        }
+    }
+    progress[value]::-webkit-progress-bar, progress {
+        background: lighten($black, 9%);
+    }
+    .panel-heading .step-block {
+        background: transparent !important;
+    }
+    .pager li>a, .pager li>span {
+        border: none;
+        background: lighten($black, 9%);
+        &:hover {
+            background: lighten($black, 12%);
+        }
+    }
+    .note-editor {
+        border-color: lighten($black, 9%) !important;
+        .note-codable {
+            outline: none;
+            background: lighten($black, 9%) !important;
+        }
+        .note-resizebar {
+            border-top: 1px solid lighten($black, 9%) !important;
+            background: lighten($black, 9%) !important;
+        }
+        .panel-heading {
+            background: lighten($black, 9%) !important;
+            border: none;
+        }
+        &.note-frame .note-editing-area .note-editable {
+            background: lighten($black, 9%) !important;
+            color: $black-lighten-more;
+        }
+    }
+    .dd-handle, .dd3-content {
+        background: lighten($black, 9%);
+        border: none;
+    }
+    .dd-placeholder, .dd-empty {
+        background: lighten($black, 20%);
+        border-color: lighten($black, 9%);
+    }
+    .layout-grid-example .row div {
+        background: lighten($black, 9%);
+        border-color: lighten($black, 3%);
+    }
+    .panel.panel-with-sidebar:before {
+        background: lighten($black, 9%);
+    }
+    .example-block {
+        border-color: lighten($black, 9%);
+    }
+    .example-icons-block li {
+        background: lighten($black, 9%);
+        &:hover {
+            background: lighten($black, 12%);
+        }
+    }
+    .well {
+        border: none;
+        background: lighten($black, 9%);
+    }
+    blockquote {
+        background: lighten($black, 9%);
+        border-left-color: lighten($black, 20%);
+        &.blockquote-right {
+            border-right-color: lighten($black, 20%);
+        }
+    }
+}

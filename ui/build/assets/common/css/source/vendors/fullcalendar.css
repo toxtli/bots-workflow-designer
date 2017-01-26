@@ -1,0 +1,288 @@
+/*
+ * FULLCALENDAR
+ */
+.fc-unthemed {
+    position: relative;
+    z-index: 50;
+}
+
+.fc-unthemed * {
+    outline: none !important;
+    -webkit-appearance: none !important;
+       -moz-appearance: none !important;
+            appearance: none !important;
+}
+
+.fc-unthemed .fc-axis {
+    padding: 0px 15px;
+}
+
+.fc-unthemed .fc-divider, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead {
+    border-color: #dfe4ed;
+}
+
+.fc-unthemed th {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+.fc-unthemed .jspVerticalBar {
+    z-index: 10;
+}
+
+.fc-unthemed .fc-toolbar {
+    margin-bottom: 0px;
+}
+
+.fc-unthemed .fc-toolbar h1, .fc-unthemed .fc-toolbar h2, .fc-unthemed .fc-toolbar h3, .fc-unthemed .fc-toolbar h4, .fc-unthemed .fc-toolbar h5, .fc-unthemed .fc-toolbar h6 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.fc-unthemed .fc-toolbar .fc-left, .fc-unthemed .fc-toolbar .fc-right, .fc-unthemed .fc-toolbar .fc-center {
+    margin-bottom: 10px;
+}
+
+.fc-unthemed .fc-toolbar .fc-center {
+    padding: 0px 20px;
+}
+
+.fc-unthemed .fc-state-default {
+    background: #acb7bf;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 10px 10px;
+    -webkit-border-radius: 3px !important;
+            border-radius: 3px !important;
+    text-shadow: none;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.fc-unthemed .fc-state-default:hover {
+    background: #c9d0d5;
+}
+
+.fc-unthemed .fc-state-active {
+    background-color: #01a8fe !important;
+    color: #ffffff !important;
+    text-shadow: none;
+}
+
+.fc-unthemed .fc-unthemed .fc-today {
+    background-color: #fff6da;
+}
+
+.fc-unthemed .fc-highlight {
+    background-color: #a0dfff;
+    border: solid 1px #01a8fe;
+}
+
+.fc-unthemed .fc-widget-header, .fc-unthemed .fc-widget-content {
+    margin-right: 0 !important;
+}
+
+.fc-unthemed .fc-scroller.jspScrollable {
+    overflow: hidden !important;
+}
+
+.fc-unthemed .fc-ltr .fc-time-grid .fc-event-container {
+    margin: 0;
+}
+
+.fc-unthemed .fc-time-grid-event .fc-time {
+    font-size: 1rem;
+}
+
+.fc-unthemed .fc-day-grid-event .fc-time {
+    font-weight: 600;
+}
+
+.fc-unthemed .fc-event {
+    background-color: #01a8fe;
+    border-color: #fff;
+    color: #ffffff;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    font-size: 14px;
+    padding: 7px;
+}
+
+.fc-unthemed .fc-event.event-clicked {
+    opacity: .7;
+    z-index: 30 !important;
+}
+
+.fc-unthemed .fc-event.fc-event-success {
+    background-color: #46be8a;
+}
+
+.fc-unthemed .fc-event.fc-event-secondary {
+    background-color: #6a7a84;
+}
+
+.fc-unthemed .fc-event.fc-event-danger {
+    background-color: #fb434a;
+}
+
+.fc-unthemed .fc-event.fc-event-warning {
+    background-color: #f39834;
+}
+
+.fc-unthemed .fc-event.fc-event-info {
+    background-color: #0190da;
+}
+
+.fc-unthemed .fc-event.fc-event-default {
+    background-color: #acb7bf;
+}
+
+.fc-unthemed a.fc-more {
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.fc-unthemed .fc-event {
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    padding: 0 8px;
+    margin: 1px 2px 0;
+}
+
+.fc-unthemed .fc-time-grid-event {
+    padding: 8px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+
+.fc-unthemed hr.fc-divider {
+    padding: 0px;
+}
+
+.fc-unthemed .fc-popover, .fc-popover {
+    width: 250px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: none;
+    border: none;
+}
+
+.fc-unthemed .fc-popover .fc-header, .fc-popover .fc-header {
+    -webkit-border-radius: 4px 4px 0 0;
+            border-radius: 4px 4px 0 0;
+    color: #fff;
+    background: #01a8fe;
+    padding: 6px 10px 6px 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .875rem;
+}
+
+.fc-unthemed .fc-popover .fc-header .fc-title, .fc-popover .fc-header .fc-title {
+    margin: 0;
+}
+
+.fc-unthemed .fc-popover .fc-header .fc-close, .fc-popover .fc-header .fc-close {
+    color: #fff;
+    font-size: .875rem;
+}
+
+.fc-unthemed .fc-popover .fc-body, .fc-popover .fc-body {
+    background: #fbfcfd;
+    border: solid 1px #dfe4ed;
+    border-top: none;
+    -webkit-border-radius: 0 0 4px 4px;
+            border-radius: 0 0 4px 4px;
+}
+
+.fc-unthemed .fc-popover .fc-event-container, .fc-popover .fc-event-container {
+    padding: 10px 12px;
+}
+
+.fc-unthemed .fc-popover .fc-h-event, .fc-popover .fc-h-event {
+    padding-left: 7px !important;
+    margin-left: 2px !important;
+}
+
+.fc-unthemed .fc-popover .text-center .btn, .fc-popover .text-center .btn {
+    margin: 0 4px;
+}
+
+.fc-popover.click {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    z-index: 50;
+    margin-left: -120px;
+    margin-top: 8px;
+    font-size: .9375rem;
+}
+
+.fc-popover.click .fc-header {
+    position: relative;
+    padding-right: 30px;
+}
+
+.fc-popover.click .fc-header:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    margin-left: -9px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 9px 9px 9px;
+    border-color: transparent transparent #01a8fe transparent;
+}
+
+.fc-popover.click .fc-header .cl {
+    border: none;
+    background: none;
+    padding: 0;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -7px;
+}
+
+.fc-popover.click .fc-body {
+    padding: 12px;
+}
+
+.fc-popover.click .fc-body p {
+    margin: 0 0 1em;
+}
+
+.fc-popover.click .fc-body .actions {
+    margin: 0 -12px 0 0;
+}
+
+.fc-popover.click .fc-body .actions li {
+    float: left;
+    margin: 0 12px 0 0;
+}
+
+.fc-popover.click .fc-body .actions li:last-child {
+    margin-right: 0;
+}
+
+.fc-popover.click .fc-body > .btn {
+    margin: 0 10px 0 0;
+}
+
+.fc-popover.click .fc-body .form-control {
+    font-size: .875rem;
+}
+
+.fc-popover.click .fc-body.remove-confirm, .fc-popover.click .fc-body.edit-event {
+    display: none;
+}

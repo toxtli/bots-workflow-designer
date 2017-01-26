@@ -1,0 +1,95 @@
+.demo {
+    /* for IE10+ touch devices */
+    touch-action:none;
+}
+
+/** ELEMENTS **/
+.drag-drop-demo .window {
+    background-color: white;
+    border: 1px solid #346789;
+    text-align: center;
+    z-index: 24;
+    cursor: pointer;
+    box-shadow: 2px 2px 19px #aaa;
+    -o-box-shadow: 2px 2px 19px #aaa;
+    -webkit-box-shadow: 2px 2px 19px #aaa;
+    -moz-box-shadow: 2px 2px 19px #aaa;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+    position: absolute;
+    color: black;
+    padding-top: 5px;
+    width: 435px;
+    height: 80px;
+    line-height: 12px;
+    -webkit-transition: -webkit-box-shadow 0.15s ease-in;
+    -moz-transition: -moz-box-shadow 0.15s ease-in;
+    -o-transition: -o-box-shadow 0.15s ease-in;
+    transition: box-shadow 0.15s ease-in;
+    overflow-y: auto;
+
+}
+
+.window:hover {
+    border:1px solid #123456;
+    box-shadow: 2px 2px 19px #444;
+    -o-box-shadow: 2px 2px 19px #444;
+    -webkit-box-shadow: 2px 2px 19px #444;
+    -moz-box-shadow: 2px 2px 19px #fff;
+    opacity:0.9;
+}
+
+
+.drag-drop-demo a, .drag-drop-demo a:visited {
+    color:#057D9F;
+}
+
+.drag-drop-demo a:hover {
+    color:orange;
+}
+
+/** LINKS IN WINDOWS **/
+.drag-locked { border:1px solid red; }
+.cmdLink { font-size:0.80em;}
+
+/** DRAG/DROP CLASSES **/
+.dragActive { border:2px dotted orange; }
+.dropHover { border:1px dotted red; }
+
+/** INFO WINDOW **/
+#list {
+    text-align: center;
+    display: none;
+    font-size: 90%;
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    margin-left: -250px;
+    top: 100px;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid #456;
+    opacity: 0.8;
+    border-radius: 8px;
+    color: #444;
+}
+#list table { width:100%;}
+#list table th, #list strong { color:black; font-size:12px; text-align: center; }
+
+path, .jtk-endpoint { cursor:pointer; }
+
+/** ELEMENT POSITIONS **/
+/* User Request */
+#user { top:20px; left:20px; height:430px; }
+/* Linkedin Messenger Bot */
+#messenger { top:20px; left:520px; height:510px; }
+/* Profile Extractor Bot */
+#extractor { top:20px; left:1020px; height:370px; }
+/* Connections requester bot */
+#connection { top:20px; left:1520px; height:460px; }
+/* Random profiles generator */
+#generator { top:540px; left:20px; height:480px; }
+/* Bots creator */
+#creator { top:540px; left:520px; height:370px; }
+/* Experts Finder Bot */
+#finder { top:540px; left:1020px; height:480px; }

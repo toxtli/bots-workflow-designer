@@ -1,0 +1,81 @@
+@import '../mixins';
+
+/*
+ * TEXT-EDITOR
+ */
+
+.note-popover {
+    display: none;
+    margin-top: 5px;
+}
+
+.note-editor {
+    border-color: $gray-darken !important;
+    .note-codable {
+        outline: none;
+        background: lighten($black, 3%) !important;
+    }
+    .note-resizebar {
+        border-top: 1px solid $gray-darken !important;
+        background: $white !important;
+        padding: 2px 0px 3px !important;
+        height: 12px !important;
+        border-radius: 0px 0px 3px 3px;
+    }
+    .panel-heading {
+        padding: 0px 5px;
+    }
+    .note-btn-group {
+        .dropdown-menu {
+            padding: 5px 10px;
+            blockquote {
+                padding: 5px 10px;
+            }
+        }
+    }
+    .note-popover .popover-content .note-color .dropdown-menu,
+    .panel-heading.note-toolbar .note-color .dropdown-menu {
+        min-width: 355px;
+    }
+    .note-popover .popover-content .note-para .dropdown-menu,
+    .panel-heading.note-toolbar .note-para .dropdown-menu {
+        min-width: 230px;
+    }
+    .note-popover .popover-content .dropdown-menu,
+    .panel-heading.note-toolbar .note-fontname .dropdown-menu {
+        min-width: 140px;
+    }
+    .note-color-reset {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        border-radius: 1px !important;
+        background: $default !important;
+        color: $white !important;
+    }
+    .dropdown-toggle {
+        padding-right: 4px;
+        &:after {
+            display: none;
+        }
+    }
+    .note-recent-color {
+        color: $default;
+    }
+    .note-toolbar {
+        padding: 5px 10px 10px 10px;
+        background: $white;
+        border-radius: 3px 3px 0px 0px;
+        border-bottom: 1px solid $gray-darken;
+    }
+}
+
+.note-editor {
+    div.panel-heading {
+        padding: 5px 10px 10px !important;
+        margin-left: 0px !important;
+        height: auto !important;
+    }
+    div.panel-body {
+        margin-left: 0px !important;
+    }
+}

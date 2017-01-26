@@ -1,0 +1,103 @@
+@import '../mixins';
+
+/*
+ * ION RANGE SLIDER
+ */
+
+.irs {
+    height: 55px;
+    .irs-with-grid {
+        height: 75px;
+    }
+    .irs-line {
+        height: 10px;
+        top: 33px;
+        background: $gray;
+        border-radius: 16px;
+    }
+    .irs-line-left {
+        height: 10px;
+    }
+    .irs-line-mid {
+        height: 10px;
+    }
+    .irs-line-right {
+        height: 10px;
+    }
+    .irs-bar {
+        height: 10px;
+        top: 33px;
+        background: $primary;
+    }
+    .irs-bar-edge {
+        height: 10px;
+        top: 33px;
+        width: 14px;
+        background: $primary;
+        border-radius: 16px 0 0 16px;
+    }
+    .irs-shadow {
+        height: 10px;
+        top: 33px;
+        background: $black-lighten;
+        opacity: 0.3;
+        border-radius: 5px;
+    }
+    .lt-ie9 .irs-shadow {
+        filter: alpha(opacity=30);
+    }
+    .irs-slider {
+        top: 25px;
+        width: 27px;
+        height: 27px;
+        background: $white;
+        border-radius: 27px;
+        -moz-border-radius: 27px;
+        box-shadow: 0 0 2px rgba(0,0,0,0.2), 0 3px 1px rgba(0,0,0,0.1);
+        cursor: pointer;
+    }
+    .irs-slider.state_hover, .irs-slider:hover {
+        background: $white;
+    }
+    .irs-min, .irs-max {
+        color: $black-lighten-more;
+        font-size: .875rem;
+        line-height: 1.333;
+        text-shadow: none;
+        top: 0;
+        padding: 1px 5px;
+        background: #e1e4e9;
+        border-radius: 3px;
+    }
+    .lt-ie9 .irs-min, .lt-ie9 .irs-max {
+        background: $gray;
+    }
+    .irs-from, .irs-to, .irs-single {
+        color: $white;
+        font-size: .875rem;
+        line-height: 1.333;
+        text-shadow: none;
+        padding: 1px 5px;
+        background: #00a8ff;
+        border-radius: 3px;
+    }
+    .lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single {
+        background: $gray-darken;
+    }
+    .irs-grid {
+        height: 27px;
+        bottom: -15px;
+    }
+    .irs-grid-pol {
+        opacity: 0.5;
+        background: #d0d3d8;
+    }
+    .irs-grid-pol.small {
+        background: #d0d3d8;
+    }
+    .irs-grid-text {
+        bottom: 3px;
+        color: #99a4ac;
+        font-size: .75rem;
+    }
+}

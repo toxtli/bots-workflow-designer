@@ -1,0 +1,24 @@
+@import '../mixins';
+
+/*
+ * CHECKBOXES & RADIOS
+ */
+
+.radio, .checkbox {
+    display: inline-block;
+    label {
+        input[type=radio], input[type=checkbox] {
+            margin-right: 5px;
+            display: inline-flex;
+        }
+    }
+}
+
+label[disabled] {
+    cursor: not-allowed;
+    color: $black-lighten-more-more;
+    &.btn {
+        opacity: .6;
+        cursor: not-allowed;
+    }
+}

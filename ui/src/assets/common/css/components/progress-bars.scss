@@ -1,0 +1,72 @@
+@import '../mixins';
+
+/*
+ * PROGRESS BARS
+ */
+
+.progress {
+    height: 18px;
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.progress-animation {
+    transition: all 0.1s !important;
+}
+
+.progress-primary[value]::-webkit-progress-value, .progress[value]::-webkit-progress-value  {
+    background-color: $primary;
+}
+
+.progress-primary[value]::-moz-progress-bar, .progress[value]::-moz-progress-bar {
+    background-color: $primary;
+}
+
+.progress-default[value]::-webkit-progress-value  {
+    background-color: $default;
+}
+
+.progress-default[value]::-moz-progress-bar {
+    background-color: $default;
+}
+
+.progress-secondary[value]::-webkit-progress-value  {
+    background-color: $secondary;
+}
+
+.progress-secondary[value]::-moz-progress-bar {
+    background-color: $secondary;
+}
+
+.progress-success[value]::-webkit-progress-value  {
+    background-color: $success;
+}
+
+.progress-success[value]::-moz-progress-bar {
+    background-color: $success;
+}
+
+.progress-danger[value]::-webkit-progress-value  {
+    background-color: $danger;
+}
+
+.progress-danger[value]::-moz-progress-bar {
+    background-color: $danger;
+}
+
+.progress-warning[value]::-webkit-progress-value  {
+    background-color: $warning;
+}
+
+.progress-warning[value]::-moz-progress-bar {
+    background-color: $warning;
+}
+
+.progress-info[value]::-webkit-progress-value  {
+    background-color: $info;
+}
+
+.progress-info[value]::-moz-progress-bar {
+    background-color: $info;
+}

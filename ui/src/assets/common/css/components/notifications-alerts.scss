@@ -1,0 +1,115 @@
+@import '../mixins';
+
+/*
+ * NOTIFICATIONS & ALERTS
+ */
+
+.alert {
+    border: none;
+    font-weight: normal;
+    color: $white;
+    .close {
+        color: $white;
+        opacity: .5;
+        outline: none !important;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    a, .alert-link {
+        font-weight: normal;
+        color: $white;
+        opacity: .7;
+        @include transition-middle();
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &.alert-default {
+        background: $default;
+    }
+    &.alert-primary {
+        background: $primary;
+    }
+    &.alert-secondary {
+        background: $secondary;
+    }
+    &.alert-success {
+        background: $success;
+    }
+    &.alert-info {
+        background: $info;
+    }
+    &.alert-warning {
+        background: $warning;
+    }
+    &.alert-danger {
+        background: $danger;
+    }
+}
+
+.sweet-overlay {
+    background: rgba($black, .3);
+}
+
+.sweet-alert {
+    h2 {
+        font-weight: 400;
+        position: relative;
+        margin: 30px 0px 15px;
+    }
+    p {
+        margin: 0px 0px 10px;
+    }
+    .lead {
+        font-weight: 400;
+        font-size: 18px;
+        color: $black-lighten;
+        margin-bottom: 20px;
+    }
+    .btn {
+        min-width: 150px;
+        border-radius: 3px;
+        box-shadow: none !important;
+        margin: 0px 5px 15px;
+        border: none !important;
+    }
+    .btn-success {
+        background: $success;
+    }
+    .btn-warning {
+        border-color: $warning;
+    }
+    .btn-danger {
+        border-color: $danger;
+    }
+    .btn-info {
+        border-color: $info;
+    }
+    .sa-icon.sa-success {
+        .line {
+            background-color: $success;
+        }
+        .placeholder {
+            border-color: $success;
+        }
+    }
+    .sa-icon.sa-warning {
+        border-color: $warning;
+        span {
+            background: $warning;
+        }
+    }
+    .sa-icon.sa-error {
+        border-color: $danger;
+        .line {
+            background-color: $danger;
+        }
+    }
+    .sa-icon.sa-info {
+        border-color: $info;
+        &:before, &:after {
+            background-color: $info;
+        }
+    }
+}

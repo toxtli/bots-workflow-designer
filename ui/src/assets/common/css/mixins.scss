@@ -1,0 +1,59 @@
+// Colors
+$white: #ffffff;
+$gray: #eceff4;
+$gray-lighten: lighten($gray, 2%);
+$gray-lighten-more: lighten($gray, 4%);
+$gray-darken: darken($gray, 4%);
+$gray-darken-more: darken($gray, 8%);
+$black: #24222f;
+$black-lighten: lighten($black, 20%);
+$black-lighten-more: lighten($black, 40%);
+$black-lighten-more-more: lighten($black, 60%);
+$blue: #0088ff;
+$blue-darken: darken($blue, 8%);
+$orange: #f2a654;
+$yellow: yellow;
+
+// Accent colors
+$default: #acb7bf;
+$primary: #01a8fe;
+$secondary: #6a7a84;
+$success: #46be8a;
+$info: #0190da;
+$warning: #f39834;
+$danger: #fb434a;
+
+// Transitions
+@mixin transition-fast() {
+    transition: all 0.05s ease-in-out;
+}
+@mixin transition-middle() {
+    transition: all 0.1s ease-in-out;
+}
+@mixin transition-slow() {
+    transition: all 0.2s ease-in-out;
+}
+@mixin transition-very-slow() {
+    transition: all 0.4s ease-in-out;
+}
+@mixin transition-menu() {
+  transition: transform 0.2s ease-in-out;
+}
+
+// Fonts
+$font-text: 'Lato', sans;
+
+// Rsponsive utils
+$xxl-min-width: 1600px;
+$xxl-max-width: 1599px;
+$xl-min-width: 1200px;
+$xl-max-width: 1199px;
+$md-min-width: 992px;
+$md-max-width: 991px;
+$sm-min-width: 768px;
+$sm-max-width: 767px;
+$xs-min-width: 544px;
+$xs-max-width: 543px;
+
+$px1336-min-width: 1366px;
+$px1336-max-width: 1365px;

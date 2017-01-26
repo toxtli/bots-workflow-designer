@@ -1,0 +1,2 @@
+exports.decode = function(text) {
+};

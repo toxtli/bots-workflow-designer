@@ -1,0 +1,192 @@
+@import '../mixins';
+
+/*
+ * GLOBAL RESPONSIVE STYLES
+ */
+
+@media (max-width: $sm-max-width) {
+    nav.top-menu {
+        left: 0px !important;
+        .menu {
+            padding: 21px 15px;
+        }
+        .menu-icon-container {
+            & + .menu {
+                margin-left: 65px;
+            }
+        }
+    }
+
+    nav.top-submenu, .top-submenu {
+        padding: 10px 10px 0px 10px;
+        &.top-submenu-with-background {
+            margin: -15px -15px 15px -15px;
+        }
+    }
+
+    nav.left-menu {
+        transform: translateX(-240px);
+        @include transition-menu();
+        & + .main-container {
+            margin-left: 0px;
+        }
+    }
+
+    .menu-static {
+        nav.top-menu {
+            margin-left: 0px !important;
+            z-index: 40;
+            position: relative;
+        }
+    }
+
+    .page-content {
+        padding: 15px;
+        margin-left: 0px !important;
+    }
+
+    .panel {
+        margin-bottom: 15px;
+        &.panel-with-sidebar {
+            &:before {
+                display: none;
+            }
+            .panel-heading, .panel-body, .panel-footer {
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+            .panel-sidebar {
+                float: none !important;
+                border-right: none !important;
+                border-left: none !important;
+                width: auto;
+                border-bottom: 1px solid $gray-darken;
+                margin-bottom: 0px !important;
+            }
+        }
+    }
+    body.menu-sliding {
+        nav.top-menu {
+            transition: transform 0.2s ease-in-out;
+        }
+        .page-content {
+            @include transition-menu();
+        }
+        nav.left-menu {
+            &.left-menu-showed {
+                & + * + .page-content,
+                & + nav.top-menu {
+                    transform: translateX(240px);
+                }
+                & + * + .page-content + .main-backdrop {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: $md-max-width) {
+    .sidebar-large {
+        &.panel {
+            margin-bottom: 15px;
+            &.panel-with-sidebar {
+                &:before {
+                    display: none;
+                }
+                .panel-heading, .panel-body, .panel-footer {
+                    margin-left: 0px !important;
+                    margin-right: 0px !important;
+                }
+                .panel-sidebar {
+                    float: none !important;
+                    width: auto;
+                    border-bottom: 1px solid $gray-darken;
+                    margin-bottom: 0px !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $xs-max-width) {
+    nav.top-submenu, .top-submenu {
+        &.top-submenu-with-background {
+            margin: -15px -.9375rem .9375rem -.9375rem;
+        }
+    }
+
+    nav.top-menu {
+        .menu {
+            padding-left: 0px;
+        }
+    }
+
+    .page-content {
+        padding: .9375rem;
+    }
+
+    .panel {
+        margin-bottom: .9375rem;
+        .panel {
+            margin-bottom: 20px;
+        }
+        .panel-sidebar {
+            padding: 20px !important;
+        }
+        .panel-heading {
+            padding: 20px;
+        }
+        .panel-body {
+            padding: 20px;
+        }
+        .panel-footer {
+            padding: 20px;
+        }
+        &.panel-with-borders {
+            > .panel-body {
+                padding-top: 20px;
+            }
+            > .panel-body {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .mode-superclean {
+        .top-submenu, .top-submenu.top-submenu-with-background {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+
+/*
+ * NEW PADDINGS & MARGINS
+ */
+
+.row {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+body .page-content {
+    padding: 16px;
+}
+
+body .widget, body .panel,
+.widget-four .step-block {
+    margin-bottom: 16px;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7,
+.col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5,
+.col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3,
+.col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12,
+.col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xs-1, .col-xs-10,
+.col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-left: 8px;
+    padding-right: 8px;
+}

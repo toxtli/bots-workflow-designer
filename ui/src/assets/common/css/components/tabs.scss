@@ -1,0 +1,59 @@
+@import '../mixins';
+
+/*
+ * TABS
+ */
+
+.nav-tabs {
+    .nav-link {
+        &:focus, &:hover {
+            border-color: transparent;
+        }
+    }
+}
+
+.nav-tabs-horizontal {
+    .nav-tabs {
+        border-bottom: 1px solid $gray-darken;
+        .nav-item {
+            margin-bottom: -2px;
+            cursor: pointer;
+            .nav-link {
+                border: none;
+                border-bottom: 3px solid transparent;
+                &.active, &:focus {
+                    border-bottom-color: $primary !important;
+                }
+                &:hover {
+                    border-bottom-color: $gray-darken;
+                }
+            }
+        }
+    }
+}
+
+.nav-tabs-vertical {
+    .nav-tabs {
+        border-bottom: none;
+        border-right: 1px solid $gray-darken;
+        float: left;
+        margin-right: 30px;
+        .nav-item {
+            margin: 0px -2px 1px 0px;
+            float: none;
+            cursor: pointer;
+            .nav-link {
+                border: none;
+                border-right: 3px solid transparent;
+                padding-left: 0px;
+                border-radius: 0px;
+                &.active, &:focus {
+                    border-right-color: $primary !important;
+                }
+                &:hover {
+                    border-right-color: $gray-darken;
+                }
+            }
+        }
+    }
+}

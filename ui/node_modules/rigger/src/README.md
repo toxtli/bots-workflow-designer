@@ -1,0 +1,1 @@
+This folder contains particular files that are prebuilt using rigger.  This stage was introduced to deal with TypeScript's non-API style approach :(

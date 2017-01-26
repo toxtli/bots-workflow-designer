@@ -1,0 +1,59 @@
+/*
+ * TYPOGRAPHY
+ */
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #24222f;
+}
+
+.h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small,
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
+.h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small,
+h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small {
+    color: #827ca1;
+}
+
+.h1 .icon-heading, .h2 .icon-heading, .h3 .icon-heading, .h4 .icon-heading, .h5 .icon-heading, .h6 .icon-heading,
+h1 .icon-heading, h2 .icon-heading, h3 .icon-heading, h4 .icon-heading, h5 .icon-heading, h6 .icon-heading {
+    margin-right: 10px;
+}
+
+.h1 .label, .h2 .label, .h3 .label, .h4 .label, .h5 .label, .h6 .label,
+h1 .label, h2 .label, h3 .label, h4 .label, h5 .label, h6 .label {
+    font-size: 75% !important;
+}
+
+code {
+    color: #827ca1;
+    background: #f2f4f8;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+mark {
+    background: #f2a654;
+    color: #ffffff;
+}
+
+.drop-cap {
+    float: left;
+    padding: 5px;
+    margin-right: 5px;
+    font-family: serif;
+    font-size: 60px;
+    line-height: 50px;
+    color: #24222f;
+}
+
+.drop-cap.drop-cap-reversed {
+    color: #ffffff;
+    background: #24222f;
+}

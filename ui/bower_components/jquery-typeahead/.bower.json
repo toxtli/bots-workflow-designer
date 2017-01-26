@@ -1,0 +1,37 @@
+{
+  "name": "jquery-typeahead",
+  "version": "2.7.6",
+  "authors": [
+    "Tom Bertrand"
+  ],
+  "description": "jQuery plugin that provides Typeahead (autocomplete) Search preview from Json object(s) via same domain Ajax request or cross domain Jsonp and offers data compression inside Local Storage. The plugin is built with a lot of options and callbacks to allow customization.",
+  "main": [
+    "dist/jquery.typeahead.min.js",
+    "dist/jquery.typeahead.min.css"
+  ],
+  "keywords": [
+    "search",
+    "typeahead",
+    "ajax",
+    "json",
+    "jsonp",
+    "input",
+    "autocomplete"
+  ],
+  "ignore": [],
+  "licenses": "MIT",
+  "homepage": "http://www.runningcoder.org/jquerytypeahead/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/running-coder/jquery-typeahead.git"
+  },
+  "_release": "2.7.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.7.6",
+    "commit": "910abc164289a693b0f73609b1faa81b798d3d34"
+  },
+  "_source": "https://github.com/running-coder/jquery-typeahead.git",
+  "_target": "^2.6.1",
+  "_originalSource": "jquery-typeahead"
+}

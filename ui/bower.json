@@ -1,0 +1,48 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "authors": [
+    "Mediatec Software <hello@mediatec.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2",
+    "jquery": "~1.10.2",
+    "tether": "~1.1.1",
+    "jquery-mousewheel": "^3.1.13",
+    "jscrollpane": "^2.0.22",
+    "ladda": "^1.0.0",
+    "select2": "^4.0.3",
+    "html5-form-validation": "^1.5.3",
+    "jquery-typeahead": "^2.6.1",
+    "jquery-mask-plugin": "^1.14.0",
+    "autosize": "^3.0.15",
+    "bootstrap-show-password": "^1.0.3",
+    "angular": "^1.5.6",
+    "angular-route": "^1.5.6",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.37",
+    "fullcalendar": "^2.7.3",
+    "bootstrap-sweetalert": "^1.0.0",
+    "remarkable-bootstrap-notify": "^3.1.3",
+    "summernote": "^0.8.1",
+    "owl.carousel": "^2.1.4",
+    "ionrangeslider": "^2.1.4",
+    "nestable": "latest",
+    "datatables": "^1.10.12",
+    "datatables-responsive": "^1.0.7",
+    "datatables-fixedcolumns": "^3.1.0",
+    "chartist": "^0.9.7",
+    "chartist-plugin-tooltip": "0.0.11",
+    "c3": "^0.4.11",
+    "peity": "^3.2.0",
+    "gsap": "^1.19.0 ",
+    "jquery-countTo": "^1.2.0"
+  },
+  "resolutions": {
+    "chartist": "^0.9.7"
+  }
+}

@@ -1,0 +1,138 @@
+/*
+ * NOTIFICATIONS & ALERTS
+ */
+.alert {
+    border: none;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.alert .close {
+    color: #ffffff;
+    opacity: .5;
+    outline: none !important;
+}
+
+.alert .close:hover {
+    opacity: 1;
+}
+
+.alert a, .alert .alert-link {
+    font-weight: normal;
+    color: #ffffff;
+    opacity: .7;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.alert a:hover, .alert .alert-link:hover {
+    opacity: 1;
+}
+
+.alert.alert-default {
+    background: #acb7bf;
+}
+
+.alert.alert-primary {
+    background: #01a8fe;
+}
+
+.alert.alert-secondary {
+    background: #6a7a84;
+}
+
+.alert.alert-success {
+    background: #46be8a;
+}
+
+.alert.alert-info {
+    background: #0190da;
+}
+
+.alert.alert-warning {
+    background: #f39834;
+}
+
+.alert.alert-danger {
+    background: #fb434a;
+}
+
+.sweet-overlay {
+    background: rgba(36, 34, 47, 0.3);
+}
+
+.sweet-alert h2 {
+    font-weight: 400;
+    position: relative;
+    margin: 30px 0px 15px;
+}
+
+.sweet-alert p {
+    margin: 0px 0px 10px;
+}
+
+.sweet-alert .lead {
+    font-weight: 400;
+    font-size: 18px;
+    color: #514d6a;
+    margin-bottom: 20px;
+}
+
+.sweet-alert .btn {
+    min-width: 150px;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    margin: 0px 5px 15px;
+    border: none !important;
+}
+
+.sweet-alert .btn-success {
+    background: #46be8a;
+}
+
+.sweet-alert .btn-warning {
+    border-color: #f39834;
+}
+
+.sweet-alert .btn-danger {
+    border-color: #fb434a;
+}
+
+.sweet-alert .btn-info {
+    border-color: #0190da;
+}
+
+.sweet-alert .sa-icon.sa-success .line {
+    background-color: #46be8a;
+}
+
+.sweet-alert .sa-icon.sa-success .placeholder {
+    border-color: #46be8a;
+}
+
+.sweet-alert .sa-icon.sa-warning {
+    border-color: #f39834;
+}
+
+.sweet-alert .sa-icon.sa-warning span {
+    background: #f39834;
+}
+
+.sweet-alert .sa-icon.sa-error {
+    border-color: #fb434a;
+}
+
+.sweet-alert .sa-icon.sa-error .line {
+    background-color: #fb434a;
+}
+
+.sweet-alert .sa-icon.sa-info {
+    border-color: #0190da;
+}
+
+.sweet-alert .sa-icon.sa-info:before, .sweet-alert .sa-icon.sa-info:after {
+    background-color: #0190da;
+}

@@ -1,0 +1,84 @@
+@import '../mixins';
+
+/*
+ * GREEN THEME
+ */
+
+$color1: #1f5d42;
+$color2: lighten($color1, 5%);
+
+
+.theme-green {
+    &.layout-boxed.menu-top {
+        nav.left-menu {
+            border-left: none;
+            border-right: none;
+        }
+        nav.top-menu {
+            border-left: none;
+            border-right: none;
+        }
+    }
+    nav.left-menu {
+        .logo-container {
+            background: $color1 !important;
+            border-bottom: none;
+            .logo {
+                img {
+                    display: none;
+                    &.logo-inverse {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    nav.top-menu {
+        background: $color1 !important;
+        border-bottom: none;
+        color: $white;
+        &:before {
+            display: none;
+        }
+        .dropdown {
+            &.dropdown-avatar {
+                .dropdown-toggle {
+                    &:after {
+                        color: $black-lighten-more;
+                    }
+                    &:hover {
+                        &:after {
+                            color: $gray;
+                        }
+                    }
+                }
+            }
+            .dropdown-inline-button {
+                color: $gray;
+                .dropdown-inline-button-icon {
+                    color: $black-lighten-more-more;
+                }
+                &:after {
+                    color: $black-lighten-more-more;
+                }
+                &:hover, &:focus, &:active {
+                    color: $white;
+                    .dropdown-inline-button-icon {
+                        color: $gray;
+                    }
+                    &:after {
+                        color: $gray;
+                    }
+                }
+            }
+            &.open {
+                .dropdown-inline-button {
+                    color: $white;
+                    .dropdown-inline-button-icon {
+                        color: $gray;
+                    }
+                }
+            }
+        }
+    }
+}

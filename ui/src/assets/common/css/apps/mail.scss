@@ -1,0 +1,57 @@
+@import '../mixins';
+
+/*
+ * MAIL
+ */
+
+.mail {
+    .panel-heading {
+        height: 66px;
+        padding: 13px 25px 10px !important;
+        .mail-heading {
+            float: left;
+            margin-top: 2px;
+            .nav-link {
+                padding-top: 8px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .messaging-list-item {
+        .s2 {
+            margin-left: 0px;
+        }
+    }
+    .note-editor {
+        margin-bottom: 0px;
+    }
+}
+
+.compose-message {
+    .note-editor {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: $xl-max-width) {
+    .mail {
+        &.panel {
+            margin-bottom: 15px;
+            &.panel-with-sidebar {
+                &:before {
+                    display: none;
+                }
+                .panel-heading, .panel-body, .panel-footer {
+                    margin-left: 0px !important;
+                    margin-right: 0px !important;
+                }
+                .panel-sidebar {
+                    float: none !important;
+                    width: auto;
+                    border-bottom: 1px solid $gray-darken;
+                    margin-bottom: 0px !important;
+                }
+            }
+        }
+    }
+}

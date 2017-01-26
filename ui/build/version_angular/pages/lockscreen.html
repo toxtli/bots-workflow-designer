@@ -1,0 +1,128 @@
+<div class="page-content-inner" style="background-image: url(../assets/common/img/temp/login/3.jpg)">
+
+    <!-- Lockscreen Page -->
+
+    <div class="empty-holder"><!-- --></div>
+    <div class="single-page-block">
+        <div class="single-page-block-inner effect-3d-element">
+            <div class="blur-placeholder"><!-- --></div>
+            <div class="single-page-block-form">
+                <form id="form-validation" name="form-validation" method="POST">
+                    <div class="text-center">
+                        <span class="avatar" href="javascript:void(0);">
+                            <img src="../assets/common/img/temp/avatars/1.jpg" alt="Alternative text to the image">
+                        </span>
+                    </div>
+                    <h2 class="text-center">
+                        <i class="icmn-lock4"></i>
+                        Artour Arteezy
+                    </h2>
+                    <br />
+                    <div class="form-group">
+                        <input id="validation-password"
+                               class="form-control password"
+                               name="validation[password]"
+                               type="password" data-validation="[L>=6]"
+                               data-validation-message="$ must be at least 6 characters"
+                               placeholder="Password">
+                    </div>
+                    <div class="form-actions text-center">
+                        <button type="submit" class="btn btn-success width-150">Unlock</button>
+                    </div>
+                    <div class="form-group text-center">
+                        <a href="javascript: void(0);" class="color-default">Or sign in as a different user</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="lockscreen-typer">
+        <div class="locksreen-typer-inner" id="console"><!-- --></div>
+    </div>
+    <div class="empty-holder"><!-- --></div>
+    <!-- End Lockscreen Page -->
+
+</div>
+
+<!-- Page Scripts -->
+<script>
+    $(function() {
+
+        // Add class to body for change layout settings
+        $('body').addClass('single-page');
+
+        // Form Validation
+        $('#form-validation').validate({
+            submit: {
+                settings: {
+                    inputContainer: '.form-group',
+                    errorListClass: 'form-control-error',
+                    errorClass: 'has-danger'
+                }
+            }
+        });
+
+        // Show/Hide Password
+        $('.password').password({
+            eyeClass: '',
+            eyeOpenClass: 'icmn-eye',
+            eyeCloseClass: 'icmn-eye-blocked'
+        });
+
+        // Show/Hide Password
+        Typer.speed = 3;
+        Typer.file = "/assets/vendors/hackertyper/kernel.txt";
+        Typer.init();
+
+        // Set Background Image for Form Block
+        function setImage() {
+            var imgUrl = $('.page-content-inner').css('background-image');
+
+            $('.blur-placeholder').css('background-image', imgUrl);
+        };
+
+        function changeImgPositon() {
+            var width = $(window).width(),
+                    height = $(window).height(),
+                    left = - (width - $('.single-page-block-inner').outerWidth()) / 2,
+                    top = - (height - $('.single-page-block-inner').outerHeight()) / 2;
+
+
+            $('.blur-placeholder').css({
+                width: width,
+                height: height,
+                left: left,
+                top: top
+            });
+        };
+
+        setImage();
+        changeImgPositon();
+
+        $(window).on('resize', function(){
+            changeImgPositon();
+        });
+
+        // Hacker Typer
+        (function loop() {
+            var rand = Math.round(Math.random() * (600 - 500)) + 100;
+            setTimeout(function() {
+                Typer.addText();
+                loop();
+            }, rand);
+        }());
+
+        // Mouse Move 3d Effect
+        var rotation = function(e){
+            var perX = (e.clientX/$(window).width())-0.5;
+            var perY = (e.clientY/$(window).height())-0.5;
+            TweenMax.to(".effect-3d-element", 0.4, { rotationY:15*perX, rotationX:15*perY,  ease:Linear.easeNone, transformPerspective:1000, transformOrigin:"center" })
+        };
+
+        if (!cleanUI.hasTouch) {
+            $('body').mousemove(rotation);
+        }
+
+    });
+</script>
+<!-- End Page Scripts -->

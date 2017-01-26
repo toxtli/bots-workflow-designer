@@ -1,0 +1,138 @@
+@import '../mixins';
+
+/*
+ * BLUE THEME
+ */
+
+$color2: #13033a;
+$color1: #0b0222;
+
+
+.theme-blue {
+    &.layout-boxed.menu-top {
+        nav.left-menu {
+            border-left: none;
+            border-right: none;
+        }
+    }
+    nav.top-menu {
+        &:before {
+            display: none;
+        }
+    }
+    nav.left-menu {
+        background: $color1;
+        border-right-color: $color1;
+        .logo-container {
+            background: $color2 !important;
+            border-color: transparent;
+            .logo {
+                img {
+                    display: none;
+                    &.logo-inverse {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .left-menu-inner {
+            &.scroll-pane {
+                &.jspScrollable {
+                    .jspDrag {
+                        &:after {
+                            background: $black-lighten;
+                        }
+                    }
+                }
+            }
+        }
+        .left-menu-list {
+            li {
+                .left-menu-link {
+                    color: darken($gray-darken-more, 10%);
+                    .left-menu-link-icon {
+                        color: $black-lighten-more;
+                    }
+                    &:hover {
+                        background: $color2;
+                        color: $white;
+                        .left-menu-link-icon {
+                            color: $gray;
+                        }
+                    }
+                    &:after {
+                        border-left-color: $black-lighten;
+                    }
+                    &:before {
+                        background: $black-lighten !important;
+                    }
+                }
+                .left-menu-item {
+                    color: $white;
+                }
+                &.left-menu-list-active {
+                    .left-menu-link {
+                        color: $white;
+                        background: $color2;
+                        .left-menu-link-icon {
+                            color: $gray !important;;
+                        }
+                    }
+                }
+                &.left-menu-list-opened {
+                    background: $color2;
+                    > .left-menu-link {
+                        color: $white !important;
+                        .left-menu-link-icon {
+                            color: $gray !important;
+                        }
+                    }
+                }
+                &.left-menu-list-separator {
+                    background: $color2;
+                }
+                &.left-menu-list-disabled {
+                    > .left-menu-link {
+                        color: $black-lighten-more !important;
+
+                    }
+                }
+                &.left-menu-list-submenu {
+                    .left-menu-list {
+                        background: $color2;
+                    }
+                }
+            }
+        }
+    }
+    &.menu-top {
+        @media (min-width: $sm-min-width) {
+            nav.left-menu {
+                border-bottom: none;
+                .left-menu-list-root {
+                    > li {
+                        &:first-child {
+                            > .left-menu-link {
+                                border-left: 1px solid lighten($black, 4%);
+                            }
+                        }
+                        > .left-menu-link {
+                            border-bottom: 0px !important;
+                            border-right: 1px solid lighten($black, 4%);
+                        }
+                        &:hover {
+                            background: $color2;
+                        }
+                    }
+                    li.left-menu-list-submenu {
+                        .left-menu-link {
+                            &:after {
+                                border-top-color: $black-lighten !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

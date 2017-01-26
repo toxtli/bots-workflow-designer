@@ -1,0 +1,88 @@
+@import '../mixins';
+
+/*
+ * MESSAGING
+ */
+
+.messaging {
+    .panel-sidebar {
+        padding: 0px !important;
+    }
+    .messaging-title {
+        margin-right: 70px;
+    }
+    .messaging-list {
+        .messaging-list-item {
+            padding: 20px 15px;
+            border-bottom: 1px solid $gray;
+            .avatar {
+                width: 50px;
+                height: 50px;
+                padding: 3px;
+                background: $white;
+                position: relative;
+                top: -5px;
+                left: -5px;
+                img {
+                    border-radius: 100%;
+                }
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            &:hover {
+                background: $gray;
+                cursor: pointer;
+            }
+            &.current {
+                background: $default;
+                color: $white;
+                .messaging-time, .messaging-list-title-last {
+                    color: $white !important;
+                }
+            }
+        }
+        .s1 {
+            float: left;
+            margin-top: 2px;
+        }
+        .s2 {
+            margin-left: 55px;
+        }
+        .messaging-time {
+            color: $default;
+            float: right;
+            position: relative;
+            top: 3px;
+        }
+        .messaging-list-title-name {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin-right: 30px;
+        }
+        .messaging-list-title-subject {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .messaging-list-title-last {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: $default;
+        }
+    }
+    .messaging-search {
+        border-bottom: 1px solid $gray-darken;
+        padding: 0px 15px;
+        .search-block {
+            padding: 15px 0px 14px;
+        }
+    }
+
+    .mdtc-clnplra-main-player:not(.mdtc-clnplra-dark-theme) .mdtc-clnplra-interface,
+    .mdtc-clnplrv-main-player:not(.mdtc-clnplrv-dark-theme) .mdtc-clnplrv-interface {
+        background: $white;
+    }
+}

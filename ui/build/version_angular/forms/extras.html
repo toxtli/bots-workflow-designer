@@ -1,0 +1,67 @@
+<div class="page-content-inner">
+
+    <!-- Forms Extras -->
+    <section class="panel">
+        <div class="panel-heading">
+            <h3>Extras</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>
+                        Adjustable Textarea
+                        <sup>
+                            <small><a href="http://www.jacklmoore.com/autosize/" target="_blank" class="link-underlined">Official Documentation</a></small>
+                        </sup>
+                    </h4>
+                    <p>Modifier: see documentation</p>
+                    <br />
+                    <div class="margin-bottom-50">
+                        <!-- Adjustable Textarea  -->
+                        <div class="form-group">
+                            <textarea id="textarea" class="form-control" placeholder="Type and press enter"></textarea>
+                        </div>
+                        <!-- End Adjustable Textarea -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>
+                        Show / Hide Password
+                        <sup>
+                            <small><a href="https://github.com/wenzhixin/bootstrap-show-password" target="_blank" class="link-underlined">Official Documentation</a></small>
+                        </sup>
+                    </h4>
+                    <p>Modifier: see documentation</p>
+                    <br />
+                    <div class="margin-bottom-50">
+                        <!-- Show / Hide Password -->
+                        <div class="form-group">
+                            <input id="password" type="password" class="form-control" value="Password">
+                        </div>
+                        <!-- End Show Hide Password -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End -->
+
+</div>
+
+<!-- Page Scripts -->
+<script>
+    $(function() {
+
+        autosize($('#textarea'));
+
+        $('#password').password({
+            eyeClass: '',
+            eyeOpenClass: 'icmn-eye',
+            eyeCloseClass: 'icmn-eye-blocked'
+        });
+
+    });
+</script>
+<!-- End Page Scripts -->

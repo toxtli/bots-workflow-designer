@@ -1,0 +1,71 @@
+@import '../mixins';
+
+/*
+ * BASIC TABLES
+ */
+
+.table {
+    thead {
+        th {
+            border-bottom: 1px solid $gray;
+            outline: none !important;
+            &:focus {
+                background: $gray-lighten;
+            }
+        }
+    }
+    td, th {
+        border-color: $gray;
+        &:focus {
+            background-color: $gray;
+        }
+    }
+    tbody {
+        tr:first-child {
+            td {
+                border-top: none;
+            }
+        }
+    }
+    &.table-hover {
+        tbody {
+            tr {
+                &:hover {
+                    background: $gray-lighten;
+                }
+            }
+        }
+    }
+    .thead-inverse {
+        th {
+            background: lighten($black, 9%);
+        }
+    }
+    .thead-default {
+        th {
+            background: $gray;
+        }
+    }
+
+    &.table-striped {
+        tbody tr:nth-of-type(odd) {
+            background: $gray-lighten;
+        }
+    }
+}
+
+.table-inverse {
+    thead th {
+        border-bottom-color: $black-lighten;
+    }
+    th, td {
+        border-top-color: $black-lighten;
+    }
+    th, td, thead th {
+        background: lighten($black, 9%);
+        &:focus {
+            background: lighten($black, 3%);
+        }
+    }
+}
+

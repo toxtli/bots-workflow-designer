@@ -1,0 +1,23 @@
+@import '../mixins';
+
+/*
+ * EDITABLE TABLE
+ */
+
+.editable-table {
+    td {
+        outline: none !important;
+    }
+    & + input, & input:focus {
+        border: 1px solid $primary !important;
+        outline: 0 !important;
+        outline-offset: 0 !important;
+        box-sizing: content-box;
+    }
+    &.table-inverse {
+        & + input, & input:focus {
+            border-color: $gray !important;
+            border-bottom: none !important;
+        }
+    }
+}

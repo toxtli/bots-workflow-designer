@@ -1,0 +1,1 @@
+require('./regex-js-singleline');

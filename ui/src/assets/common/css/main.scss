@@ -1,0 +1,64 @@
+// We don't need to concatenate ".scss" resulting files to one here, that's why we just import ".css" files
+
+// Helpers
+@import 'helpers/fonts.css';
+@import 'helpers/typography.css';
+@import 'helpers/base.default.css';
+@import 'helpers/base.responsive.css';
+@import 'helpers/rtl.version.css';
+
+// Themes
+@import 'themes/theme-dark.css';
+@import 'themes/theme-blue.css';
+@import 'themes/theme-green.css';
+@import 'themes/theme-orange.css';
+@import 'themes/theme-red.css';
+@import 'themes/theme-inverse.css';
+
+// Forms
+@import 'forms/basic-form-elements.css';
+@import 'forms/buttons.css';
+@import 'forms/dropdowns.css';
+@import 'forms/checkboxes-radio.css';
+@import 'forms/form-validation.css';
+@import 'forms/selectboxes.css';
+@import 'forms/autocomplete.css';
+
+// Components
+@import 'components/utilities.css';
+@import 'components/tables.css';
+@import 'components/steps.css';
+@import 'components/tooltips-popovers.css';
+@import 'components/modal.css';
+@import 'components/progress-bars.css';
+@import 'components/badges-labels.css';
+@import 'components/pagination.css';
+@import 'components/collapse.css';
+@import 'components/tabs.css';
+@import 'components/notifications-alerts.css';
+@import 'components/carousel.css';
+@import 'components/widgets.css';
+
+// Vendors
+@import 'vendors/jscrollpane.css';
+@import 'vendors/select2.css';
+@import 'vendors/eonasdan-bootstrap-datetimepicker.css';
+@import 'vendors/fullcalendar.css';
+@import 'vendors/summernote.css';
+@import 'vendors/ionrangeslider.css';
+@import 'vendors/nestable.css';
+@import 'vendors/datatables-fixedcolumns.css';
+@import 'vendors/datatables-responsive.css';
+@import 'vendors/editable-table.css';
+@import 'vendors/chartist.css';
+@import 'vendors/chartist-tooltip-plugin.css';
+
+// Pages
+@import 'pages/pricing-table.css';
+
+// Apps
+@import 'apps/profile.css';
+@import 'apps/messaging.css';
+@import 'apps/mail.css';
+@import 'apps/calendar.css';
+@import 'apps/gallery.css';

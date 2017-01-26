@@ -1,0 +1,62 @@
+/*
+ * RTL VERSION
+ */
+html[dir=rtl] .widget-seven .counter-count {
+    right: auto;
+    left: 10px;
+}
+
+html[dir=rtl] .pull-right {
+    float: left;
+}
+
+html[dir=rtl] .pull-left {
+    float: right;
+}
+
+html[dir=rtl] .single-page-block-header-menu {
+    text-align: left;
+}
+
+html[dir=rtl] .single-page-block .single-page-block-inner h3 {
+    text-align: right;
+}
+
+html[dir=rtl] .mail .panel-heading .mail-heading {
+    float: right;
+}
+
+html[dir=rtl] div.dataTables_wrapper div.dataTables_paginate {
+    text-align: left;
+}
+
+html[dir=rtl] .radio label, html[dir=rtl] .checkbox label {
+    padding-right: 0px;
+    padding-left: 20px;
+}
+
+html[dir=rtl] .app-gallery .app-gallery-item {
+    float: right;
+}
+
+html[dir=rtl] nav.left-menu .left-menu-list li.left-menu-list-submenu > .left-menu-link:after {
+    right: auto;
+    left: 15px;
+}
+
+html[dir=rtl] nav.top-menu .menu .menu-user-block {
+    float: left;
+}
+
+html[dir=rtl] .menu-info-block {
+    margin-right: 0px !important;
+    margin-left: 80px;
+}
+
+html[dir=rtl] .menu-info-block .left {
+    float: right !important;
+}
+
+html[dir=rtl] .menu-info-block .right {
+    float: left !important;
+}

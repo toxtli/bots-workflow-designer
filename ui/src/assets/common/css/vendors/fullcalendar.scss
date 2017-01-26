@@ -1,0 +1,232 @@
+@import '../mixins';
+
+/*
+ * FULLCALENDAR
+ */
+
+.fc-unthemed {
+    position: relative;
+    z-index: 50;
+    * {
+      outline: none !important;
+      appearance: none !important;
+    }
+    .fc-axis {
+        padding: 0px 15px;
+    }
+    .fc-divider, .fc-popover, .fc-row, tbody, td, th, thead {
+        border-color: $gray-darken;
+    }
+    th {
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 10px 15px;
+    }
+    .jspVerticalBar {
+        z-index: 10;
+    }
+    .fc-toolbar {
+        margin-bottom: 0px;
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 32px;
+        }
+        .fc-left, .fc-right, .fc-center {
+            margin-bottom: 10px;
+        }
+        .fc-center {
+            padding: 0px 20px;
+        }
+    }
+    .fc-state-default {
+        background: $default;
+        border: none;
+        box-shadow: none;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 6px 10px 10px;
+        border-radius: 3px !important;
+        text-shadow: none;
+        line-height: 18px;
+        color: $white;
+        &:hover {
+            background: lighten($default, 10%);
+        }
+    }
+    .fc-state-active {
+        background-color: $primary !important;
+        color: $white !important;
+        text-shadow: none;
+    }
+    .fc-unthemed .fc-today {
+        background-color: #fff6da;
+    }
+    .fc-highlight {
+        background-color: #a0dfff;
+        border: solid 1px $primary;
+    }
+    .fc-widget-header, .fc-widget-content {
+        margin-right: 0 !important;
+    }
+    .fc-scroller {
+        &.jspScrollable {
+            overflow: hidden !important;
+        }
+    }
+    .fc-ltr .fc-time-grid .fc-event-container {
+        margin: 0;
+    }
+    .fc-time-grid-event .fc-time {
+        font-size: 1rem;
+    }
+    .fc-day-grid-event .fc-time {
+        font-weight: 600;
+    }
+    .fc-event {
+        background-color: $primary;
+        border-color: #fff;
+        color: $white;
+        border-radius: 0;
+        font-size: 14px;
+        padding: 7px;
+        &.event-clicked {
+            opacity: .7;
+            z-index: 30 !important;
+        }
+        &.fc-event-success {
+            background-color: $success;
+        }
+        &.fc-event-secondary {
+            background-color: $secondary;
+        }
+        &.fc-event-danger {
+            background-color: $danger;
+        }
+        &.fc-event-warning {
+            background-color: $warning;
+        }
+        &.fc-event-info {
+            background-color: $info;
+        }
+        &.fc-event-default {
+            background-color: $default;
+        }
+    }
+    a.fc-more {
+        font-size: 1rem;
+        text-decoration: none;
+    }
+    .fc-event {
+        border-radius: 10px;
+        padding: 0 8px;
+        margin: 1px 2px 0;
+    }
+    .fc-time-grid-event {
+        padding: 8px;
+        border-radius: 5px;
+    }
+    hr.fc-divider {
+        padding: 0px;
+    }
+}
+
+.fc-unthemed .fc-popover, .fc-popover {
+    width: 250px;
+    box-shadow: none;
+    background: none;
+    border: none;
+    .fc-header {
+        border-radius: 4px 4px 0 0;
+        color: #fff;
+        background: $primary;
+        padding: 6px 10px 6px 12px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: .875rem;
+        .fc-title {
+            margin: 0;
+        }
+        .fc-close {
+            color: #fff; font-size: .875rem;
+        }
+    }
+    .fc-body {
+        background: #fbfcfd;
+        border: solid 1px $gray-darken;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+    }
+    .fc-event-container {
+        padding: 10px 12px;
+    }
+    .fc-h-event {
+        padding-left: 7px !important;
+        margin-left: 2px !important;
+    }
+    .text-center .btn {
+        margin: 0 4px;
+    }
+}
+
+.fc-popover.click {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    z-index: 50;
+    margin-left: -120px;
+    margin-top: 8px;
+    font-size: .9375rem;
+    .fc-header {
+        position: relative;
+        padding-right: 30px;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -8px; left: 50%;
+            margin-left: -9px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 9px 9px 9px;
+            border-color: transparent transparent $primary transparent;
+        }
+        .cl {
+            border: none;
+            background: none;
+            padding: 0;
+            color: #fff;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -7px;
+        }
+    }
+    .fc-body {
+        padding: 12px;
+        p {
+            margin: 0 0 1em;
+        }
+        .actions {
+            margin: 0 -12px 0 0;
+            li {
+                float: left;
+                margin: 0 12px 0 0;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        >.btn {
+            margin: 0 10px 0 0;
+        }
+        .form-control {
+            font-size: .875rem;
+        }
+        &.remove-confirm, &.edit-event {
+            display: none;
+        }
+    }
+}

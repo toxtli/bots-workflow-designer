@@ -1,0 +1,47 @@
+@import '../mixins';
+
+/*
+ * PAGINATION
+ */
+
+
+.pagination {
+    .page-link {
+        border-color: $gray-darken;
+        color: $black-lighten-more;
+        outline: none;
+        margin-bottom: 10px;
+        &:hover, &:focus {
+            background: $default;
+            color: $white;
+            border-color: $default;
+        }
+    }
+    .page-item {
+        &.disabled {
+            .page-link {
+                background: $gray;
+            }
+        }
+        &.active {
+            .page-link {
+                background: $primary;
+                border-color: $primary;
+            }
+        }
+    }
+}
+
+.pager {
+    li > a {
+        border-color: $gray-darken;
+        color: $black-lighten-more;
+        outline: none;
+        border-radius: 3px;
+        &:hover, &:focus {
+            background: $default;
+            color: $white;
+            border-color: $default;
+        }
+    }
+}

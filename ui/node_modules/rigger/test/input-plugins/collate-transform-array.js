@@ -1,0 +1,1 @@
+//=collate resources { "transform": "array" }
