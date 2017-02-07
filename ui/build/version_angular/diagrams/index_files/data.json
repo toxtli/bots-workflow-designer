@@ -19,7 +19,7 @@
         },{
             "name": "feedback",
             "type": "in",
-            "value": "http://sheets.google.com/",
+            "value": "https://docs.google.com/spreadsheets/d/1QR5HS7nwK5BVURjQ1bzn0JJIG3-DkHfU7Bn2lSrymUo/gviz/tq?tqx=out:csv&sheet=testsheet",
             "source": "User",
             "top": 0.58,
             "required": true
@@ -104,7 +104,7 @@
             "name":  "expertise",
             "type": "in",
             "value": "",
-            "source": "Linked",
+            "source": "Persistent",
             "top": 0.53
         },{
             "name":  "location",
@@ -146,6 +146,25 @@
             "top": 0.43
         }]
     },{
+        "name": "connlistener",
+        "class": "ConnectionListenerModule",
+        "fields": [{
+            "name": "bots",
+            "type": "in",
+            "value": "",
+            "source": "Linked"
+        },{
+            "name": "accepted",
+            "type": "in",
+            "value": "",
+            "source": "Linked"
+        },{
+            "name": "added",
+            "type": "out",
+            "value": "",
+            "source": "Linked"
+        }]
+    },{
         "name": "extractor",
         "class": "ProfilesExtractorModule",
         "fields": [{
@@ -155,7 +174,7 @@
             "source": "Linked",
             "top": 0.39
         },{
-            "name": "accepted",
+            "name": "added",
             "type": "in",
             "value": "",
             "source": "Linked",
@@ -186,7 +205,7 @@
             "name": "feedback",
             "type": "in",
             "value": "",
-            "source": "Linked",
+            "source": "Persistent",
             "top": 0.50
         },{
             "name": "message",
@@ -194,11 +213,30 @@
             "value": "",
             "source": "User"
         },{
-            "name": "results",
+            "name": "conversation",
             "type": "out",
             "value": "",
             "source": "Linked",
             "top": 0.78
+        }]
+    },{
+        "name": "messlistener",
+        "class": "MessengerListenerModule",
+        "fields": [{
+            "name": "bots",
+            "type": "in",
+            "value": "",
+            "source": "Linked"
+        },{
+            "name": "conversation",
+            "type": "in",
+            "value": "",
+            "source": "Linked"
+        },{
+            "name": "results",
+            "type": "out",
+            "value": "",
+            "source": "Linked"
         }]
     }],
     "connections": [
@@ -318,7 +356,7 @@
                 "variable": "bots"
             },
             "to": {
-                "window": "extractor",
+                "window": "connlistener",
                 "variable": "bots"
             }
         },
@@ -328,12 +366,32 @@
                 "variable": "accepted"
             },
             "to": {
-                "window": "extractor",
+                "window": "connlistener",
                 "variable": "accepted"
             }
         },
         {
             "from": {
+                "window": "connlistener",
+                "variable": "bots"
+            },
+            "to": {
+                "window": "extractor",
+                "variable": "bots"
+            }
+        },
+        {
+            "from": {
+                "window": "connlistener",
+                "variable": "added"
+            },
+            "to": {
+                "window": "extractor",
+                "variable": "added"
+            }
+        },
+        {
+            "from": {
                 "window": "extractor",
                 "variable": "bots"
             },
@@ -355,6 +413,26 @@
         {
             "from": {
                 "window": "messenger",
+                "variable": "bots"
+            },
+            "to": {
+                "window": "messlistener",
+                "variable": "bots"
+            }
+        },
+        {
+            "from": {
+                "window": "messenger",
+                "variable": "conversation"
+            },
+            "to": {
+                "window": "messlistener",
+                "variable": "conversation"
+            }
+        },
+        {
+            "from": {
+                "window": "messlistener",
                 "variable": "results"
             },
             "to": {

@@ -2,3 +2,6 @@ flask
 flask_cors
 requests
 requests[security]
+beautifulsoup4
+pygooglevoice
+

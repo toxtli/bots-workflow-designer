@@ -1,4 +1,5 @@
 import sys, json, traceback
+from utils import LogHelper
 from flask.app import Flask, request
 from flask_cors.extension import CORS
 from flask_cors.decorator import cross_origin
@@ -16,26 +17,26 @@ def index():
 	data = request.json
 	if data:
 		exit = json.dumps(data)
-		print(exit)
+		# LogHelper.log(exit)
 		modules = {}
 		values = []
 		for module in data['modules']:
 			modules[module['name']] = get_obj(module['class'])
-			print(module['name'] + ' = ' + module['class'] + '()')
+			LogHelper.log(module['name'] + ' = ' + module['class'] + '()')
 			content = {}
 			for field in module['fields']:
 				modules[module['name']].add_node(field)
-				print(module['name'] + ".add_node(" + json.dumps(field) + ")")
+				LogHelper.log(module['name'] + ".add_node(" + json.dumps(field) + ")")
 				if field['value']:
 					content[field['name']] = field['value']
 			if content:
 				values.append({'window':module['name'],'content':content})
 		for connection in data['connections']:
 			modules[connection['from']['window']].connect({'name':connection['from']['variable'], 'target':modules[connection['to']['window']]})
-			print(connection['from']['window'] + ".connect({'name':'" + connection['from']['variable'] + "', 'target':" + connection['to']['window'] + "})")
+			LogHelper.log(connection['from']['window'] + ".connect({'name':'" + connection['from']['variable'] + "', 'target':" + connection['to']['window'] + "})")
 		while values:
 			record = values.pop()
-			print(record['window'] + ".set_values(" + json.dumps(record['content']) + ")")
+			LogHelper.log(record['window'] + ".set_values(" + json.dumps(record['content']) + ")")
 			modules[record['window']].set_values(record['content'])
 	return exit
 

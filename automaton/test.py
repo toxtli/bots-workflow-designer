@@ -5,80 +5,67 @@ from modules.MessengerModule import MessengerModule
 from modules.ProfilesExtractorModule import ProfilesExtractorModule
 from modules.ProfilesFinderModule import ProfilesFinderModule
 from modules.ProfilesGeneratorModule import ProfilesGeneratorModule
-
 user = UserRequesterModule()
-creator = BotsCreatorModule()
-connection = ConnectionRequesterModule()
-messenger = MessengerModule()
-extractor = ProfilesExtractorModule()
-finder = ProfilesFinderModule()
+user.add_node({"value": "Linkedin", "source": "User", "name": "platforms", "top": 0.33, "type": "in", "required": true})
+user.add_node({"value": "Software Enginneer", "source": "User", "name": "expertise", "top": 0.45, "type": "in", "required": true})
+user.add_node({"value": "https://docs.google.com/spreadsheets/d/1QR5HS7nwK5BVURjQ1bzn0JJIG3-DkHfU7Bn2lSrymUo/gviz/tq?tqx=out:csv&sheet=testsheet", "source": "User", "name": "feedback", "top": 0.58, "type": "in", "required": true})
+user.add_node({"value": "", "source": "Table", "type": "out", "top": 0.7, "name": "results"})
 generator = ProfilesGeneratorModule()
-
-user.add_node({'type':'in','name':'platforms','source':'User'})
-user.add_node({'type':'in','name':'expertise','source':'User'})
-user.add_node({'type':'in','name':'feedback','source':'Linked'})
-user.add_node({'type':'out','name':'results','source':'Table'})
-
-generator.add_node({'type':'in','name':'platforms','source':'Linked'})
-generator.add_node({'type':'in','name':'expertise','source':'Linked'})
-generator.add_node({'type':'in','name':'gender','source':'User'})
-generator.add_node({'type':'in','name':'feedback','source':'Linked'})
-generator.add_node({'type':'out','name':'profiles','source':'Linked'})
-
-creator.add_node({'type':'in','name':'platforms','source':'Linked'})
-creator.add_node({'type':'in','name':'profiles','source':'Linked'})
-creator.add_node({'type':'out','name':'bots','source':'Linked'})
-
-finder.add_node({'type':'in','name':'bots','source':'Linked'})
-finder.add_node({'type':'in','name':'platforms','source':'Linked'})
-finder.add_node({'type':'in','name':'expertise','source':'Linked'})
-finder.add_node({'type':'in','name':'location','source':'User'})
-finder.add_node({'type':'out','name':'contacts','source':'Linked'})
-
-connection.add_node({'type':'in','name':'bots','source':'Linked'})
-connection.add_node({'type':'in','name':'contacts','source':'Linked'})
-connection.add_node({'type':'in','name':'message','source':'User'})
-connection.add_node({'type':'out','name':'accepted','source':'Linked'})
-
-extractor.add_node({'type':'in','name':'bots','source':'Linked'})
-extractor.add_node({'type':'in','name':'accepted','source':'Linked'})
-extractor.add_node({'type':'out','name':'userdata','source':'Table'})
-
-messenger.add_node({'type':'in','name':'bots','source':'Linked'})
-messenger.add_node({'type':'in','name':'userdata','source':'Linked'})
-messenger.add_node({'type':'in','name':'feedback','source':'Linked'})
-messenger.add_node({'type':'in','name':'message','source':'User'})
-messenger.add_node({'type':'out','name':'results','source':'Linked'})
-
+generator.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.3, "name": "platforms"})
+generator.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.42, "name": "expertise"})
+generator.add_node({"value": "", "source": "User", "type": "in", "name": "gender"})
+generator.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.65, "name": "feedback"})
+generator.add_node({"value": "", "source": "Linked", "type": "out", "top": 0.76, "name": "profiles"})
+creator = BotsCreatorModule()
+creator.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.39, "name": "platforms"})
+creator.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.53, "name": "profiles"})
+creator.add_node({"value": "", "source": "Linked", "type": "out", "top": 0.68, "name": "bots"})
+finder = ProfilesFinderModule()
+finder.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.3, "name": "bots"})
+finder.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.41, "name": "platforms"})
+finder.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.53, "name": "expertise"})
+finder.add_node({"value": "United States", "source": "User", "type": "in", "name": "location"})
+finder.add_node({"value": "", "source": "Linked", "type": "out", "top": 0.75, "name": "contacts"})
+connection = ConnectionRequesterModule()
+connection.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.31, "name": "bots"})
+connection.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.43, "name": "contacts"})
+connection.add_node({"value": "", "source": "User", "type": "in", "name": "message"})
+connection.add_node({"value": "", "source": "Linked", "type": "out", "top": 0.43, "name": "accepted"})
+extractor = ProfilesExtractorModule()
+extractor.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.39, "name": "bots"})
+extractor.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.53, "name": "accepted"})
+extractor.add_node({"value": "", "source": "Linked", "type": "out", "top": 0.67, "name": "userdata"})
+messenger = MessengerModule()
+messenger.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.28, "name": "bots"})
+messenger.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.39, "name": "userdata"})
+messenger.add_node({"value": "", "source": "Linked", "type": "in", "top": 0.5, "name": "feedback"})
+messenger.add_node({"value": "", "source": "User", "type": "in", "name": "message"})
+messenger.add_node({"value": "", "source": "Linked", "type": "out", "top": 0.78, "name": "results"})
 user.connect({'name':'platforms', 'target':generator})
 user.connect({'name':'expertise', 'target':generator})
 user.connect({'name':'feedback', 'target':generator})
-
 generator.connect({'name':'platforms', 'target':creator})
 generator.connect({'name':'expertise', 'target':finder})
 generator.connect({'name':'feedback', 'target':messenger})
 generator.connect({'name':'profiles', 'target':creator})
-
 creator.connect({'name':'platforms', 'target':finder})
 creator.connect({'name':'bots', 'target':finder})
-
 finder.connect({'name':'bots', 'target':connection})
 finder.connect({'name':'contacts', 'target':connection})
-
 connection.connect({'name':'bots', 'target':extractor})
 connection.connect({'name':'accepted', 'target':extractor})
-
 extractor.connect({'name':'bots', 'target':messenger})
 extractor.connect({'name':'userdata', 'target':messenger})
-
 messenger.connect({'name':'results', 'target':user})
-
-connection.set_values({'message':'Please accept my request.'})
-messenger.set_values({'message':'Hello friend'})
-finder.set_values({'location':'United States'})
-
-user.set_values({'platforms':'Linkedin'})
-user.set_values({'expertise':'Software Engineering'})
-user.set_values({'feedback':'Initial Advice'})
+finder.set_values({"location": "United States"})
+user.set_values({"platforms": "Linkedin", "feedback": "https://docs.google.com/spreadsheets/d/1QR5HS7nwK5BVURjQ1bzn0JJIG3-DkHfU7Bn2lSrymUo/gviz/tq?tqx=out:csv&sheet=testsheet", "expertise": "Software Enginneer"})
 
 print('Done')
+
+"""
+from utils.DatabaseHelper import DatabaseHelper
+
+db = DatabaseHelper()
+print(db.insert_one({'name':'Pepe'}))
+print(db.select({}))
+"""
