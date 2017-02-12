@@ -13,7 +13,7 @@ class ProfilesGenerator(object):
 			profiles = []
 		for result in results['results']:
 			profile = self.complete_profile(params, result)
-			email_result = MailHelper.create_mail(profile)
+			email_result = MailHelper.create_email(profile)
 			LogHelper.log('EMAIL RESULT')
 			LogHelper.log(email_result)
 			profile['emailCreated'] = True
