@@ -12,6 +12,6 @@ selenium_user_agent = (
     "Gecko/20100101 Firefox/45.0"
 )
 
-sms_number = '2065885490'
-sms_user = 'codealodotcom@gmail.com'
-sms_password = 'edupassword'
+sms_number = '<YOUR_GOOGLE_VOICE_NUMBER>'
+sms_user = '<YOUR_GOOGLE_VOICE_EMAIL>'
+sms_password = '<YOUR_GOOGLE_VOICE_PASSWORD>'
