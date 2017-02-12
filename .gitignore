@@ -152,3 +152,5 @@ typings/
 .DS_Store
 Icon^M
 
+ghostdriver.log
+nohup.out
