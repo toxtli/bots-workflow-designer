@@ -4,4 +4,6 @@ requests
 requests[security]
 beautifulsoup4
 pygooglevoice
-
+pymongo
+selenium
+BeautifulSoup
