@@ -1,0 +1,101 @@
+/*
+ * MESSAGING
+ */
+.messaging .panel-sidebar {
+    padding: 0px !important;
+}
+
+.messaging .messaging-title {
+    margin-right: 70px;
+}
+
+.messaging .messaging-list .messaging-list-item {
+    padding: 20px 15px;
+    border-bottom: 1px solid #eceff4;
+}
+
+.messaging .messaging-list .messaging-list-item .avatar {
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+    background: #ffffff;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+
+.messaging .messaging-list .messaging-list-item .avatar img {
+    -webkit-border-radius: 100%;
+            border-radius: 100%;
+}
+
+.messaging .messaging-list .messaging-list-item:last-child {
+    border-bottom: none;
+}
+
+.messaging .messaging-list .messaging-list-item:hover {
+    background: #eceff4;
+    cursor: pointer;
+}
+
+.messaging .messaging-list .messaging-list-item.current {
+    background: #acb7bf;
+    color: #ffffff;
+}
+
+.messaging .messaging-list .messaging-list-item.current .messaging-time, .messaging .messaging-list .messaging-list-item.current .messaging-list-title-last {
+    color: #ffffff !important;
+}
+
+.messaging .messaging-list .s1 {
+    float: left;
+    margin-top: 2px;
+}
+
+.messaging .messaging-list .s2 {
+    margin-left: 55px;
+}
+
+.messaging .messaging-list .messaging-time {
+    color: #acb7bf;
+    float: right;
+    position: relative;
+    top: 3px;
+}
+
+.messaging .messaging-list .messaging-list-title-name {
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    margin-right: 30px;
+}
+
+.messaging .messaging-list .messaging-list-title-subject {
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+}
+
+.messaging .messaging-list .messaging-list-title-last {
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    color: #acb7bf;
+}
+
+.messaging .messaging-search {
+    border-bottom: 1px solid #dfe4ed;
+    padding: 0px 15px;
+}
+
+.messaging .messaging-search .search-block {
+    padding: 15px 0px 14px;
+}
+
+.messaging .mdtc-clnplra-main-player:not(.mdtc-clnplra-dark-theme) .mdtc-clnplra-interface,
+.messaging .mdtc-clnplrv-main-player:not(.mdtc-clnplrv-dark-theme) .mdtc-clnplrv-interface {
+    background: #ffffff;
+}

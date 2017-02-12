@@ -1,0 +1,19 @@
+
+div.DTFC_LeftWrapper table.ui.table.dataTable {
+	border-right: none;
+}
+
+div.DTFC_RightWrapper table.ui.table.dataTable {
+	border-left: none;
+}
+
+// Block out the gap above the scrollbar on the right, when there is a fixed
+// right column
+div.DTFC_Blocker {
+	background-color: white;
+}
+
+div.DTFC_LeftWrapper table.dataTable,
+div.DTFC_RightWrapper table.dataTable {
+	z-index: 2;
+}

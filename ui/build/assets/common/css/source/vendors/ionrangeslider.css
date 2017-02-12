@@ -1,0 +1,126 @@
+/*
+ * ION RANGE SLIDER
+ */
+.irs {
+    height: 55px;
+}
+
+.irs .irs-with-grid {
+    height: 75px;
+}
+
+.irs .irs-line {
+    height: 10px;
+    top: 33px;
+    background: #eceff4;
+    -webkit-border-radius: 16px;
+            border-radius: 16px;
+}
+
+.irs .irs-line-left {
+    height: 10px;
+}
+
+.irs .irs-line-mid {
+    height: 10px;
+}
+
+.irs .irs-line-right {
+    height: 10px;
+}
+
+.irs .irs-bar {
+    height: 10px;
+    top: 33px;
+    background: #01a8fe;
+}
+
+.irs .irs-bar-edge {
+    height: 10px;
+    top: 33px;
+    width: 14px;
+    background: #01a8fe;
+    -webkit-border-radius: 16px 0 0 16px;
+            border-radius: 16px 0 0 16px;
+}
+
+.irs .irs-shadow {
+    height: 10px;
+    top: 33px;
+    background: #514d6a;
+    opacity: 0.3;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+
+.irs .lt-ie9 .irs-shadow {
+    filter: alpha(opacity=30);
+}
+
+.irs .irs-slider {
+    top: 25px;
+    width: 27px;
+    height: 27px;
+    background: #ffffff;
+    -webkit-border-radius: 27px;
+            border-radius: 27px;
+    -moz-border-radius: 27px;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 3px 1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 3px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.irs .irs-slider.state_hover, .irs .irs-slider:hover {
+    background: #ffffff;
+}
+
+.irs .irs-min, .irs .irs-max {
+    color: #827ca1;
+    font-size: .875rem;
+    line-height: 1.333;
+    text-shadow: none;
+    top: 0;
+    padding: 1px 5px;
+    background: #e1e4e9;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+}
+
+.irs .lt-ie9 .irs-min, .irs .lt-ie9 .irs-max {
+    background: #eceff4;
+}
+
+.irs .irs-from, .irs .irs-to, .irs .irs-single {
+    color: #ffffff;
+    font-size: .875rem;
+    line-height: 1.333;
+    text-shadow: none;
+    padding: 1px 5px;
+    background: #00a8ff;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+}
+
+.irs .lt-ie9 .irs-from, .irs .lt-ie9 .irs-to, .irs .lt-ie9 .irs-single {
+    background: #dfe4ed;
+}
+
+.irs .irs-grid {
+    height: 27px;
+    bottom: -15px;
+}
+
+.irs .irs-grid-pol {
+    opacity: 0.5;
+    background: #d0d3d8;
+}
+
+.irs .irs-grid-pol.small {
+    background: #d0d3d8;
+}
+
+.irs .irs-grid-text {
+    bottom: 3px;
+    color: #99a4ac;
+    font-size: .75rem;
+}

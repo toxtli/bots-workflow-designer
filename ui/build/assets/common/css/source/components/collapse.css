@@ -1,0 +1,57 @@
+/*
+ * COLLAPSE
+ */
+.accordion .panel {
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    margin-bottom: 0px;
+    border-bottom-width: 0px;
+}
+
+.accordion .panel:first-child {
+    -webkit-border-radius: 5px 5px 0 0;
+            border-radius: 5px 5px 0 0;
+}
+
+.accordion .panel:last-child {
+    -webkit-border-radius: 0 0 5px 5px;
+            border-radius: 0 0 5px 5px;
+    border-bottom-width: 1px;
+}
+
+.accordion .panel .panel-heading {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.accordion .panel .panel-body {
+    padding: 0px 20px 10px 20px;
+}
+
+.accordion.accordion-margin-bottom .panel {
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    margin-bottom: 10px;
+    border-bottom-width: 1px;
+}
+
+.accordion .accordion-indicator {
+    padding-top: 1px;
+    color: #dfe4ed;
+}
+
+.accordion .accordion-indicator .plus {
+    display: none;
+}
+
+.accordion .accordion-indicator .minus {
+    display: inline;
+}
+
+.accordion .collapsed .accordion-indicator .plus {
+    display: inline;
+}
+
+.accordion .collapsed .accordion-indicator .minus {
+    display: none;
+}

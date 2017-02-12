@@ -1,0 +1,114 @@
+/*
+ * DARK THEME
+ */
+.theme-dark.layout-boxed.menu-top nav.left-menu {
+    border-left: none;
+    border-right: none;
+}
+
+.theme-dark nav.top-menu:before {
+    display: none;
+}
+
+.theme-dark nav.left-menu {
+    background: #38354a;
+    border-right-color: #38354a;
+}
+
+.theme-dark nav.left-menu .logo-container {
+    background: #2b2838 !important;
+    border-color: transparent;
+}
+
+.theme-dark nav.left-menu .logo-container .logo img {
+    display: none;
+}
+
+.theme-dark nav.left-menu .logo-container .logo img.logo-inverse {
+    display: block;
+}
+
+.theme-dark nav.left-menu .left-menu-inner.scroll-pane.jspScrollable .jspDrag:after {
+    background: #514d6a;
+}
+
+.theme-dark nav.left-menu .left-menu-list li .left-menu-link {
+    color: #d2d9e5;
+}
+
+.theme-dark nav.left-menu .left-menu-list li .left-menu-link .left-menu-link-icon {
+    color: #827ca1;
+}
+
+.theme-dark nav.left-menu .left-menu-list li .left-menu-link:hover {
+    background: #2b2838;
+    color: #ffffff;
+}
+
+.theme-dark nav.left-menu .left-menu-list li .left-menu-link:hover .left-menu-link-icon {
+    color: #eceff4;
+}
+
+.theme-dark nav.left-menu .left-menu-list li .left-menu-link:after {
+    border-left-color: #514d6a;
+}
+
+.theme-dark nav.left-menu .left-menu-list li .left-menu-link:before {
+    background: #514d6a !important;
+}
+
+.theme-dark nav.left-menu .left-menu-list li .left-menu-item {
+    color: #ffffff;
+}
+
+.theme-dark nav.left-menu .left-menu-list li.left-menu-list-active .left-menu-link {
+    color: #ffffff;
+    background: #2b2838;
+}
+
+.theme-dark nav.left-menu .left-menu-list li.left-menu-list-active .left-menu-link .left-menu-link-icon {
+    color: #eceff4 !important;
+}
+
+.theme-dark nav.left-menu .left-menu-list li.left-menu-list-opened {
+    background: #2b2838;
+}
+
+.theme-dark nav.left-menu .left-menu-list li.left-menu-list-opened > .left-menu-link {
+    color: #ffffff !important;
+}
+
+.theme-dark nav.left-menu .left-menu-list li.left-menu-list-opened > .left-menu-link .left-menu-link-icon {
+    color: #eceff4 !important;
+}
+
+.theme-dark nav.left-menu .left-menu-list li.left-menu-list-separator {
+    background: #514d6a;
+}
+
+.theme-dark nav.left-menu .left-menu-list li.left-menu-list-disabled > .left-menu-link {
+    color: #827ca1 !important;
+}
+
+.theme-dark nav.left-menu .left-menu-list li.left-menu-list-submenu .left-menu-list {
+    background: #2b2838;
+}
+
+@media (min-width: 768px) {
+    .theme-dark.menu-top nav.left-menu {
+        border-bottom: none;
+    }
+    .theme-dark.menu-top nav.left-menu .left-menu-list-root > li:first-child > .left-menu-link {
+        border-left: 1px solid #514d6a;
+    }
+    .theme-dark.menu-top nav.left-menu .left-menu-list-root > li > .left-menu-link {
+        border-bottom: 0px !important;
+        border-right: 1px solid #514d6a;
+    }
+    .theme-dark.menu-top nav.left-menu .left-menu-list-root > li:hover {
+        background: #2b2838;
+    }
+    .theme-dark.menu-top nav.left-menu .left-menu-list-root li.left-menu-list-submenu .left-menu-link:after {
+        border-top-color: #514d6a !important;
+    }
+}

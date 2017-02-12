@@ -1,0 +1,89 @@
+/*
+ * RED THEME
+ */
+.theme-red.layout-boxed.menu-top nav.left-menu {
+    border-left: none;
+}
+
+.theme-red nav.left-menu .jspDrag {
+    opacity: .3;
+}
+
+.theme-red nav.left-menu .jspDrag:after {
+    background: #bbb8cb;
+}
+
+.theme-red nav.left-menu .logo-container {
+    background: #d26464 !important;
+}
+
+.theme-red nav.left-menu .logo-container .logo img {
+    display: none;
+}
+
+.theme-red nav.left-menu .logo-container .logo img.logo-inverse {
+    display: block;
+}
+
+.theme-red nav.left-menu .left-menu-list li .left-menu-link .left-menu-link-icon {
+    color: #bbb8cb;
+}
+
+.theme-red nav.left-menu .left-menu-list li .left-menu-link:hover {
+    background: #fff;
+    color: #514d6a;
+}
+
+.theme-red nav.left-menu .left-menu-list li .left-menu-link:hover .left-menu-link-icon {
+    color: #24222f;
+}
+
+.theme-red nav.left-menu .left-menu-list li .left-menu-link:after {
+    border-left-color: #dfe4ed;
+}
+
+.theme-red nav.left-menu .left-menu-list li.left-menu-list-active .left-menu-link {
+    color: #ffffff;
+    background: #d26464 !important;
+}
+
+.theme-red nav.left-menu .left-menu-list li.left-menu-list-active .left-menu-link .left-menu-link-icon {
+    color: #ffffff !important;
+}
+
+.theme-red nav.left-menu .left-menu-list li.left-menu-list-opened {
+    background: #d26464 !important;
+}
+
+.theme-red nav.left-menu .left-menu-list li.left-menu-list-opened > .left-menu-link {
+    color: #ffffff !important;
+    background: #d26464 !important;
+}
+
+.theme-red nav.left-menu .left-menu-list li.left-menu-list-opened > .left-menu-link:hover {
+    background: #d26464 !important;
+}
+
+.theme-red nav.left-menu .left-menu-list li.left-menu-list-opened > .left-menu-link .left-menu-link-icon {
+    color: #eceff4 !important;
+}
+
+.theme-red nav.left-menu .left-menu-list li.left-menu-list-submenu .left-menu-item {
+    color: #ffffff;
+}
+
+.theme-red nav.left-menu .left-menu-list li.left-menu-list-submenu .left-menu-list {
+    background: #d26464;
+}
+
+.theme-red nav.left-menu .left-menu-list li.left-menu-list-submenu .left-menu-list .left-menu-link {
+    color: #ffffff;
+}
+
+.theme-red nav.left-menu .left-menu-list li.left-menu-list-submenu .left-menu-list .left-menu-link:hover {
+    background: #dd8c8c !important;
+}
+
+.theme-red nav.top-menu:before {
+    display: none;
+}

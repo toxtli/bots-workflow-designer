@@ -1,0 +1,48 @@
+/*
+ * MAIL
+ */
+.mail .panel-heading {
+    height: 66px;
+    padding: 13px 25px 10px !important;
+}
+
+.mail .panel-heading .mail-heading {
+    float: left;
+    margin-top: 2px;
+}
+
+.mail .panel-heading .mail-heading .nav-link {
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+
+.mail .messaging-list-item .s2 {
+    margin-left: 0px;
+}
+
+.mail .note-editor {
+    margin-bottom: 0px;
+}
+
+.compose-message .note-editor {
+    margin-bottom: 0px;
+}
+
+@media (max-width: 1199px) {
+    .mail.panel {
+        margin-bottom: 15px;
+    }
+    .mail.panel.panel-with-sidebar:before {
+        display: none;
+    }
+    .mail.panel.panel-with-sidebar .panel-heading, .mail.panel.panel-with-sidebar .panel-body, .mail.panel.panel-with-sidebar .panel-footer {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    .mail.panel.panel-with-sidebar .panel-sidebar {
+        float: none !important;
+        width: auto;
+        border-bottom: 1px solid #dfe4ed;
+        margin-bottom: 0px !important;
+    }
+}

@@ -1,0 +1,75 @@
+/*
+ * GREEN THEME
+ */
+.theme-green.layout-boxed.menu-top nav.left-menu {
+    border-left: none;
+    border-right: none;
+}
+
+.theme-green.layout-boxed.menu-top nav.top-menu {
+    border-left: none;
+    border-right: none;
+}
+
+.theme-green nav.left-menu .logo-container {
+    background: #1f5d42 !important;
+    border-bottom: none;
+}
+
+.theme-green nav.left-menu .logo-container .logo img {
+    display: none;
+}
+
+.theme-green nav.left-menu .logo-container .logo img.logo-inverse {
+    display: block;
+}
+
+.theme-green nav.top-menu {
+    background: #1f5d42 !important;
+    border-bottom: none;
+    color: #ffffff;
+}
+
+.theme-green nav.top-menu:before {
+    display: none;
+}
+
+.theme-green nav.top-menu .dropdown.dropdown-avatar .dropdown-toggle:after {
+    color: #827ca1;
+}
+
+.theme-green nav.top-menu .dropdown.dropdown-avatar .dropdown-toggle:hover:after {
+    color: #eceff4;
+}
+
+.theme-green nav.top-menu .dropdown .dropdown-inline-button {
+    color: #eceff4;
+}
+
+.theme-green nav.top-menu .dropdown .dropdown-inline-button .dropdown-inline-button-icon {
+    color: #bbb8cb;
+}
+
+.theme-green nav.top-menu .dropdown .dropdown-inline-button:after {
+    color: #bbb8cb;
+}
+
+.theme-green nav.top-menu .dropdown .dropdown-inline-button:hover, .theme-green nav.top-menu .dropdown .dropdown-inline-button:focus, .theme-green nav.top-menu .dropdown .dropdown-inline-button:active {
+    color: #ffffff;
+}
+
+.theme-green nav.top-menu .dropdown .dropdown-inline-button:hover .dropdown-inline-button-icon, .theme-green nav.top-menu .dropdown .dropdown-inline-button:focus .dropdown-inline-button-icon, .theme-green nav.top-menu .dropdown .dropdown-inline-button:active .dropdown-inline-button-icon {
+    color: #eceff4;
+}
+
+.theme-green nav.top-menu .dropdown .dropdown-inline-button:hover:after, .theme-green nav.top-menu .dropdown .dropdown-inline-button:focus:after, .theme-green nav.top-menu .dropdown .dropdown-inline-button:active:after {
+    color: #eceff4;
+}
+
+.theme-green nav.top-menu .dropdown.open .dropdown-inline-button {
+    color: #ffffff;
+}
+
+.theme-green nav.top-menu .dropdown.open .dropdown-inline-button .dropdown-inline-button-icon {
+    color: #eceff4;
+}

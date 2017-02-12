@@ -1,0 +1,72 @@
+/*
+ * PROFILE
+ */
+.profile-header {
+    background: #ffffff;
+    height: 145px;
+    margin: -25px;
+    padding: 25px;
+    background-size: cover;
+    position: relative;
+}
+
+.profile-header .profile-header-info {
+    padding: 25px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.profile-user {
+    background: #acb7bf;
+    margin-top: -145px;
+    color: #ffffff;
+    background-size: cover;
+}
+
+.profile-user .profile-user-title .avatar {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 5px;
+    background: #ffffff;
+}
+
+.profile-user .profile-user-title .avatar img {
+    -webkit-border-radius: 100%;
+            border-radius: 100%;
+}
+
+.profile-header-title {
+    padding-left: 25px;
+}
+
+.profile-user-skills progress {
+    height: 6px;
+    margin-top: 4px;
+}
+
+.mode-superclean .profile-header-title {
+    padding-left: 15px;
+}
+
+@media (max-width: 1200px) {
+    .profile-header-title {
+        padding-left: 0px !important;
+    }
+    .profile-user {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .user-profile-dl dt {
+        float: none;
+        text-align: left;
+    }
+    .user-profile-dl dd {
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+}

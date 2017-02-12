@@ -1,0 +1,200 @@
+/*
+ * NESTABLE
+ */
+.dd {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dd button {
+    outline: none;
+}
+
+.dd-list {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dd-list .dd-list {
+    padding-left: 30px;
+}
+
+.dd-collapsed .dd-list {
+    display: none;
+}
+
+.dd-item,
+.dd-empty,
+.dd-placeholder {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 30px;
+    line-height: 30px;
+}
+
+.dd-handle {
+    display: block;
+    height: 40px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #dfe4ed;
+    background: #fff;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    cursor: move;
+}
+
+.dd-handle:hover {
+    color: #fff;
+    background: #01a8fe;
+    border-color: #01a8fe;
+}
+
+.dd-item > button {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 5px 0;
+    padding: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 0;
+    background: transparent;
+    line-height: 33px;
+    text-align: center;
+    font-family: FontAwesome;
+    font-size: 11px;
+}
+
+.dd-item > button:before {
+    content: "\f067";
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    text-indent: 0;
+}
+
+.dd-item > button[data-action="collapse"]:before {
+    content: "\f068";
+}
+
+.dd-placeholder, .dd-empty {
+    margin: 5px 0;
+    padding: 0;
+    min-height: 30px;
+    background: #f2f4f8;
+    border: 1px dashed #bbb8cb;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+}
+
+.dd-empty {
+    border: 1px dashed #eceff4;
+    min-height: 100px;
+    background-color: #ffffff;
+}
+
+.dd-dragel {
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: .8;
+    list-style: none;
+}
+
+.dd-dragel li {
+    list-style: none;
+}
+
+.dd-dragel > .dd-item .dd-handle {
+    margin-top: 0;
+}
+
+.dd-dragel .dd-item > button {
+    display: none;
+}
+
+.dd-dragel .dd-handle {
+    line-height: 20px;
+    min-height: 30px;
+    padding: 5px 10px;
+}
+
+.dd3-content {
+    display: block;
+    height: 40px;
+    margin: 5px 0;
+    padding: 5px 10px 5px 40px;
+    text-decoration: none;
+    border: 1px solid #dfe4ed;
+    background: #ffffff;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+}
+
+.dd-dragel > .dd3-item > .dd3-content {
+    margin: 0;
+}
+
+.dd3-item > button {
+    margin-left: 30px;
+}
+
+.dd3-item > button.hover {
+    color: #514d6a;
+}
+
+.dd3-handle {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    cursor: move;
+    width: 30px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 1px solid #dfe4ed;
+    background: #eceff4;
+    -webkit-border-top-right-radius: 0;
+            border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+            border-bottom-right-radius: 0;
+    color: #514d6a;
+}
+
+.dd3-handle:before {
+    font-family: FontAwesome;
+    content: "\f0c9";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 100%;
+    text-align: center;
+    text-indent: 0;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.dd3-handle:hover {
+    background: #01a8fe;
+}
+
+.dd3-handle:hover + .dd3-content {
+    border-color: #01a8fe;
+}

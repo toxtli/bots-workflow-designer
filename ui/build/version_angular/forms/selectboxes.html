@@ -1,0 +1,201 @@
+<section class="page-content-inner">
+
+    <!-- Selectboxes -->
+    <section class="panel">
+        <div class="panel-heading">
+            <h3>
+                Default Selectbox
+            </h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="margin-bottom-50">
+                        <h4>Single Item</h4>
+                        <p>Modifier: <code>[disabled]</code></p>
+                        <br />
+                        <div class="form-group">
+                            <label>Enabled</label>
+                            <select class="form-control">
+                                <option>Option 1</option>
+                                <option disabled>Option 2 (disabled)</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                                <option>Option 5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Disabled</label>
+                            <select class="form-control" disabled>
+                                <option>Option 1</option>
+                                <option disabled>Option 2 (disabled)</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                                <option>Option 5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="margin-bottom-50">
+                        <h4>Multiple Items</h4>
+                        <p>Modifier: <code>[multiple]</code>, <code>[disabled]</code></p>
+                        <br />
+                        <div class="form-group">
+                            <label>Enabled</label>
+                            <select class="form-control height-120" multiple>
+                                <option>Option 1</option>
+                                <option disabled>Option 2 (disabled)</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                                <option>Option 5</option>
+                                <option>Option 6</option>
+                                <option>Option 7</option>
+                                <option>Option 8</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Select2 -->
+    <section class="panel">
+        <div class="panel-heading">
+            <h3>
+                Select2
+                <sup>
+                    <small><a href="https://select2.github.io/" target="_blank" class="link-underlined">Official Documentation</a></small>
+                </sup>
+            </h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="margin-bottom-50">
+                        <h4>Single Item</h4>
+                        <p>Modifier: see documentation</p>
+                        <br />
+                        <!-- Select2 Single Item -->
+                        <div class="form-group">
+                            <label>Enabled</label>
+                            <select class="select2">
+                                <option>Option 1</option>
+                                <option disabled>Option 2 (disabled)</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                                <option>Option 5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Disabled</label>
+                            <select class="select2" disabled>
+                                <option>Option 1</option>
+                                <option disabled>Option 2 (disabled)</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                                <option>Option 5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Grouped</label>
+                            <select class="select2">
+                                <optgroup label="Group 1">
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                </optgroup>
+                                <optgroup label="Group 2">
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                    <option>Option 5</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <!-- End Select2 Single Item  -->
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="margin-bottom-50">
+                        <h4>Multiple Items</h4>
+                        <p>Modifier: see documentation</p>
+                        <br />
+                        <!-- Select2 Multiple Item -->
+                        <div class="form-group">
+                            <label>Enabled</label>
+                            <select class="select2" multiple>
+                                <option selected>Option 1</option>
+                                <option>Option 2</option>
+                                <option selected>Option 3</option>
+                                <option>Option 4</option>
+                                <option selected>Option 5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Disabled</label>
+                            <select class="select2" multiple disabled>
+                                <option selected>Option 1</option>
+                                <option>Option 2</option>
+                                <option selected>Option 3</option>
+                                <option>Option 4</option>
+                                <option selected>Option 5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Grouped</label>
+                            <select class="select2" multiple>
+                                <optgroup label="Group 1">
+                                    <option selected>Option 1</option>
+                                    <option>Option 2</option>
+                                </optgroup>
+                                <optgroup label="Group 2">
+                                    <option selected>Option 3</option>
+                                    <option>Option 4</option>
+                                    <option>Option 5</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <!-- End Select2 Multiple Item -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="margin-bottom-50">
+                        <h4>Dynamic Tags</h4>
+                        <p>Modifier: see documentation</p>
+                        <br />
+                        <!-- Select2 Dynamic Tags -->
+                        <div class="form-group">
+                            <select class="select2-tags" multiple>
+                                <option selected>Type tag and press Enter</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                                <option>Option 5</option>
+                            </select>
+                        </div>
+                        <!-- End Select2 Dynamic Tags -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Select2 -->
+
+</section>
+
+<!-- Page Scripts -->
+<script>
+    $(function(){
+
+        $('.select2').select2();
+        $('.select2-tags').select2({
+            tags: true,
+            tokenSeparators: [',', ' ']
+        });
+
+    })
+</script>
+<!-- End Page Scripts-->

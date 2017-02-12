@@ -1,0 +1,44 @@
+/*
+ * BADGES & LABELS
+ */
+.label {
+    font-weight: normal;
+    background: #ffffff;
+    color: #6a7a84;
+    font-size: 100%;
+}
+
+.label.label-default {
+    background: #acb7bf;
+    color: #ffffff;
+}
+
+.label.label-primary {
+    background: #01a8fe;
+    color: #ffffff;
+}
+
+.label.label-secondary {
+    background: #6a7a84;
+    color: #ffffff;
+}
+
+.label.label-success {
+    background: #46be8a;
+    color: #ffffff;
+}
+
+.label.label-info {
+    background: #0190da;
+    color: #ffffff;
+}
+
+.label.label-danger {
+    background: #fb434a;
+    color: #ffffff;
+}
+
+.label.label-warning {
+    background: #f39834;
+    color: #ffffff;
+}

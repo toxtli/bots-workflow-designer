@@ -1,0 +1,96 @@
+<div class="page-content-inner">
+
+    <!-- Sliders -->
+    <section class="panel">
+        <div class="panel-heading">
+            <h3>
+                Slider
+                <sup>
+                    <small><a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html" target="_blank" class="link-underlined">Official Documentation</a></small>
+                </sup>
+            </h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>Basic w/ Grid</h4>
+                    <p>Modifiers: see documentation</p>
+                    <br />
+                    <div class="margin-bottom-50">
+                        <input type="text" id="slider-1" name="example_name" value="" />
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4>Basic w/o Grid</h4>
+                    <p>Modifiers: see documentation</p>
+                    <br />
+                    <div class="margin-bottom-50">
+                        <input type="text" id="slider-2" name="example_name" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>Range w/ Min-Max</h4>
+                    <p>Modifiers: see documentation</p>
+                    <br />
+                    <div class="margin-bottom-50">
+                        <input type="text" id="slider-3" name="example_name" value="" />
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4>Basic Range</h4>
+                    <p>Modifiers: see documentation</p>
+                    <br />
+                    <div class="margin-bottom-50">
+                        <input type="text" id="slider-4" name="example_name" value="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Sliders -->
+
+</div>
+
+<!-- Page Scripts -->
+<script>
+    $(function(){
+
+        $("#slider-1").ionRangeSlider({
+            min: 0,
+            max: 100,
+            from: 50,
+            step: 10,
+            grid: true,
+            grid_num: 10
+        });
+
+        $("#slider-2").ionRangeSlider();
+
+
+        $("#slider-3").ionRangeSlider({
+            type: "double",
+            min: 0,
+            max: 100,
+            from: 20,
+            from_min: 10,
+            from_max: 30,
+            from_shadow: true,
+            to: 80,
+            to_min: 70,
+            to_max: 90,
+            to_shadow: true,
+            grid: true,
+            grid_num: 10
+        });
+
+        $("#slider-4").ionRangeSlider({
+            from: 30,
+            to: 60,
+            type: 'double'
+        });
+
+    });
+</script>
+<!-- End Page Scripts --->

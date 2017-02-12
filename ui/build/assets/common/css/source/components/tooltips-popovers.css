@@ -1,0 +1,94 @@
+/*
+ * TOOLTIPS & POPOVERS
+ */
+.popover {
+    border-color: #d2d9e5;
+}
+
+.popover .popover-arrow {
+    border-width: 8px;
+}
+
+.popover .popover-arrow:after {
+    border-width: 7px;
+}
+
+.popover.left .tooltip-arrow,
+.popover.bs-tether-element-attached-left .popover-arrow {
+    border-right-color: #d2d9e5;
+    left: -8px;
+}
+
+.popover.left .tooltip-arrow:after,
+.popover.bs-tether-element-attached-left .popover-arrow:after {
+    bottom: -7px;
+}
+
+.popover.right .tooltip-arrow,
+.popover.bs-tether-element-attached-right .popover-arrow {
+    border-left-color: #d2d9e5;
+    right: -8px;
+}
+
+.popover.right .tooltip-arrow:after,
+.popover.bs-tether-element-attached-right .popover-arrow:after {
+    bottom: -7px;
+}
+
+.popover.top .tooltip-arrow,
+.popover.bs-tether-element-attached-top .popover-arrow {
+    border-bottom-color: #d2d9e5;
+    top: -8px;
+}
+
+.popover.top .tooltip-arrow:after,
+.popover.bs-tether-element-attached-top .popover-arrow:after {
+    margin-left: -7px;
+}
+
+.popover.bottom .tooltip-arrow,
+.popover.bs-tether-element-attached-bottom .popover-arrow {
+    border-top-color: #d2d9e5;
+    bottom: -8px;
+}
+
+.popover.bottom .tooltip-arrow:after,
+.popover.bs-tether-element-attached-bottom .popover-arrow:after {
+    margin-left: -7px;
+}
+
+.popover .popover-title {
+    font-weight: 600;
+    background: #eceff4;
+    margin: -1px;
+    padding: 8px 15px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+            border-radius: 3px 3px 0px 0px;
+}
+
+.tooltip .tooltip-inner {
+    background: #514d6a;
+    padding: 4px 15px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.tooltip.left .tooltip-arrow,
+.tooltip.bs-tether-element-attached-left .tooltip-arrow {
+    border-right-color: #514d6a;
+}
+
+.tooltip.right .tooltip-arrow,
+.tooltip.bs-tether-element-attached-right .tooltip-arrow {
+    border-left-color: #514d6a;
+}
+
+.tooltip.top .tooltip-arrow,
+.tooltip.bs-tether-element-attached-top .tooltip-arrow {
+    border-bottom-color: #514d6a;
+}
+
+.tooltip.bottom .tooltip-arrow,
+.tooltip.bs-tether-element-attached-bottom .tooltip-arrow {
+    border-top-color: #514d6a;
+}

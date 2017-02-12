@@ -1,0 +1,57 @@
+/*
+ * TABS
+ */
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+
+.nav-tabs-horizontal .nav-tabs {
+    border-bottom: 1px solid #dfe4ed;
+}
+
+.nav-tabs-horizontal .nav-tabs .nav-item {
+    margin-bottom: -2px;
+    cursor: pointer;
+}
+
+.nav-tabs-horizontal .nav-tabs .nav-item .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-tabs-horizontal .nav-tabs .nav-item .nav-link.active, .nav-tabs-horizontal .nav-tabs .nav-item .nav-link:focus {
+    border-bottom-color: #01a8fe !important;
+}
+
+.nav-tabs-horizontal .nav-tabs .nav-item .nav-link:hover {
+    border-bottom-color: #dfe4ed;
+}
+
+.nav-tabs-vertical .nav-tabs {
+    border-bottom: none;
+    border-right: 1px solid #dfe4ed;
+    float: left;
+    margin-right: 30px;
+}
+
+.nav-tabs-vertical .nav-tabs .nav-item {
+    margin: 0px -2px 1px 0px;
+    float: none;
+    cursor: pointer;
+}
+
+.nav-tabs-vertical .nav-tabs .nav-item .nav-link {
+    border: none;
+    border-right: 3px solid transparent;
+    padding-left: 0px;
+    -webkit-border-radius: 0px;
+            border-radius: 0px;
+}
+
+.nav-tabs-vertical .nav-tabs .nav-item .nav-link.active, .nav-tabs-vertical .nav-tabs .nav-item .nav-link:focus {
+    border-right-color: #01a8fe !important;
+}
+
+.nav-tabs-vertical .nav-tabs .nav-item .nav-link:hover {
+    border-right-color: #dfe4ed;
+}

@@ -1,0 +1,101 @@
+/*
+ * BASIC INPUTS
+ */
+.form-actions {
+    border-top: 1px solid #dfe4ed;
+    padding-top: 20px;
+    margin: 20px 0px;
+}
+
+input[type=text], input[type=password], input[type=email], textarea {
+    -webkit-appearance: none !important;
+       -moz-appearance: none !important;
+            appearance: none !important;
+}
+
+.form-control {
+    font-family: "Lato", sans;
+    padding: 8px 16px;
+    border-color: #dfe4ed;
+}
+
+.form-control.form-control-rounded {
+    -webkit-border-radius: 500px;
+            border-radius: 500px;
+}
+
+.form-control:focus {
+    border-color: #01a8fe;
+}
+
+.form-control.input-sm {
+    padding: 4px 8px;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #f2f4f8;
+}
+
+.input-group-addon {
+    border-color: #dfe4ed;
+    background-color: #f2f4f8;
+}
+
+span.input-group-addon {
+    outline: none !important;
+}
+
+.form-control-label {
+    padding-left: 0px;
+}
+
+.form-control-static {
+    min-height: 39px;
+}
+
+.form-group.has-danger .form-control {
+    border-color: #fb434a;
+}
+
+.form-group.has-success .form-control {
+    border-color: #46be8a;
+}
+
+.form-group.has-warning .form-control {
+    border-color: #f39834;
+}
+
+.form-group.has-focused .form-control {
+    border-color: #01a8fe;
+}
+
+.form-input-icon {
+    position: relative;
+}
+
+.form-input-icon > i {
+    color: #ccc;
+    position: absolute;
+    z-index: 1 !important;
+    margin: 11px 2px 4px 10px;
+    z-index: 3;
+    width: 16px;
+    font-size: 16px;
+    text-align: center;
+    left: 0;
+}
+
+.form-input-icon .form-control {
+    padding-left: 34px;
+}
+
+.form-input-icon.form-input-icon-right > i {
+    left: auto;
+    right: 3px;
+    margin: 11px 10px 4px 2px;
+}
+
+.form-input-icon.form-input-icon-right .form-control {
+    padding-left: 16px;
+    padding-right: 34px;
+}
