@@ -12,7 +12,7 @@
         },{
             "name": "expertise",
             "type": "in",
-            "value": "Software Enginneer",
+            "value": "Software Engineer",
             "source": "User",
             "top": 0.45,
             "required": true

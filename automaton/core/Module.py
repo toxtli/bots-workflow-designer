@@ -74,12 +74,13 @@ class Module(object):
 		check = False
 		LogHelper.log("SET VALUE " + self.__class__.__name__ + ' ' + str(params.keys()))
 		for index in params:
-			if index in self.queues:
-				self.queues[index].append(params[index])
-				check = True
-			elif index in self.values:
-				self.values[index] = params[index]
-				check = True
+			if params[index] is not None:
+				if index in self.queues:
+					self.queues[index].append(params[index])
+					check = True
+				elif index in self.values:
+					self.values[index] = params[index]
+					check = True
 		if check:
 			self.check_states()
 

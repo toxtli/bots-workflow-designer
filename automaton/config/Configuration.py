@@ -1,5 +1,7 @@
 debug = False
 
+logic_file = 'logic.json'
+
 db_host = 'mongodb://localhost'
 db_name = 'test'
 db_collection = 'test'

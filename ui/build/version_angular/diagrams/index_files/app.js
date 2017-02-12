@@ -13,7 +13,7 @@ $.getJSON( "diagrams/index_files/data.json", function(data) {
         console.log('RUNNING ...');
         console.log(JSON.stringify(data, null, '\t'));
         $.ajax({
-            url: 'http://localhost:5000/',
+            url: 'http://localhost:5000/load',
             type: 'POST',
             data: JSON.stringify(data),
             contentType: 'application/json; charset=utf-8',
