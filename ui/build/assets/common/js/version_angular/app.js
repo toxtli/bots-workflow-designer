@@ -50,6 +50,11 @@ angular.module('cleanUI', [
             templateUrl: 'apps/gallery.html'
         });
 
+        $routeProvider.when('/diagrams/diagram1', {
+            templateUrl: 'diagrams/diagram1.html'
+        });
+        
+
         /////////////////////////////////////////////////////////////
         // Layout
         $routeProvider.when('/layout/grid', {

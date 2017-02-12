@@ -53,6 +53,7 @@ angular.module('cleanUI', [
         $routeProvider.when('/diagrams/diagram1', {
             templateUrl: 'diagrams/diagram1.html'
         });
+        
 
         /////////////////////////////////////////////////////////////
         // Layout
