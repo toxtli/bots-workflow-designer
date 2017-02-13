@@ -45,6 +45,5 @@ class MessengerListenerModule(Module):
 			self.drivers[email].executeScript('tox.requestMessages()')
 			time.sleep(2)
 			result = self.drivers[email].executeScript('return tox.getMessages()')
-			text = TextHelper.text_between(result, '', '')
-			LogHelper.log(text)
+			LogHelper.log(result, True)
 			time.sleep(5)

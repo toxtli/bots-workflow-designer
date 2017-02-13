@@ -7,10 +7,7 @@ def clean_text(input_str):
 	return only_ascii.decode("utf-8")
 
 def text_between( s, first, last ):
-	exit = []
-	if s:
-		exit = re.findall(first + '(.*?)' + last, s)
-	return exit
+	return re.findall(first + '(.*?)' + last, s)
 
 """
 def text_between( s, first, last ):
