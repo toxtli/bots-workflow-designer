@@ -350,7 +350,7 @@ class SeleniumHelper:
 	            time.sleep(0.1)
 	    return False
 
-	def waitPageLoad(seld, wait=None):
+	def waitPageLoad(self, wait=None):
 		wait = wait if wait else self.WAIT
 		def page_has_loaded():
 			page_state = self.driver.execute_script('return document.readyState;')
