@@ -1,4 +1,8 @@
-window.tox = {lastResult:''};
+if (!window.tox) {
+	window.tox = {};
+}
+
+window.tox.lastResult = '';
 
 tox.requestNotifications = function() {
 	var url = 'https://www.linkedin.com/chrome/inbox/activity/notifications/v2?rnd=' + (new Date()).getTime();
