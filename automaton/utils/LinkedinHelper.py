@@ -43,11 +43,11 @@ def login(driver, params, skipLoad=False):
 					driver.selectAndWrite(FIELD_LOGIN_USER, params['email'])
 					driver.selectAndWrite(FIELD_LOGIN_PASS, params['password'])
 					driver.submitFormSelector(FIELD_LOGIN_PASS)
+					driver.waitPageLoad()
 					cookies = driver.waitGetCookies()
-					driver.waitShowElement(ELEMENT_TOP_BAR)
-					title = driver.getTitle()
+					url = driver.getUrl()
 					LogHelper.log(title, True)
-					if 'Error' in title:
+					if 'uas' in url:
 						LogHelper.log('ERROR LOGIN', True)
 						time.sleep(100)
 					
