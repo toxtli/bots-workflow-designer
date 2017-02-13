@@ -14,6 +14,5 @@ class MessengerListener(object):
 		message = params['conversation']
 		if callback:
 			callback(message)
-		self.sel.close()
 		#https://www.linkedin.com/messaging/conversationsView?includeSent=true&clearUnseen=false&after=1486408991388
 		pass
