@@ -115,6 +115,7 @@ class BotsCreator(object):
 			time.sleep(1)
 			sms_text = VoiceHelper.get_sms_last()
 			code_value = TextHelper.text_between(sms_text,'verification code is ','.')
+		code_value = code_value[0]
 		return code_value
 
 	def get_email_code(self, email):
@@ -124,4 +125,5 @@ class BotsCreator(object):
 			time.sleep(1)
 			email_text = NetworkHelper.get(url)
 			code_value = TextHelper.text_between(email_text, 'full access to LinkedIn. ', ' Enter your verificatio')
+		code_value = code_value[0]
 		return code_value

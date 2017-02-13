@@ -1,3 +1,4 @@
+import re
 import unicodedata
 
 def clean_text(input_str):
@@ -6,9 +7,14 @@ def clean_text(input_str):
 	return only_ascii.decode("utf-8")
 
 def text_between( s, first, last ):
+	return re.findall(first + '(.*?)' + last)
+
+"""
+def text_between( s, first, last ):
 	try:
 		start = s.rindex( first ) + len( first )
 		end = s.rindex( last, start )
 		return s[start:end]
 	except ValueError:
 		return ""
+"""
