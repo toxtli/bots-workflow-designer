@@ -43,7 +43,7 @@ def login(driver, params, skipLoad=False):
 			driver.waitShowElement(ELEMENT_TOP_BAR)
 			if driver.getElement(REQUEST_ERRROR):
 				LogHelper.log('ERROR LOGIN', True)
-				# time.sleep(100)
+				time.sleep(100)
 	return cookies
 
 def get_logged_in_driver(params=None):
