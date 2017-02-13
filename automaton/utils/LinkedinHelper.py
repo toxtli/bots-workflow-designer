@@ -43,6 +43,7 @@ def login(driver, params, skipLoad=False):
 					driver.selectAndWrite(FIELD_LOGIN_USER, params['email'])
 					driver.selectAndWrite(FIELD_LOGIN_PASS, params['password'])
 					driver.submitFormSelector(FIELD_LOGIN_PASS)
+					time.sleep(0.2)
 					driver.waitPageLoad()
 					cookies = driver.waitGetCookies()
 					title = driver.getTitle()
