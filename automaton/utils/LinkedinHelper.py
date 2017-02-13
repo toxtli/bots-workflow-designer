@@ -45,8 +45,10 @@ def login(driver, params, skipLoad=False):
 					driver.submitFormSelector(FIELD_LOGIN_PASS)
 					driver.waitPageLoad()
 					cookies = driver.waitGetCookies()
-					url = driver.getUrl()
+					title = driver.getTitle()
 					LogHelper.log(title, True)
+					url = driver.getUrl()
+					LogHelper.log(url, True)
 					if 'uas' in url:
 						LogHelper.log('ERROR LOGIN', True)
 						time.sleep(100)
