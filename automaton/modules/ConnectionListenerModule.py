@@ -27,6 +27,8 @@ class ConnectionListenerModule(Module):
 			self.drivers[email] = sel
 			t = threading.Thread(target=self.check_connections, args=[params])
 			t.start()
+		else:
+			sel = {}
 		args = {'driver': sel}
 		connection_listener = ConnectionListener(args)
 		def connection_listener_handler(url):
