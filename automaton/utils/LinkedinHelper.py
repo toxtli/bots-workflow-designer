@@ -1,10 +1,14 @@
+import time
 from config import Configuration
+from utils import LogHelper
 from utils.SeleniumHelper import SeleniumHelper
 
 URL_INIT = 'https://www.linkedin.com/'
 FIELD_LOGIN_USER = '#login-email'
 FIELD_LOGIN_PASS = '#login-password'
-ELEMENT_TOP_BAR = '.header-section'
+# ELEMENT_TOP_BAR = '.header-section'
+ELEMENT_TOP_BAR = '#top-header'
+REQUEST_ERRROR = '#global-error'
 
 def get_conn_id(html):
 	connId = ''
@@ -37,6 +41,9 @@ def login(driver, params, skipLoad=False):
 			driver.submitFormSelector(FIELD_LOGIN_PASS)
 			cookies = driver.getCookies()
 			driver.waitShowElement(ELEMENT_TOP_BAR)
+			if driver.getElement(REQUEST_ERRROR):
+				LogHelper.log('ERROR LOGIN', True)
+				time.sleep(100)
 	return cookies
 
 def get_logged_in_driver(params=None):
