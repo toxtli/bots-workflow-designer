@@ -39,13 +39,17 @@ def login(driver, params, skipLoad=False):
 				driver.cleanCookies()
 			url = driver.getUrl()
 			if not 'error' in url:
+				LogHelper.log('FIRST TIME', True)
 				has_logged = login_enter_credentials(driver, params)
 				if has_logged:
 					cookies = has_logged
 				else:
+					LogHelper.log('SECOND TIME', True)
 					driver.loadPage(URL_INIT)
+					LogHelper.log('TIME 3', True)
 					has_logged = login_enter_credentials(driver, params)
 					if has_logged:
+						LogHelper.log('TIME 4', True)
 						cookies = has_logged
 					else:
 						LogHelper.log('ERROR AGAIN', True)
@@ -61,14 +65,11 @@ def login_enter_credentials(driver, params):
 		driver.selectAndWrite(FIELD_LOGIN_USER, params['email'])
 		driver.selectAndWrite(FIELD_LOGIN_PASS, params['password'])
 		driver.submitFormSelector(FIELD_LOGIN_PASS)
-		time.sleep(0.2)
+		time.sleep(0.4)
 		driver.waitPageLoad()
 		title = driver.getTitle()
 		LogHelper.log(title, True)
 		if 'Error' not in title:
-			driver.loadPage(URL_INIT)
-			LogHelper.log('ERROR LOGIN', True)
-		else:
 			exit = driver.waitGetCookies()
 	return exit
 
