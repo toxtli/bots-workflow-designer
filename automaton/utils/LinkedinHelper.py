@@ -39,25 +39,38 @@ def login(driver, params, skipLoad=False):
 				driver.cleanCookies()
 			url = driver.getUrl()
 			if not 'error' in url:
-				if driver.existElement(FIELD_LOGIN_USER):
-					driver.selectAndWrite(FIELD_LOGIN_USER, params['email'])
-					driver.selectAndWrite(FIELD_LOGIN_PASS, params['password'])
-					driver.submitFormSelector(FIELD_LOGIN_PASS)
-					time.sleep(0.2)
-					driver.waitPageLoad()
-					cookies = driver.waitGetCookies()
-					title = driver.getTitle()
-					LogHelper.log(title, True)
-					url = driver.getUrl()
-					LogHelper.log(url, True)
-					if 'uas' in url:
-						LogHelper.log('ERROR LOGIN', True)
+				has_logged = login_enter_credentials(driver, params)
+				if has_logged:
+					cookies = has_logged
+				else:
+					driver.loadPage(URL_INIT)
+					has_logged = login_enter_credentials(driver, params)
+					if has_logged:
+						cookies = has_logged
+					else:
+						LogHelper.log('ERROR AGAIN', True)
 						time.sleep(100)
-					
 			else:
 				LogHelper.log('ERROR FOUND', True)
 				time.sleep(100)
 	return cookies
+
+def login_enter_credentials(driver, params):
+	exit = False
+	if driver.existElement(FIELD_LOGIN_USER):
+		driver.selectAndWrite(FIELD_LOGIN_USER, params['email'])
+		driver.selectAndWrite(FIELD_LOGIN_PASS, params['password'])
+		driver.submitFormSelector(FIELD_LOGIN_PASS)
+		time.sleep(0.2)
+		driver.waitPageLoad()
+		title = driver.getTitle()
+		LogHelper.log(title, True)
+		if 'Error' not in title:
+			driver.loadPage(URL_INIT)
+			LogHelper.log('ERROR LOGIN', True)
+		else:
+			exit = driver.waitGetCookies()
+	return exit
 
 def get_logged_in_driver(params=None):
 	if params:
