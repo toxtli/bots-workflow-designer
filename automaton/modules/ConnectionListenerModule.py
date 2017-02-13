@@ -47,5 +47,5 @@ class ConnectionListenerModule(Module):
 			time.sleep(2)
 			result = self.drivers[email].executeScript('return tox.getNotifications()')
 			text = TextHelper.text_between(result, '', '')
-			LogHelper.log(text, True)
+			LogHelper.log(text)
 			time.sleep(5)
