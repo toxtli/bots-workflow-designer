@@ -338,12 +338,15 @@ class SeleniumHelper:
 	def getUrl(self):
 		return self.driver.current_url
 
+	def getTitle(self):
+		return self.driver.title
+
 	def waitGetCookies(self):
 		cookies = {}
 		try:
 			cookies = self.driver.get_cookies()
 		except:
-			LogHelper.log(sys.exc_info())
+			LogHelper.log(sys.exc_info(), True)
 		if cookies:
 			return cookies
 		else:
