@@ -6,5 +6,5 @@ NetworkHelper.config_server(StateMachineHelper.get_endpoints())
 NetworkHelper.start_server({
 	'host': '0.0.0.0',
 	'port': 5000,
-	'debug': True
+	'debug': False
 })
