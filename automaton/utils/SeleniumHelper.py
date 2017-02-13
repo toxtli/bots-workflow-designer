@@ -341,7 +341,7 @@ class SeleniumHelper:
 	def getTitle(self):
 		return self.driver.title
 
-	def wait_for(condition_function, wait):
+	def wait_for(self, condition_function, wait):
 	    start_time = time.time()
 	    while time.time() < start_time + wait:
 	        if condition_function():
@@ -350,14 +350,14 @@ class SeleniumHelper:
 	            time.sleep(0.1)
 	    return False
 
-	def waitPageLoad(wait=None):
+	def waitPageLoad(seld, wait=None):
 		wait = wait if wait else self.WAIT
 	    def page_has_loaded():
 	        page_state = self.driver.execute_script(
 	            'return document.readyState;'
 	        ) 
 	        return page_state == 'complete'
-	    return wait_for(page_has_loaded, wait)
+	    return self.wait_for(page_has_loaded, wait)
 
 	def waitGetCookies(self):
 		cookies = {}
