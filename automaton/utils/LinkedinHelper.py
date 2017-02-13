@@ -10,7 +10,7 @@ FIELD_LOGIN_PASS = '#login-password'
 ELEMENT_TOP_BAR = '#top-header'
 REQUEST_ERRROR = '#main > h1'
 ERROR_UNPLANNED = '.wiper'
-PAGE_TITLE = 'title'
+PAGE_BODY = 'body'
 
 def get_conn_id(html):
 	connId = ''
@@ -45,7 +45,7 @@ def login(driver, params, skipLoad=False):
 					driver.selectAndWrite(FIELD_LOGIN_PASS, params['password'])
 					driver.submitFormSelector(FIELD_LOGIN_PASS)
 					cookies = driver.waitGetCookies()
-					driver.waitShowElement(PAGE_TITLE)
+					driver.waitShowElement(PAGE_BODY)
 					title = driver.getTitle()
 					LogHelper.log(title, True)
 					if 'Error' in title:
