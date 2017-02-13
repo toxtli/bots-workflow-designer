@@ -362,7 +362,7 @@ class SeleniumHelper:
 		try:
 			cookies = self.driver.get_cookies()
 		except:
-			LogHelper.log(sys.exc_info(), True)
+			LogHelper.log(sys.exc_info())
 		if cookies:
 			return cookies
 		else:
