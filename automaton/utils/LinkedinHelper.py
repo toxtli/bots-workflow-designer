@@ -46,6 +46,7 @@ def login(driver, params, skipLoad=False):
 					driver.submitFormSelector(FIELD_LOGIN_PASS)
 					cookies = driver.getCookies()
 					title = driver.getElementValue(SITE_TITLE)
+					LogHelper.log(title, True)
 					if 'Error' in title:
 						LogHelper.log('ERROR LOGIN', True)
 						time.sleep(100)
