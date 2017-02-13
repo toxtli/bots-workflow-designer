@@ -352,12 +352,10 @@ class SeleniumHelper:
 
 	def waitPageLoad(seld, wait=None):
 		wait = wait if wait else self.WAIT
-	    def page_has_loaded():
-	        page_state = self.driver.execute_script(
-	            'return document.readyState;'
-	        ) 
-	        return page_state == 'complete'
-	    return self.wait_for(page_has_loaded, wait)
+		def page_has_loaded():
+			page_state = self.driver.execute_script('return document.readyState;')
+			return page_state == 'complete'
+		return self.wait_for(page_has_loaded, wait)
 
 	def waitGetCookies(self):
 		cookies = {}
