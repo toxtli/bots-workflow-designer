@@ -9,6 +9,7 @@ FIELD_LOGIN_PASS = '#login-password'
 # ELEMENT_TOP_BAR = '.header-section'
 ELEMENT_TOP_BAR = '#top-header'
 REQUEST_ERRROR = '#global-error'
+ERROR_UNPLANNED = '.wiper'
 
 def get_conn_id(html):
 	connId = ''
@@ -36,13 +37,19 @@ def login(driver, params, skipLoad=False):
 		if not logged:
 			if params['cookies']:
 				driver.cleanCookies()
-			driver.selectAndWrite(FIELD_LOGIN_USER, params['email'])
-			driver.selectAndWrite(FIELD_LOGIN_PASS, params['password'])
-			driver.submitFormSelector(FIELD_LOGIN_PASS)
-			cookies = driver.getCookies()
-			driver.waitShowElement(ELEMENT_TOP_BAR)
-			if driver.getElement(REQUEST_ERRROR):
-				LogHelper.log('ERROR LOGIN', True)
+			url = driver.getUrl()
+			if not 'error' in url:
+				if driver.existElement(FIELD_LOGIN_USER):
+					driver.selectAndWrite(FIELD_LOGIN_USER, params['email'])
+					driver.selectAndWrite(FIELD_LOGIN_PASS, params['password'])
+					driver.submitFormSelector(FIELD_LOGIN_PASS)
+					cookies = driver.getCookies()
+					driver.waitShowElement(ELEMENT_TOP_BAR)
+					if driver.existElement(REQUEST_ERRROR):
+						LogHelper.log('ERROR LOGIN', True)
+						time.sleep(100)
+			else:
+				LogHelper.log('ERROR FOUND', True)
 				time.sleep(100)
 	return cookies
 
