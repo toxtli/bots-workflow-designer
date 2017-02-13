@@ -41,7 +41,7 @@ class MessengerListenerModule(Module):
 		finish = False
 		email = params['bots']['email']
 		while not finish:
-			LogHelper.log('check_messages', True)
+			LogHelper.log('check_messages')
 			self.drivers[email].executeScript('tox.requestMessages()')
 			time.sleep(2)
 			result = self.drivers[email].executeScript('return tox.getMessages()')
