@@ -26,7 +26,7 @@ class ProfilesGeneratorModule(Module):
 		if existing < num_results:
 			restant = num_results - existing
 			params['num_results'] = restant
-			LogHelper.log('CREATING ACCOUNTS', True)
+			LogHelper.log('CREATING ACCOUNTS CICLE', True)
 			"""
 			profiles_generator = ProfilesGenerator()
 			def profiles_generator_callback(profile):
