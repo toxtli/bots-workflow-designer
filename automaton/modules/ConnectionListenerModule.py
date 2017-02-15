@@ -11,7 +11,7 @@ class ConnectionListenerModule(Module):
 	drivers = {}
 
 	def run(self, params, callback):
-		self.MAX_PROCESSES = 10
+		self.MAX_PROCESSES = 1
 		self.push(params, callback, self.run_queue)
 		# super(self.__class__, self).run(params, callback)
 

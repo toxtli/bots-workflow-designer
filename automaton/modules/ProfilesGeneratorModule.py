@@ -1,3 +1,4 @@
+import re
 from core.Module import Module
 from utils import LogHelper, CsvHelper
 from utils.DatabaseHelper import DatabaseHelper
@@ -18,11 +19,15 @@ class ProfilesGeneratorModule(Module):
 		self.db = DatabaseHelper(table=self.DATABASE_TABLE)
 		if params['feedback']:
 			num_results = CsvHelper.gsheets_get_num_rows(params['feedback'])
-		records = self.db.select({'suspended': False})
+		regexs = []
+		regexs.append(re.compile(params['expertise'], re.IGNORECASE))
+		records = self.db.select({'suspended': False,'expertises':{'$in':regexs}})
 		existing = len(records)
 		if existing < num_results:
 			restant = num_results - existing
 			params['num_results'] = restant
+			LogHelper.log('CREATING ACCOUNTS', True)
+			"""
 			profiles_generator = ProfilesGenerator()
 			def profiles_generator_callback(profile):
 				output = {'profiles': [profile]}
@@ -30,6 +35,7 @@ class ProfilesGeneratorModule(Module):
 				self.db.insert_one(profile)
 				self.pop(params, output, callback)
 			profiles_generator.run(params, profiles_generator_callback)
+			"""
 		if existing != 0:
 			if existing < num_results:
 				to_value = existing
@@ -39,5 +45,6 @@ class ProfilesGeneratorModule(Module):
 			for i in range(to_value):
 				profile = records[i]
 				output = {'profiles': [profile]}
+				LogHelper.log('EXTRACTING ACCOUNTS', True)
 				LogHelper.log('OUTPUT ' + self.__class__.__name__ + ' ' + str(output))
-				self.pop(params, output, callback)
+				# self.pop(params, output, callback)

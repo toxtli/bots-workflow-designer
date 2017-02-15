@@ -185,8 +185,7 @@
     color: inherit;
     margin-bottom: 10px;
     white-space: nowrap;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
+    text-overflow: ellipsis;
     overflow: hidden;
 }
 

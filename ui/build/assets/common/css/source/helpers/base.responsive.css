@@ -24,7 +24,7 @@
                 transform: translateX(-240px);
         -webkit-transition: -webkit-transform 0.2s ease-in-out;
         transition: -webkit-transform 0.2s ease-in-out;
-        -o-transition: transform 0.2s ease-in-out, -o-transform 0.2s ease-in-out;
+        -o-transition: -o-transform 0.2s ease-in-out;
         transition: transform 0.2s ease-in-out;
         transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out, -o-transform 0.2s ease-in-out;
     }
@@ -61,14 +61,14 @@
     body.menu-sliding nav.top-menu {
         -webkit-transition: -webkit-transform 0.2s ease-in-out;
         transition: -webkit-transform 0.2s ease-in-out;
-        -o-transition: transform 0.2s ease-in-out, -o-transform 0.2s ease-in-out;
+        -o-transition: -o-transform 0.2s ease-in-out;
         transition: transform 0.2s ease-in-out;
         transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out, -o-transform 0.2s ease-in-out;
     }
     body.menu-sliding .page-content {
         -webkit-transition: -webkit-transform 0.2s ease-in-out;
         transition: -webkit-transform 0.2s ease-in-out;
-        -o-transition: transform 0.2s ease-in-out, -o-transform 0.2s ease-in-out;
+        -o-transition: -o-transform 0.2s ease-in-out;
         transition: transform 0.2s ease-in-out;
         transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out, -o-transform 0.2s ease-in-out;
     }

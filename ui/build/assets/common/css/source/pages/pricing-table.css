@@ -5,7 +5,6 @@
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     padding: 40px 0px;
@@ -14,7 +13,6 @@
 .pricing-table .pricing-item {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
-       -moz-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
     -webkit-flex-shrink: 1;

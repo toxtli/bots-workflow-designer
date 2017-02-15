@@ -66,23 +66,20 @@
 .messaging .messaging-list .messaging-list-title-name {
     overflow: hidden;
     white-space: nowrap;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
+    text-overflow: ellipsis;
     margin-right: 30px;
 }
 
 .messaging .messaging-list .messaging-list-title-subject {
     overflow: hidden;
     white-space: nowrap;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
+    text-overflow: ellipsis;
 }
 
 .messaging .messaging-list .messaging-list-title-last {
     overflow: hidden;
     white-space: nowrap;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
+    text-overflow: ellipsis;
     color: #acb7bf;
 }
 

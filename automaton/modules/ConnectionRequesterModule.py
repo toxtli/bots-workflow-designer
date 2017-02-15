@@ -8,7 +8,7 @@ class ConnectionRequesterModule(Module):
 	DATABASE_TABLE = 'contacts'
 
 	def run(self, params, callback):
-		self.MAX_PROCESSES = 10
+		self.MAX_PROCESSES = 1
 		self.push(params, callback, self.run_queue)
 
 	def run_queue(self, params, callback):
