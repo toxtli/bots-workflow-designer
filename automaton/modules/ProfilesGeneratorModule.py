@@ -20,10 +20,11 @@ class ProfilesGeneratorModule(Module):
 		if params['feedback']:
 			num_results = CsvHelper.gsheets_get_num_rows(params['feedback'])
 		regexs = []
+		LogHelper.log(params['expertise'], True)
 		regexs.append(re.compile(params['expertise'], re.IGNORECASE))
 		records = self.db.select({'suspended': False,'expertises':{'$in':regexs}})
 		existing = len(records)
-		LogHelper.log('TO DECIDE 5', True)
+		LogHelper.log('TO DECIDE 6', True)
 		if existing < num_results:
 			restant = num_results - existing
 			params['num_results'] = restant
