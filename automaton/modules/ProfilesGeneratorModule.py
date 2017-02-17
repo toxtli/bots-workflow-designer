@@ -23,7 +23,7 @@ class ProfilesGeneratorModule(Module):
 		regexs.append(re.compile(params['expertise'], re.IGNORECASE))
 		records = self.db.select({'suspended': False,'expertises':{'$in':regexs}})
 		existing = len(records)
-		LogHelper.log('TO DECIDE', True)
+		LogHelper.log('TO DECIDE 2', True)
 		if existing < num_results:
 			restant = num_results - existing
 			params['num_results'] = restant
