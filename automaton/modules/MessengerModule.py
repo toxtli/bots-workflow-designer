@@ -37,7 +37,10 @@ class MessengerModule(Module):
 					self.pop(params, output, callback)
 
 				params['url'] = contact['url']
-				params['connId'] = contact['connId']
+				if 'connId' in contact:
+					params['connId'] = contact['connId']
+				else:
+					params['connId'] = ''
 				messenger.send_message(params, messenger_callback)
 			else:
 				output = {'conversation': [url]}
