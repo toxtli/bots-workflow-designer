@@ -1,3 +1,4 @@
+import urllib
 import time
 import threading
 import requests
@@ -7,6 +8,12 @@ from utils import LogHelper
 from multiprocessing import Process
 
 args = None
+
+def url_encode(url):
+	return urllib.quote(url, safe='')
+
+def dict_to_querystring(params):
+	return urllib.urlencode(params)
 
 def get_json(url):
 	r = requests.get(url)

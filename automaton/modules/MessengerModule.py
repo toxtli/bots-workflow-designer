@@ -9,8 +9,8 @@ from modules.Messenger.Messenger import Messenger
 
 class MessengerModule(Module):
 
-	DATABASE_TABLE = 'messages'
-	CONTACTS_TABLE = 'contacts'
+	DATABASE_TABLE = 'contacts'
+	CONTACTS_TABLE = 'messages'
 
 	def run(self, params, callback):
 		self.MAX_PROCESSES = 1
@@ -21,21 +21,26 @@ class MessengerModule(Module):
 		LogHelper.log('EXECUTING ' + self.__class__.__name__, True)
 		LogHelper.log('INPUT ' + self.__class__.__name__ + ' ' + str(params))
 		exit = 'result messenger'
-		bot_email = params['bots']['email']
-		self.db = DatabaseHelper(table=self.DATABASE_TABLE)
-		sel = LinkedinHelper.clone_driver(params['bots']['driver'])
-		args = {'driver': sel}
-		messenger = Messenger(args)
-		def messenger_callback(results):
-			output = {'conversation': results}
-			LogHelper.log('OUTPUT ' + self.__class__.__name__ + ' ' + str(output))
-			self.pop(params, output, callback)
+		email = params['bots']['email']
 		urls = params['userdata']
+		self.db = DatabaseHelper(table=self.DATABASE_TABLE)
 		for url in urls:
-			params['url'] = url
-			params['connId'] = ''
-			dbdata = self.db.select_one({'url':url},table=self.CONTACTS_TABLE)
-			if dbdata:
-				params['connId'] = dbdata['userId']
-			messenger.send_message(params, messenger_callback)
+			contact = self.db.select_one({'email':email, 'url':url})
+			if not contact['firstMessageSent']:
+				sel = LinkedinHelper.clone_driver(params['bots']['driver'])
+				args = {'driver': sel}
+				messenger = Messenger(args)
+				def messenger_callback(results):
+					self.db.update_one({'email':email,'url':url},{'firstMessageSent':True})
+					output = {'conversation': results}
+					LogHelper.log('OUTPUT ' + self.__class__.__name__ + ' ' + str(output))
+					self.pop(params, output, callback)
+
+				params['url'] = contact['url']
+				params['connId'] = contact['connId']
+				messenger.send_message(params, messenger_callback)
+			else:
+				output = {'conversation': [url]}
+				LogHelper.log('OUTPUT ' + self.__class__.__name__ + ' ' + str(output))
+				self.pop(params, output, callback)
 		

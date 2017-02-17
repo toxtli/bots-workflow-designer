@@ -11,7 +11,7 @@ class ConnectionListenerModule(Module):
 	drivers = {}
 
 	def run(self, params, callback):
-		self.MAX_PROCESSES = 1
+		self.MAX_PROCESSES = 10
 		self.push(params, callback, self.run_queue)
 		# super(self.__class__, self).run(params, callback)
 
@@ -46,6 +46,7 @@ class ConnectionListenerModule(Module):
 			self.drivers[email].executeScript('tox.requestNotifications()')
 			time.sleep(2)
 			result = self.drivers[email].executeScript('return tox.getNotifications()')
-			text = TextHelper.text_between(result, '', '')
-			LogHelper.log(text)
+			if result:
+				text = TextHelper.text_between(result, '', '')
+				LogHelper.log(text)
 			time.sleep(5)

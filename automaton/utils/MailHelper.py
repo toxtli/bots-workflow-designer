@@ -1,3 +1,5 @@
+from utils import NetworkHelper
+
 CREATE_EMAILS_API_URL = 'http://hcilab.ml/api/?method=create'
 
 def create_email(params):

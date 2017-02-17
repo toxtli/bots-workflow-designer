@@ -1,4 +1,4 @@
-from utils import LogHelper, LinkedinHelper
+from utils import LogHelper, LinkedinHelper, NetworkHelper
 
 class ProfilesFinder(object):
 
@@ -14,6 +14,7 @@ class ProfilesFinder(object):
 	USER_POSITION_PATH_NORMAL = 'div > dl.snippet > dd > p'
 	USER_LOCATION_PATH_NORMAL = 'div > dl.demographic'
 	USER_COMMON_PATH_NORMAL = 'div > div.related-wrapper.collapsed > ul > li.shared-conn > a'
+	USER_CONTACT_LEVEL = '.degree-icon'
 	USER_DESCRIPTION_PATH_NORMAL = 'div > div.description'
 	USER_IMAGE_PATH_NORMAL = 'a img'
 	USER_URL_PATH_NORMAL = 'a'
@@ -48,9 +49,15 @@ class ProfilesFinder(object):
 		containers = self.sel.getElements(self.USER_LIST_CONTAINER_PATH_NORMAL)
 		profiles = []
 		for element in containers:
-			userData = {}
+			userData = {
+				'userdata': '',
+				'userId': '',
+				'extractedLogged': False,
+				'extractedPublic': False,
+				'firstMessageSent': False
+			}
 			username = self.sel.getElementFromValue(element, self.USER_NAME_PATH_NORMAL)
-			if username:
+			if username and username != 'LinkedIn Member':
 				exit = True
 				userData['name'] = username
 				userData['position'] = self.sel.getElementFromValue(element, self.USER_POSITION_PATH_NORMAL)
@@ -58,6 +65,9 @@ class ProfilesFinder(object):
 				userData['image'] = self.sel.getElementFromAttribute(element, self.USER_IMAGE_PATH_NORMAL, 'src')
 				userData['location'] = self.sel.getElementFromValue(element, self.USER_LOCATION_PATH_NORMAL)
 				userData['common'] = self.sel.getElementFromValue(element, self.USER_COMMON_PATH_NORMAL)
+				userData['level'] = self.sel.getElementFromValue(element, self.USER_CONTACT_LEVEL)
+				userData['friend'] = True if userData['level'] == '1st' else False
+				userData['status'] = 'FRIEND' if userData['friend'] else 'FOUND'
 				tmpUrl = self.sel.getElementFromAttribute(element, self.USER_URL_PATH_NORMAL, 'href')
 				arrUrl = tmpUrl.split('&')
 				varUrl = arrUrl[0]
@@ -65,6 +75,8 @@ class ProfilesFinder(object):
 				arrId = varUrl.split('id=')
 				varId = arrId[1]
 				userData['id'] = varId
+				userData['keywords'] = params['expertise']
+				userData['where'] = params['location']
 				userData['email'] = params['email']
 				userData['status'] = 'FOUND'
 				profiles.append(userData)
@@ -74,7 +86,13 @@ class ProfilesFinder(object):
 		return profiles
 
 	def get_url(self, params):
-		url = 'https://www.linkedin.com/vsearch/p?type=people&keywords=Software%20Engineer&orig=GLHD&rsid=563306671485974706471&pageKey=oz-winner&trkInfo=tarId%3A1485974676173&trk=global_header&search=Search&pt=people&openFacets=N,G,CC'
+		expertise = params['expertise'].split(',')[0]
+		location = params['location'].split(',')[0]
+		args = {
+			'keywords': expertise
+		}
+		extra = '&' + NetworkHelper.dict_to_querystring(args)
+		url = 'https://www.linkedin.com/vsearch/p?type=people&orig=GLHD&rsid=563306671485974706471&pageKey=oz-winner&trkInfo=tarId%3A1485974676173&trk=global_header&search=Search&pt=people&openFacets=N,G,CC' + extra
 		return url
 
 	def batch(self):

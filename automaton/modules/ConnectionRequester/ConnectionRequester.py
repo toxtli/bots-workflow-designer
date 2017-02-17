@@ -20,9 +20,8 @@ class ConnectionRequester(object):
 		self.sel = LinkedinHelper.get_logged_in_driver(params)
 
 	def run(self, params, callback=None):
-		contactList = params['contacts']
-		for contact in contactList:
-			url = contact['url']
+		urls = params['contacts']
+		for url in urls:
 			LogHelper.log(url)
 			self.sel.loadPage(url)
 			try:

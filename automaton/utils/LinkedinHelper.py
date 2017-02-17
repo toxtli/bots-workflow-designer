@@ -66,7 +66,7 @@ def login_enter_credentials(driver, params):
 		driver.selectAndWrite(FIELD_LOGIN_PASS, params['password'])
 		driver.submitFormSelector(FIELD_LOGIN_PASS)
 		time.sleep(0.4)
-		driver.waitPageLoad()
+		# driver.waitPageLoad()
 		title = driver.getTitle()
 		LogHelper.log(title, True)
 		if 'Error' not in title:

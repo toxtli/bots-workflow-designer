@@ -247,13 +247,18 @@ class SeleniumHelper:
 		return True
 
 	def injectLocalScript(self, filepath):
-		return self.driver.execute_script(open(filepath).read())
+		return self.executeScript(open(filepath).read())
 
 	def injectRemoteScript(self, url):
-		return self.driver.execute_script("var s=window.document.createElement('script');s.src='" + url + "';window.document.head.appendChild(s);")
+		return self.executeScript("var s=window.document.createElement('script');s.src='" + url + "';window.document.head.appendChild(s);")
 
 	def executeScript(self, code):
-		return self.driver.execute_script(code)
+		result = None
+		try:
+			result = self.driver.execute_script(code)
+		except:
+			pass
+		return result 
 
 	def clickJavascript(self, selector):
 		return self.driver.execute_script("var obj=document.querySelector('" + selector + "');if(obj){obj.click();return true;}else{return false;}")
