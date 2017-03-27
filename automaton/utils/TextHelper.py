@@ -1,7 +1,10 @@
 import re
 import unicodedata
+from config import Configuration
 
 def get_regexp(text):
+	if Configuration.default_datasource == 'sheets':
+		return text
 	return re.compile(text, re.IGNORECASE)
 
 def clean_text(input_str):

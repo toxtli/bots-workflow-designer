@@ -15,8 +15,13 @@ def url_encode(url):
 def dict_to_querystring(params):
 	return urllib.urlencode(params)
 
-def get_json(url):
-	r = requests.get(url)
+def get_json(url, headers=None):
+	LogHelper.log(url)
+	r = requests.get(url, headers=headers)
+	return r.json()
+
+def post_json(url, json=None, headers=None):
+	r = requests.post(url, json=json, headers=headers)
 	return r.json()
 
 def get(url):

@@ -1,6 +1,5 @@
 from core.Module import Module
-from utils import LogHelper, LinkedinHelper
-from utils.DatabaseHelper import DatabaseHelper
+from utils import LogHelper, LinkedinHelper, DatasourceHelper
 from modules.BotsCreator.BotsCreator import BotsCreator
 
 class BotsCreatorModule(Module):
@@ -19,7 +18,7 @@ class BotsCreatorModule(Module):
 		LogHelper.log('EXECUTING ' + self.__class__.__name__, True)
 		LogHelper.log('INPUT ' + self.__class__.__name__ + ' ' + str(params))
 		profiles = params['profiles']
-		self.db = DatabaseHelper(table=self.DATABASE_TABLE)
+		self.db = DatasourceHelper.get_dataset({"table": self.DATABASE_TABLE})
 		for profile in profiles:
 			email = profile['email']
 			if email not in self.drivers:

@@ -4,10 +4,11 @@ from utils import LogHelper
 from utils.SeleniumHelper import SeleniumHelper
 
 URL_INIT = 'https://www.linkedin.com/'
+URL_MESSAGING = 'https://www.linkedin.com/messaging'
 FIELD_LOGIN_USER = '#login-email'
 FIELD_LOGIN_PASS = '#login-password'
 # ELEMENT_TOP_BAR = '.header-section'
-ELEMENT_TOP_BAR = '#top-header'
+ELEMENT_TOP_BAR = '#feed-tab-icon'
 REQUEST_ERRROR = '#main > h1'
 ERROR_UNPLANNED = '.wiper'
 
@@ -30,6 +31,8 @@ def login(driver, params, skipLoad=False):
 	if not skipLoad:
 		driver.loadPage(URL_INIT)
 	logged = driver.getElement(ELEMENT_TOP_BAR)
+	LogHelper.log('COOKIES')
+	LogHelper.log(params['cookies'])
 	if not logged:
 		if params['cookies']:
 			driver.applyCookies(URL_INIT, params['cookies'])
@@ -86,3 +89,6 @@ def clone_driver(driver):
 
 def clone_driver_wait(driver):
 	return driver.waitCloneDriverSite(URL_INIT, ELEMENT_TOP_BAR)
+
+def open_messages(driver):
+	driver.loadPage(URL_MESSAGING)

@@ -1,6 +1,5 @@
 from core.Module import Module
-from utils import LogHelper, LinkedinHelper
-from utils.DatabaseHelper import DatabaseHelper
+from utils import LogHelper, LinkedinHelper, DatasourceHelper
 from modules.ConnectionRequester.ConnectionRequester import ConnectionRequester
 
 class ConnectionRequesterModule(Module):
@@ -14,7 +13,7 @@ class ConnectionRequesterModule(Module):
 	def run_queue(self, params, callback):
 		LogHelper.log('EXECUTING ' + self.__class__.__name__, True)
 		LogHelper.log('INPUT ' + self.__class__.__name__ + ' ' + str(params))
-		self.db = DatabaseHelper(table=self.DATABASE_TABLE)
+		self.db = DatasourceHelper.get_dataset({"table": self.DATABASE_TABLE})
 		email = params['bots']['email']
 		urls = params['contacts']
 		for url in urls:

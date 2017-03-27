@@ -1,6 +1,5 @@
 from core.Module import Module
-from utils import LogHelper, LinkedinHelper, TextHelper
-from utils.DatabaseHelper import DatabaseHelper
+from utils import LogHelper, LinkedinHelper, TextHelper, DatasourceHelper
 from modules.ProfilesFinder.ProfilesFinder import ProfilesFinder
 
 class ProfilesFinderModule(Module):
@@ -18,7 +17,7 @@ class ProfilesFinderModule(Module):
 	def run_queue(self, params, callback):
 		LogHelper.log('EXECUTING ' + self.__class__.__name__, True)
 		LogHelper.log('INPUT ' + self.__class__.__name__ + ' ' + str(params))
-		self.db = DatabaseHelper(table=self.DATABASE_TABLE)
+		self.db = DatasourceHelper.get_dataset({"table": self.DATABASE_TABLE})
 		email = params['bots']['email']
 		regex_expertise = []
 		expertises = params['expertise'].split(',')
@@ -32,6 +31,8 @@ class ProfilesFinderModule(Module):
 			regex_location.append(TextHelper.get_regexp(location))
 		records = self.db.select({'email': email,'keywords':{'$in':regex_expertise},'where':{'$in':regex_location}})
 		num_results = len(records)
+		LogHelper.log('RESULTS_NUMBER', True)
+		LogHelper.log(num_results, True)
 		if num_results == 0:
 			if email not in self.drivers:
 				self.drivers[email] =  LinkedinHelper.clone_driver_wait(params['bots']['driver'])

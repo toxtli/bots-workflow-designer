@@ -79,7 +79,8 @@ class ProfilesGenerator(object):
 			'triedOnce': False,
 			'suspended': False,
 			'cookies': False,
-			'password': self.DEFAULT_PASSWORD
+			'password': self.DEFAULT_PASSWORD,
+			'channel': ''
 		}
 		profile['username'] = TextHelper.clean_text(result['email'].split('@')[0])
 		profile['domain'] = self.DOMAIN_NAME

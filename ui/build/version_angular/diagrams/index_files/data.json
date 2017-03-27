@@ -17,6 +17,13 @@
             "top": 0.45,
             "required": true
         },{
+            "name": "location",
+            "type": "in",
+            "value": "United States",
+            "source": "User",
+            "top": 0.45,
+            "required": true
+        },{
             "name": "feedback",
             "type": "in",
             "value": "https://docs.google.com/spreadsheets/d/1QR5HS7nwK5BVURjQ1bzn0JJIG3-DkHfU7Bn2lSrymUo/gviz/tq?tqx=out:csv&sheet=testsheet",
@@ -41,6 +48,12 @@
             "top": 0.30
         },{
             "name": "expertise",
+            "type": "in",
+            "value": "",
+            "source": "Linked",
+            "top": 0.42
+        },{
+            "name": "location",
             "type": "in",
             "value": "",
             "source": "Linked",
@@ -107,10 +120,11 @@
             "source": "Persistent",
             "top": 0.53
         },{
-            "name":  "location",
+            "name": "location",
             "type": "in",
-            "value": "United States",
-            "source": "User"
+            "value": "",
+            "source": "Persistent",
+            "top": 0.53
         },{
             "name": "contacts",
             "type": "out",
@@ -263,6 +277,16 @@
         {
             "from": {
                 "window": "user",
+                "variable": "location"
+            },
+            "to": {
+                "window": "generator",
+                "variable": "location"
+            }
+        },
+        {
+            "from": {
+                "window": "user",
                 "variable": "feedback"
             },
             "to": {
@@ -288,6 +312,16 @@
             "to": {
                 "window": "finder",
                 "variable": "expertise"
+            }
+        },
+        {
+            "from": {
+                "window": "generator",
+                "variable": "location"
+            },
+            "to": {
+                "window": "finder",
+                "variable": "location"
             }
         },
         {

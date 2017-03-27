@@ -1,14 +1,13 @@
-import time
-import threading
 from core.Module import Module
-from utils import LogHelper, LinkedinHelper, TextHelper
-from utils.DatabaseHelper import DatabaseHelper
+from utils import LogHelper, DatasourceHelper
 from modules.ConnectionListener.ConnectionListener import ConnectionListener
 
 class ConnectionListenerModule(Module):
 
 	DATABASE_TABLE = 'contacts'
 	drivers = {}
+	waiting_list = []
+	listeners = {}
 
 	def run(self, params, callback):
 		self.MAX_PROCESSES = 10
@@ -19,34 +18,41 @@ class ConnectionListenerModule(Module):
 		# https://www.linkedin.com/messaging/conversationsView?includeSent=true&clearUnseen=false&after=1486408991388
 		LogHelper.log('EXECUTING ' + self.__class__.__name__, True)
 		LogHelper.log('INPUT ' + self.__class__.__name__ + ' ' + str(params))
-		self.db = DatabaseHelper(table=self.DATABASE_TABLE)
+		self.db = DatasourceHelper.get_dataset({"table": self.DATABASE_TABLE})
+		email = params['bots']['email']
+		urls = params['accepted']
+		for url in urls:
+			contact = self.db.select_one({'email':email, 'url':url})
+			if contact['status'] == 'INVITED':
+				self.waiting_list.append(url)
+				self.maybe_init_listener(params, callback)
+			else:
+				output = {'added': [url]}
+				LogHelper.log('OUTPUT ' + self.__class__.__name__ + ' ' + str(output))
+				self.pop(params, output, callback)
+
+	
+	def maybe_init_listener(self, params, callback):
 		email = params['bots']['email']
 		if email not in self.drivers:
 			sel = params['bots']['driver']
-			sel.injectLocalScript('js/ConnectionListener.js')
 			self.drivers[email] = sel
-			t = threading.Thread(target=self.check_connections, args=[params])
-			t.start()
+			args = {'driver': sel}
+			self.listeners[email] = ConnectionListener(args)
+			def connection_listener_handler(urls):
+				LogHelper.log(self.waiting_list, True)
+				for url in urls:
+					LogHelper.log('EVALUATING INCOMMING ACCEPT', True)
+					LogHelper.log(url, True)
+					if url in self.waiting_list:
+						LogHelper.log('INCOMMING ACCEPT EVALUATED', True)
+						self.waiting_list.remove(url)
+						if not self.waiting_list:
+							self.listeners[email].stop()
+						self.db.update({'url': url},{'accepted': True, 'status': 'ACCEPTED'})
+						output = {'added': [url]}
+						LogHelper.log('OUTPUT ' + self.__class__.__name__ + ' ' + str(output))
+						self.pop(params, output, callback)
+			self.listeners[email].run(params, connection_listener_handler)
 		else:
-			sel = {}
-		args = {'driver': sel}
-		connection_listener = ConnectionListener(args)
-		def connection_listener_handler(url):
-			self.db.update({'url': url},{'accepted': True})
-			output = {'added': [url]}
-			LogHelper.log('OUTPUT ' + self.__class__.__name__ + ' ' + str(output))
-			self.pop(params, output, callback)
-		connection_listener.run(params, connection_listener_handler)
-
-	def check_connections(self, params):
-		finish = False
-		email = params['bots']['email']
-		while not finish:
-			LogHelper.log('check_connections')
-			self.drivers[email].executeScript('tox.requestNotifications()')
-			time.sleep(2)
-			result = self.drivers[email].executeScript('return tox.getNotifications()')
-			if result:
-				text = TextHelper.text_between(result, '', '')
-				LogHelper.log(text)
-			time.sleep(5)
+			self.listeners[email].tick()

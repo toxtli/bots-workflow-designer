@@ -18,7 +18,7 @@ class Messenger(object):
 	def run(self, params, callback):
 		pass
 
-	def send_message(self, params, callback=None):
+	def send_message(self, params, callback=None, keepOpen=False, backToMain=False):
 		body = params['message']
 		connId = params['connId']
 		url = params['url']			
@@ -43,5 +43,8 @@ class Messenger(object):
 			exit = 'User not found'
 		LogHelper.log(exit)
 		if callback:
-			callback(exit)
-		self.sel.close()
+			callback(params)
+		if not keepOpen:
+			self.sel.close()
+		elif backToMain:
+			self.sel.loadPage(self.SITE_URL)

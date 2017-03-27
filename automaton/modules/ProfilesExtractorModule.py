@@ -1,6 +1,5 @@
 from core.Module import Module
-from utils import LogHelper, LinkedinHelper
-from utils.DatabaseHelper import DatabaseHelper
+from utils import LogHelper, LinkedinHelper, DatasourceHelper
 from utils.SeleniumHelper import SeleniumHelper
 from modules.ProfilesExtractor.ProfilesExtractor import ProfilesExtractor
 
@@ -19,7 +18,7 @@ class ProfilesExtractorModule(Module):
 	def run_queue(self, params, callback):
 		LogHelper.log('EXECUTING ' + self.__class__.__name__, True)
 		LogHelper.log('INPUT ' + self.__class__.__name__ + ' ' + str(params))
-		self.db = DatabaseHelper(table=self.DATABASE_TABLE)	
+		self.db = DatasourceHelper.get_dataset({"table": self.DATABASE_TABLE})
 		email = params['bots']['email']
 		urls = params['added']
 		for url in urls:

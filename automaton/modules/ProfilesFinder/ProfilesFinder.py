@@ -2,9 +2,11 @@ from utils import LogHelper, LinkedinHelper, NetworkHelper
 
 class ProfilesFinder(object):
 
+
 	SITE_URL = 'https://www.linkedin.com'
 	PROFILE_URL = 'https://www.linkedin.com/profile/view?id='
-	SEARCH_URL_NORMAL = 'https://www.linkedin.com/vsearch/p?type=people&f_G=mx%3A0&keywords='
+	SEARCH_URL = 'https://www.linkedin.com/search'
+	SEARCH_URL_NORMAL = 'https://www.linkedin.com/search/results/people/?keywords='
 	SEARCH_URL_PAGE_NUMBER_NORMAL = '&page_num='
 	SEARCH_PEOPLE_URL_NORMAL = '/keywords_users?ref=top_filter'
 	SEARCH_WORK_STRING_NORMAL = 'People who work at '
@@ -54,7 +56,9 @@ class ProfilesFinder(object):
 				'userId': '',
 				'extractedLogged': False,
 				'extractedPublic': False,
-				'firstMessageSent': False
+				'firstMessageSent': False,
+				'channel': '',
+				'conversationId': ''
 			}
 			username = self.sel.getElementFromValue(element, self.USER_NAME_PATH_NORMAL)
 			if username and username != 'LinkedIn Member':
@@ -92,7 +96,7 @@ class ProfilesFinder(object):
 			'keywords': expertise
 		}
 		extra = '&' + NetworkHelper.dict_to_querystring(args)
-		url = 'https://www.linkedin.com/vsearch/p?type=people&orig=GLHD&rsid=563306671485974706471&pageKey=oz-winner&trkInfo=tarId%3A1485974676173&trk=global_header&search=Search&pt=people&openFacets=N,G,CC' + extra
+		url = self.SEARCH_URL
 		return url
 
 	def batch(self):

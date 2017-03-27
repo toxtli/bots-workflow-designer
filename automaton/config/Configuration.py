@@ -15,3 +15,9 @@ selenium_user_agent = (
 sms_number = '<YOUR_GOOGLE_VOICE_NUMBER>'
 sms_user = '<YOUR_GOOGLE_VOICE_EMAIL>'
 sms_password = '<YOUR_GOOGLE_VOICE_PASSWORD>'
+
+mbf_secret = 's3CLnK_Y-T8.cwA.FrY.VOS5rGxKMynKdmFo8Jj9Sxtow5EoNzHU4QJMBD4r0W4'
+
+sheets_url = 'https://script.google.com/macros/s/AKfycbwBIS582VR-sa2Ml04emB_TYBP0kSz82TVumUxA293Zckl25aAy/exec'
+
+default_datasource = 'sheets' # mongodb, sheets

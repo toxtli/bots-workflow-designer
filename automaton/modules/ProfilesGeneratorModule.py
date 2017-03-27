@@ -1,6 +1,5 @@
 from core.Module import Module
-from utils import LogHelper, CsvHelper, TextHelper
-from utils.DatabaseHelper import DatabaseHelper
+from utils import LogHelper, CsvHelper, TextHelper, DatasourceHelper
 from modules.ProfilesGenerator.ProfilesGenerator import ProfilesGenerator
 
 class ProfilesGeneratorModule(Module):
@@ -16,27 +15,18 @@ class ProfilesGeneratorModule(Module):
 	def run_queue(self, params, callback):
 		LogHelper.log('EXECUTING ' + self.__class__.__name__, True)
 		LogHelper.log('INPUT ' + self.__class__.__name__ + ' ' + str(params))
-		self.db = DatabaseHelper(table=self.DATABASE_TABLE)
+		self.db = DatasourceHelper.get_dataset({"table": self.DATABASE_TABLE})
 		if params['feedback']:
 			num_results = CsvHelper.gsheets_get_num_rows(params['feedback'])
 		params['expertise'] = 'Software Engineer'
 		params['location'] = 'United States'
 		LogHelper.log(params['expertise'], True)
 		LogHelper.log(params['location'], True)
-		regex_expertise = []
-		expertises = params['expertise'].split(',')
-		for expertise in expertises:
-			expertise = expertise.strip()
-			regex_expertise.append(TextHelper.get_regexp(expertise))
-		regex_location = []
-		locations = params['location'].split(',')
-		for location in locations:
-			location = location.strip()
-			regex_location.append(TextHelper.get_regexp(location))
+		regex_expertise = self.get_as_regex(params['expertise'])
+		regex_location = self.get_as_regex(params['location'])
 		records = self.db.select({'suspended': False,'expertises':{'$in':regex_expertise},'country':{'$in':regex_location}})
 		existing = len(records)
-		LogHelper.log(existing, True)
-		LogHelper.log('TO DECIDE 9', True)
+		LogHelper.log(existing)
 		if existing < num_results:
 			restant = num_results - existing
 			params['num_results'] = restant
@@ -60,3 +50,12 @@ class ProfilesGeneratorModule(Module):
 				LogHelper.log('EXTRACTING ACCOUNTS', True)
 				LogHelper.log('OUTPUT ' + self.__class__.__name__ + ' ' + str(output))
 				self.pop(params, output, callback)
+
+	def get_as_regex(self, text):
+		regexs = []
+		values = text.split(',')
+		for value in values:
+			value = value.strip()
+			regexs.append(TextHelper.get_regexp(value))
+		return regexs
+

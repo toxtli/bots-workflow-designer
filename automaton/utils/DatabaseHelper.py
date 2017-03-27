@@ -79,6 +79,6 @@ class DatabaseHelper():
 		self.client = MongoClient(Configuration.db_host)
 		self.db = self.client[Configuration.db_name]
 
-	def __init__(self, table=None):
-		self.table = table if table else Configuration.db_collection
+	def __init__(self, params=None):
+		self.table = params['table'] if params and 'table' in params else Configuration.db_collection
 		self.connect()
