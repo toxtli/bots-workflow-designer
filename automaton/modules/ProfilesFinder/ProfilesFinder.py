@@ -45,7 +45,8 @@ class ProfilesFinder(object):
 	def extract_page(self, params, callback=None):
 		exit = False
 		url = params['url']
-		curUrl = url + '&page_num=' + str(params['num_page'])
+		# curUrl = url + '&page_num=' + str(params['num_page'])
+		curUrl = url
 		self.sel.loadPage(curUrl)
 		container = self.sel.waitShowElement(self.USER_CONTAINER_PATH_NORMAL)
 		containers = self.sel.getElements(self.USER_LIST_CONTAINER_PATH_NORMAL)
