@@ -3,7 +3,7 @@
 ## Running User Interface
 
 * Pre-requisites
--- Node.js
+- Node.js
 
 Go to ui/ folder
 
