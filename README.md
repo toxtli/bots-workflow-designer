@@ -3,7 +3,9 @@
 ## Running User Interface
 
 * Pre-requisites
-- Node.js
+    * Node.js
+    * npm
+    * nvm
 
 Go to ui/ folder
 
