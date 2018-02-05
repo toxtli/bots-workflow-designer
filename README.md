@@ -2,6 +2,9 @@
 
 ## Running User Interface
 
+* Pre-requisites
+** Node.js
+
 Go to ui/ folder
 
 ## Running Back End
