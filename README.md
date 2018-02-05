@@ -1,5 +1,9 @@
 # Automaton Dashboard
 
+This is a graphical and easy to use automation flow designer. This is especially helpful for bot platforms that need to be orchestrated. This is based on a finite state machine approach in which the modules are connected between them and are able to actuate others. It is perfect to use in asynchronous environments where events happen suddenly and there is not a linear path. The main advantage of this approach is that there are no listeners turned on and listening all the time, in this approach all the modules are turned off and are only turned on when they are called and their pre-requisites have been fulfilled.
+
+Example: In the image shown at the bottom there is an automated human resources system on Linkedin. It is able to find relevant candidates, add them to contacts and contact them by sending them a message. All the actions happen asynchronously because we don´t know if a candidate will accept us as a contact and we don't know when it can happen.
+
 ## Running User Interface
 
 * Pre-requisites
@@ -7,7 +11,12 @@
     * npm
     * nvm
 
-Go to ui/ folder
+* Steps
+    * Go to ui/ folder in your command line.
+    * Run the run.sh file
+
+> cd ui
+> ./run.sh
 
 ## Running Back End
 
