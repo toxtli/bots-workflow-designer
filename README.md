@@ -12,6 +12,8 @@ Example: The following image shows an automated human resources system on Linked
     * Node.js
     * npm
     * nvm
+    
+    #### refer to https://nodejs.org/en/download/package-manager/ for further information regarding installation.
 
 * Steps
     * Go to ui/ folder in your command line.
@@ -28,6 +30,8 @@ Open your browser and go to the given URL when the platform is up.
 * Pre-requisites
     * Python 2.x or 3.x
     * Selenium
+      * install using pip-
+      > pip install selenium
     * PhantomJS
     * MongoDB
     
@@ -35,12 +39,13 @@ Open your browser and go to the given URL when the platform is up.
     * Go to /automation folder in your command line.
     * Run the run.sh file
 
-> cd ui
+> cd automation
 
 > ./run.sh
 
 ## Getting started
 
 * Steps
-    * Go to your user interface
-    * Click on execute
+    * Go to your user interface(by default: http://localhost:9000)
+    * Click on Diagram on the left-side menu
+    * Click on execute 
