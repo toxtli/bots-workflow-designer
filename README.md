@@ -12,7 +12,8 @@ Example: The following image shows an automated human resources system on Linked
     * Node.js
     * npm
     * nvm
-    refer to https://nodejs.org/en/download/package-manager/ for further information regarding installation.
+    
+    # refer to https://nodejs.org/en/download/package-manager/ for further information regarding installation.
 
 * Steps
     * Go to ui/ folder in your command line.
