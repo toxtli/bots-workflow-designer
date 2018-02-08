@@ -49,3 +49,15 @@ Open your browser and go to the given URL when the platform is up.
     * Go to your user interface(by default: http://localhost:9000)
     * Click on Diagram on the left-side menu
     * Click on execute 
+    
+ If you are using firefox web browser you may encounter an error like  
+ 
+ > "WebDriverException: Message: 'geckodriver' executable needs to be in PATH"
+ 
+ In such a case, download the latest version from [here](https://github.com/mozilla/geckodriver/releases)
+ 
+ * If you are using ubuntu just do the following:
+   
+ > export PATH=$PATH:/path/to/directory/of/executable/downloaded/in/previous/step     
+ 
+ * If using windows then you can check [this](https://www.windows-commandline.com/set-path-command-line/) to know how to set path in Windows command prompt.
