@@ -54,10 +54,10 @@ Open your browser and go to the given URL when the platform is up.
  
  > "WebDriverException: Message: 'geckodriver' executable needs to be in PATH"
  
- In such a case, download the latest version from [here](https://github.com/mozilla/geckodriver/releases)
+ In such a case, download the latest version of geckodriver from [here](https://github.com/mozilla/geckodriver/releases)
  
- * If you are using ubuntu just do the following:
+ * If you are using ubuntu just do the following after the download:
    
  > export PATH=$PATH:/path/to/directory/of/executable/downloaded/in/previous/step     
  
- * If using windows then you can check [this](https://www.windows-commandline.com/set-path-command-line/) to know how to set path in Windows command prompt.
+ * If using windows, then you can check [this](https://www.windows-commandline.com/set-path-command-line/) to know how to set path in Windows command prompt.
