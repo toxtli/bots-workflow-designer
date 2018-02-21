@@ -1,0 +1,111 @@
+{
+    "modules": [{
+        "name": "module1",
+        "class": "Module1",
+        "fields": [{
+            "name":"filename",
+            "type": "in",
+            "value": "input.csv",
+            "source": "",
+            "required": true
+        },{
+            "name": "mod1out",
+            "type": "out",
+            "value": "",
+            "source": ""
+        }]
+    },{
+        "name": "module2",
+        "class": "Module2",
+        "fields": [{
+            "name": "mod1out",
+            "type": "in",
+            "value": "",
+            "source": "",
+            "required": true
+        },{
+            "name": "mod2out",
+            "type": "out",
+            "value": "",
+            "source": ""
+        }]
+    },{
+        "name": "module3",
+        "class": "Module3",
+        "fields": [{
+            "name": "mod1out",
+            "type": "in",
+            "value": "",
+            "source": "",
+            "required": true
+        },{
+            "name": "mod3out",
+            "type": "out",
+            "value": "",
+            "source": ""
+        }]
+    },{
+        "name": "module4",
+        "class": "Module4",
+        "fields": [{
+            "name": "mod2out",
+            "type": "in",
+            "value": "",
+            "source": "",
+            "required": true
+        },{
+            "name": "mod3out",
+            "type": "in",
+            "value": "",
+            "source": "",
+            "required": true
+        },{
+            "name": "mod4out",
+            "type": "out",
+            "value": "",
+            "source": ""
+        }]
+    }],
+    "connections": [
+        {
+            "from": {
+                "window": "module1",
+                "variable": "mod1out"
+            },
+            "to": {
+                "window": "module2",
+                "variable": "mod1out"
+            }
+        },
+        {
+            "from": {
+                "window": "module1",
+                "variable": "mod1out"
+            },
+            "to": {
+                "window": "module3",
+                "variable": "mod1out"
+            }
+        },
+        {
+            "from": {
+                "window": "module2",
+                "variable": "mod2out"
+            },
+            "to": {
+                "window": "module4",
+                "variable": "mod2out"
+            }
+        },
+        {
+            "from": {
+                "window": "module3",
+                "variable": "mod3out"
+            },
+            "to": {
+                "window": "module4",
+                "variable": "mod3out"
+            }
+        }
+    ]
+}
