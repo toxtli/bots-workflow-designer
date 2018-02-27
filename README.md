@@ -61,3 +61,11 @@ Open your browser and go to the given URL when the platform is up.
  > export PATH=$PATH:/path/to/directory/of/executable/downloaded/in/previous/step     
  
  * If using windows, then you can check [this](https://www.windows-commandline.com/set-path-command-line/) to know how to set path in Windows command prompt.
+
+## Guide to creating your own bot
+
+In order to automate any of your own desired task you need to create a `logic.json` file and corresponding modules.
+
+* The `logic.json` gives the bot all related inputs and also specifies the order of running modules. You can have a look at the present logic.json present in the automation folder.
+
+* Each module must have imported the `Module.py` file present in the core folder and must have the functions `run()` and `run_queue()`. The `run_queue()` function is responsible for performing operations over the data and for calling the next module. You can have a look at the modules present in the `modules` folder for reference.
