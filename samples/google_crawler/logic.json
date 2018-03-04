@@ -1,0 +1,70 @@
+{
+    "modules": [{
+        "name": "module1",
+        "class": "testcrawler1",
+        "fields": [{
+            "name":"filename",
+            "type": "in",
+            "value": "input.csv",
+            "source": "",
+            "required": true
+        },{
+            "name": "mod1out",
+            "type": "out",
+            "value": "",
+            "source": ""
+        }]
+    },{
+        "name": "module2",
+        "class": "testcrawler2",
+        "fields": [{
+            "name": "mod1out",
+            "type": "in",
+            "value": "",
+            "source": "",
+            "required": true
+        },{
+            "name": "mod2out",
+            "type": "out",
+            "value": "",
+            "source": ""
+        }]
+    },{
+        "name": "module3",
+        "class": "testcrawler3",
+        "fields": [{
+            "name": "mod2out",
+            "type": "in",
+            "value": "",
+            "source": "",
+            "required": true
+        },{
+            "name": "mod3out",
+            "type": "out",
+            "value": "",
+            "source": ""
+        }]
+    }],
+    "connections": [
+        {
+            "from": {
+                "window": "module1",
+                "variable": "mod1out"
+            },
+            "to": {
+                "window": "module2",
+                "variable": "mod1out"
+            }
+        },
+        {
+            "from": {
+                "window": "module2",
+                "variable": "mod2out"
+            },
+            "to": {
+                "window": "module3",
+                "variable": "mod2out"
+            }
+        }
+    ]
+}
