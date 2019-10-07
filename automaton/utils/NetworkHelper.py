@@ -3,7 +3,7 @@ import time
 import threading
 import requests
 from flask import Flask, request
-from flask_cors.extension import CORS
+from flask_cors import CORS
 from utils import LogHelper
 from multiprocessing import Process
 
