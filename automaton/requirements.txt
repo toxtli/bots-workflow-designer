@@ -6,4 +6,3 @@ beautifulsoup4
 pygooglevoice
 pymongo
 selenium
-BeautifulSoup
